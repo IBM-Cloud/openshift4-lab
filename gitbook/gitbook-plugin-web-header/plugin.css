@@ -1,0 +1,35 @@
+.custom-header {
+    margin: 0px;
+    height: 50px;
+    color: #777;
+    background-color: #fafafa;;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.color-theme-1 .custom-header {
+    margin: 0px;
+    height: 50px;
+    color: #afa790;
+    background: #111111;
+    border-bottom: 1px solid #7e888b;
+}
+
+.color-theme-2 .custom-header {
+    margin: 0px;
+    height: 50px;
+    color: #bcc1d2;
+    background: #2d3143;
+    border-bottom: 1px solid #272a3a;
+}
+
+.header-element-wrapper {
+    height: inherit;
+}
+
+.custom-header .header-text {
+    float: left;
+    height: 50px;
+    margin-left: 15px;
+    font-size: 24px;
+    line-height: 40px;
+}

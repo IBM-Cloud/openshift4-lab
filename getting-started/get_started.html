@@ -1,0 +1,575 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Create Account and Get Cluster · Bring it all together on OpenShift 4.3 on IBM Cloud</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-web-header/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="setup_cli.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter active" data-level="2.1" data-path="get_started.html">
+            
+                <a href="get_started.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Create Account and Get Cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="setup_cli.html">
+            
+                <a href="setup_cli.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Configure Shell Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Learning OpenShift 4.3</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../part1-learn_openshift/exercise-1.html">
+            
+                <a href="../part1-learn_openshift/exercise-1.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Deploying an App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../part1-learn_openshift/exercise-2.html">
+            
+                <a href="../part1-learn_openshift/exercise-2.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Logging and Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../part1-learn_openshift/exercise-3.html">
+            
+                <a href="../part1-learn_openshift/exercise-3.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Metrics and Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../part1-learn_openshift/exercise-4.html">
+            
+                <a href="../part1-learn_openshift/exercise-4.html">
+            
+                    
+                        <b>3.4.</b>
+                    
+                    Scaling the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">OpenShift 4.3 and IBM Cloud</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part2-openshift_ibmcloud/exercise-5.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-5.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Cloudant with OperatorHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part2-openshift_ibmcloud/exercise-6.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-6.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Configure Sysdig Agent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../part2-openshift_ibmcloud/exercise-7.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-7.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Configure LogDNA Agent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../part2-openshift_ibmcloud/exercise-8.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-8.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    Analyze Logs w/ LogDNA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../part2-openshift_ibmcloud/exercise-9.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-9.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    Monitor Cluster w/ SysDig
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Resources</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <a target="_blank" href="https://cloud.ibm.com/docs/openshift">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Docs: Red Hat OpenShift on IBM Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <a target="_blank" href="https://docs.openshift.com/container-platform/4.3/welcome/index.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Docs: OpenShift Container Platform 4.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Create Account and Get Cluster</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="create-account-and-get-cluster">Create account and get cluster</h1>
+<p>In this section, you will login to your own IBM Cloud account, and then get access to a IBM Cloud Lab account which contains pre-provisioned clusters. Each lab attendee will be granted access to one cluster.</p>
+<h2 id="set-up-your-ibm-cloud-id">Set up your IBM Cloud ID</h2>
+<ul>
+<li>Log into IBM Cloud with an existing account: <a href="https://cloud.ibm.com" target="_blank">https://cloud.ibm.com</a></li>
+</ul>
+<p>OR</p>
+<ul>
+<li>Create your own: <a href="http://cloud.ibm.com/registration" target="_blank">http://cloud.ibm.com/registration</a></li>
+</ul>
+<h2 id="access-the-cluster-using-the-console">Access the Cluster using the Console</h2>
+<ol>
+<li><p>Instructors will provide a URL to a web app. Enter your IBMid (the email you used to sign up) and the lab key (also provided by the instructor).</p>
+<p>      <a href="../assets/get-clusters.png" rel="grouped" title="Get clusters app" target="_self" class="fancybox">
+       <img src="../assets/get-clusters.png" alt="Get clusters app">
+     </a></p>
+</li>
+<li><p>Follow the instructions on the next page. You will be added to the IBM Workshop account and granted access to a cluster. Note the name of your cluster. In the example below, it&apos;s <code>roks07</code>.</p>
+<p>      <a href="../assets/access-clusters.png" rel="grouped" title="Instructions to access cluster" target="_self" class="fancybox">
+       <img src="../assets/access-clusters.png" alt="Instructions to access cluster">
+     </a></p>
+</li>
+<li><p>Back in IBM Cloud, refresh the <a href="https://cloud.ibm.com" target="_blank">IBM Cloud Dashboard</a>. If required, switch to the <strong>1860103 - IBM</strong> account by clicking on the account selection drop down in the top nav bar.</p>
+<p>      <a href="../assets/ibmaccount.png" rel="grouped" title="IBM Account" target="_self" class="fancybox">
+       <img src="../assets/ibmaccount.png" alt="IBM Account">
+     </a></p>
+</li>
+<li><p>Click on <strong>Clusters</strong> in the <strong>Resource Summary</strong> tile.</p>
+<p>      <a href="../assets/dashboard.png" rel="grouped" title="Find the Resource Summary tile" target="_self" class="fancybox">
+       <img src="../assets/dashboard.png" alt="Find the Resource Summary tile">
+     </a></p>
+</li>
+<li><p>Under <strong>Clusters</strong>, click on the cluster that has been assigned to you.</p>
+<p>      <a href="../assets/clusters-overview.png" rel="grouped" title="Choose a cluster" target="_self" class="fancybox">
+       <img src="../assets/clusters-overview.png" alt="Choose a cluster">
+     </a></p>
+</li>
+<li><p>You can also see your cluster in the list of OpenShift clusters <a href="https://cloud.ibm.com/kubernetes/clusters?platformType=openshift" target="_blank">IBM Cloud Clusters Dashboard</a></p>
+<p>      <a href="../assets/cluster-dashboard.png" rel="grouped" title="Clusters Dashboard" target="_self" class="fancybox">
+       <img src="../assets/cluster-dashboard.png" alt="Clusters Dashboard">
+     </a></p>
+</li>
+<li><p>Have a look at the cluster overview!</p>
+<p>      <a href="../assets/cluster-overview.png" rel="grouped" title="Launch the OpenShift web console" target="_self" class="fancybox">
+       <img src="../assets/cluster-overview.png" alt="Launch the OpenShift web console">
+     </a></p>
+</li>
+<li><p>Click on <strong>OpenShift web console</strong> on the top right to launch the web console.</p>
+<p>      <a href="../assets/ocp-console.png" rel="grouped" title="Launch the OpenShift web console" target="_self" class="fancybox">
+       <img src="../assets/ocp-console.png" alt="Launch the OpenShift web console">
+     </a></p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="setup_cli.html" class="navigation navigation-next " aria-label="Next page: Configure Shell Access">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Create Account and Get Cluster","level":"2.1","depth":1,"next":{"title":"Configure Shell Access","level":"2.2","depth":1,"path":"getting-started/setup_cli.md","ref":"getting-started/setup_cli.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4.3 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4.3 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"getting-started/get_started.md","mtime":"2020-03-17T10:43:51.175Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T10:45:43.487Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-web-header/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

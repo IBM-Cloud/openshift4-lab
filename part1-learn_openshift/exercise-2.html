@@ -1,0 +1,617 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Logging and Monitoring · Bring it all together on OpenShift 4.3 on IBM Cloud</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-web-header/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="exercise-3.html" />
+    
+    
+    <link rel="prev" href="exercise-1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../getting-started/get_started.html">
+            
+                <a href="../getting-started/get_started.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Create Account and Get Cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../getting-started/setup_cli.html">
+            
+                <a href="../getting-started/setup_cli.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Configure Shell Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Learning OpenShift 4.3</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="exercise-1.html">
+            
+                <a href="exercise-1.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Deploying an App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.2" data-path="exercise-2.html">
+            
+                <a href="exercise-2.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Logging and Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="exercise-3.html">
+            
+                <a href="exercise-3.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Metrics and Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="exercise-4.html">
+            
+                <a href="exercise-4.html">
+            
+                    
+                        <b>3.4.</b>
+                    
+                    Scaling the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">OpenShift 4.3 and IBM Cloud</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part2-openshift_ibmcloud/exercise-5.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-5.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Cloudant with OperatorHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part2-openshift_ibmcloud/exercise-6.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-6.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Configure Sysdig Agent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../part2-openshift_ibmcloud/exercise-7.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-7.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Configure LogDNA Agent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../part2-openshift_ibmcloud/exercise-8.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-8.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    Analyze Logs w/ LogDNA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../part2-openshift_ibmcloud/exercise-9.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-9.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    Monitor Cluster w/ SysDig
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Resources</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <a target="_blank" href="https://cloud.ibm.com/docs/openshift">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Docs: Red Hat OpenShift on IBM Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <a target="_blank" href="https://docs.openshift.com/container-platform/4.3/welcome/index.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Docs: OpenShift Container Platform 4.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Logging and Monitoring</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="logging-and-monitoring">Logging and monitoring</h1>
+<p>In this exercise, we&apos;ll explore the out-of-the-box logging and monitoring capabilities that are offered in OpenShift.</p>
+<h2 id="simulate-load-on-the-application">Simulate Load on the Application</h2>
+<p>Let&apos;s simulate some load on our application.</p>
+<ol>
+<li><p>First, make sure you&apos;re connected to the project where you deployed your app.</p>
+<pre class="language-"><code class="lang-sh"> oc project example-health
+</code></pre>
+</li>
+<li><p>Retrieve the public route to access your Example Health application:</p>
+<pre class="language-"><code> oc get routes
+</code></pre><p> Output looks similar to this (<em>remember not to copy this exact host</em>):</p>
+<pre class="language-"><code> NAME         HOST/PORT                                                                                                 PATH      SERVICES     PORT       TERMINATION   WILDCARD
+ patient-ui   patient-ui-example-health.roks07-872b77d77f69503584da5a379a38af9c-0000.eu-de.containers.appdomain.cloud             patient-ui   8080-tcp                 None
+</code></pre></li>
+<li><p>Run the following script which will endlessly spam our app with requests:</p>
+<p> With Linux/MacOS:</p>
+<pre class="language-"><code class="lang-bash"> <span class="token keyword">while</span> <span class="token function">sleep</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token keyword">do</span> <span class="token function">curl</span> -s http://<span class="token operator">&lt;</span>host<span class="token operator">&gt;</span>/info<span class="token punctuation">;</span> <span class="token keyword">done</span>
+</code></pre>
+<p> With Windows:</p>
+<pre class="language-"><code class="lang-bash"> while<span class="token punctuation">(</span><span class="token variable">$true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>curl http://<span class="token operator">&lt;</span>host<span class="token operator">&gt;</span>/info<span class="token punctuation">}</span>
+</code></pre>
+</li>
+</ol>
+<p>We&apos;re hitting the <code>/info</code> endpoint which will trigger some logs from our app. For example:</p>
+<p><a href="http://patient-ui-health-example.myopenshift-341665-66631af3eb2bd8030c5bb56d415b8851-0001.us-east.containers.appdomain.cloud/jee.html" target="_blank"><code>http://patient-ui-health-example.myopenshift-xxx.us-east.containers.appdomain.cloud/info</code></a></p>
+<h2 id="openshift-logging">OpenShift Logging</h2>
+<p>Since we only created one pod, seeing our logs will be straight forward.</p>
+<ol>
+<li><p>Ensure that you&apos;re in the <strong>Developer</strong> view. Then, navigate to <strong>Topology</strong>.</p>
+</li>
+<li><p>Navigate to your Pod by selecting your app, then clicking the name of the Pod under <strong>Pods</strong>.</p>
+<p>      <a href="../assets/ocp-topo-pod.png" rel="grouped" title="Navigate to Pod" target="_self" class="fancybox">
+       <img src="../assets/ocp-topo-pod.png" alt="Navigate to Pod">
+     </a></p>
+</li>
+<li><p>Click on <strong>View Logs</strong> next to your Pods to see streaming logs from your running application. If you&apos;re still generating traffic, you should see log messages for every request being made.</p>
+<p>      <a href="../assets/ocp43-pod-logs.png" rel="grouped" title="Pod Logs" target="_self" class="fancybox">
+       <img src="../assets/ocp43-pod-logs.png" alt="Pod Logs">
+     </a></p>
+</li>
+</ol>
+<h2 id="openshift-terminal">OpenShift Terminal</h2>
+<p>One of the great things about Kubernetes is the ability to quickly debug your application pods with SSH terminals. This is great for development, but generally is not recommended in production environments. OpenShift makes it even easier by allowing you to launch a terminal directly in the dashboard.</p>
+<ol>
+<li><p>Navigate to your Pod by selecting your app, then clicking the name of the Pod under <strong>Pods</strong>.</p>
+<p>     <a href="../assets/ocp-topo-pod.png" rel="grouped" title="Navigate to Pod" target="_self" class="fancybox">
+       <img src="../assets/ocp-topo-pod.png" alt="Navigate to Pod">
+     </a></p>
+</li>
+<li><p>Switch to the <strong>Terminal</strong> tab</p>
+<p>     <a href="../assets/ocp43-terminal.png" rel="grouped" title="Terminal" target="_self" class="fancybox">
+       <img src="../assets/ocp43-terminal.png" alt="Terminal">
+     </a></p>
+</li>
+<li><p>Run the following Shell commands:</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Command</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ls</td>
+<td style="text-align:left">List the project files.</td>
+</tr>
+<tr>
+<td style="text-align:left">ps aux</td>
+<td style="text-align:left">List the running processes.</td>
+</tr>
+<tr>
+<td style="text-align:left">cat /etc/redhat-release</td>
+<td style="text-align:left">Show the underlying OS.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="openshift-monitoring">OpenShift Monitoring</h2>
+<p>When deploying new apps, making configuration changes, or simply inspecting the state of your cluster, the Project-scope Dashboard gives Developer Clear Insights.</p>
+<ol>
+<li><p>Access the <strong>Dashboard</strong> now by going to the <strong>Advanced &gt; Project Details</strong> tab on the left side menu.</p>
+<p>      <a href="../assets/ocp43-project-details.png" rel="grouped" title="View Details" target="_self" class="fancybox">
+       <img src="../assets/ocp43-project-details.png" alt="View Details">
+     </a></p>
+</li>
+<li><p>You can also dive in a bit deeper - the <strong>Events</strong> view is useful for identifying the timeline of events and finding potential error messages. When tracking the state of a new rollout, managing existing assets, or even something simple like exposing a route, the Events view is critical in identifying the timeline of activity. This becomes even more useful when considering that multiple operators may be working against a single cluster.</p>
+<p>      <a href="../assets/projectevents.png" rel="grouped" title="View Details" target="_self" class="fancybox">
+       <img src="../assets/projectevents.png" alt="View Details">
+     </a></p>
+</li>
+</ol>
+<p>You&apos;ll want to refer to this view throughout the lab. Almost all actions we take in in OpenShift will result in an event being fired in this view. As it is updated real-time, it&apos;s a great way to track changes to state.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="exercise-1.html" class="navigation navigation-prev " aria-label="Previous page: Deploying an App">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="exercise-3.html" class="navigation navigation-next " aria-label="Next page: Metrics and Dashboards">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Logging and Monitoring","level":"3.2","depth":1,"next":{"title":"Metrics and Dashboards","level":"3.3","depth":1,"path":"part1-learn_openshift/exercise-3.md","ref":"part1-learn_openshift/exercise-3.md","articles":[]},"previous":{"title":"Deploying an App","level":"3.1","depth":1,"path":"part1-learn_openshift/exercise-1.md","ref":"part1-learn_openshift/exercise-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4.3 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4.3 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part1-learn_openshift/exercise-2.md","mtime":"2020-03-17T10:43:51.175Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T10:45:43.487Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-web-header/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

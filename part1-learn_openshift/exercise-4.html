@@ -1,0 +1,602 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Scaling the App · Bring it all together on OpenShift 4.3 on IBM Cloud</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-web-header/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../part2-openshift_ibmcloud/exercise-5.html" />
+    
+    
+    <link rel="prev" href="exercise-3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../getting-started/get_started.html">
+            
+                <a href="../getting-started/get_started.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Create Account and Get Cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../getting-started/setup_cli.html">
+            
+                <a href="../getting-started/setup_cli.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Configure Shell Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Learning OpenShift 4.3</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="exercise-1.html">
+            
+                <a href="exercise-1.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Deploying an App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="exercise-2.html">
+            
+                <a href="exercise-2.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Logging and Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="exercise-3.html">
+            
+                <a href="exercise-3.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Metrics and Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.4" data-path="exercise-4.html">
+            
+                <a href="exercise-4.html">
+            
+                    
+                        <b>3.4.</b>
+                    
+                    Scaling the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">OpenShift 4.3 and IBM Cloud</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../part2-openshift_ibmcloud/exercise-5.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-5.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Cloudant with OperatorHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../part2-openshift_ibmcloud/exercise-6.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-6.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Configure Sysdig Agent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../part2-openshift_ibmcloud/exercise-7.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-7.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Configure LogDNA Agent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="../part2-openshift_ibmcloud/exercise-8.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-8.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    Analyze Logs w/ LogDNA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="../part2-openshift_ibmcloud/exercise-9.html">
+            
+                <a href="../part2-openshift_ibmcloud/exercise-9.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    Monitor Cluster w/ SysDig
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Resources</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <a target="_blank" href="https://cloud.ibm.com/docs/openshift">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Docs: Red Hat OpenShift on IBM Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <a target="_blank" href="https://docs.openshift.com/container-platform/4.3/welcome/index.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Docs: OpenShift Container Platform 4.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Scaling the App</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="scaling-the-application">Scaling the application</h1>
+<p>In this exercise, we&apos;ll leverage the metrics we&apos;ve observed in the previous step to automatically scale our UI application in response to load.</p>
+<h2 id="enable-resource-limits">Enable Resource Limits</h2>
+<p>Before we can setup autoscaling for our pods, we first need to set resource limits on the pods running in our cluster. Limits allows you to choose the minimum and maximum CPU and memory usage for a pod.</p>
+<p>Hopefully you have your running script simulating load (if not go <a href="exercise-2.html#simulate-load-on-the-application">here</a>), Grafana showed you that your application was consuming anywhere between &quot;.002&quot; to &quot;.02&quot; cores. This translates to 2-20 &quot;millicores&quot;. That seems like a good range for our CPU request, but to be safe, let&apos;s bump the higher-end up to 30 millicores. In addition, Grafana showed that the app consumes about <code>25</code>-<code>35</code> MB of RAM. Set the following resource limits for your deployment now.</p>
+<ol>
+<li><p>Switch to the <strong>Administrator</strong> view and then navigate to <strong>Workloads &gt; Deployments</strong> in the left-hand bar. Choose the <code>patient-ui</code> Deployment, then choose <strong>Actions &gt; Edit Deployment</strong>.</p>
+<p>      <a href="../assets/ocp-deployments.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="../assets/ocp-deployments.png" alt="">
+     </a></p>
+</li>
+<li><p>In the YAML editor, go to line 44. In the section <strong>template &gt; spec &gt; containers</strong>, add the following resource limits into the empty resources. Replace the <code>resources {}</code>, and ensure the spacing is correct -- YAML uses strict indentation.</p>
+<p>      <a href="../assets/ocp-limits-yaml.png" rel="grouped" title="" target="_self" class="fancybox">
+       <img src="../assets/ocp-limits-yaml.png" alt="">
+     </a></p>
+<pre class="language-"><code class="lang-yaml">          <span class="token key atrule">resources</span><span class="token punctuation">:</span>
+            <span class="token key atrule">limits</span><span class="token punctuation">:</span>
+              <span class="token key atrule">cpu</span><span class="token punctuation">:</span> 30m
+              <span class="token key atrule">memory</span><span class="token punctuation">:</span> 100Mi
+            <span class="token key atrule">requests</span><span class="token punctuation">:</span>
+              <span class="token key atrule">cpu</span><span class="token punctuation">:</span> 3m
+              <span class="token key atrule">memory</span><span class="token punctuation">:</span> 40Mi
+</code></pre>
+</li>
+<li><p><strong>Save</strong> and <strong>Reload</strong> to see the new version.</p>
+</li>
+<li><p>Verify that the replication controller has been changed by navigating to <strong>Events</strong></p>
+<p>      <a href="../assets/ocp-dc-events.png" rel="grouped" title="Resource Limits" target="_self" class="fancybox">
+       <img src="../assets/ocp-dc-events.png" alt="Resource Limits">
+     </a></p>
+</li>
+</ol>
+<h2 id="enable-autoscaler">Enable Autoscaler</h2>
+<p>Now that we have resource limits, let&apos;s enable autoscaler.</p>
+<p>By default, the autoscaler allows you to scale based on CPU or Memory. The UI allows you to do CPU only (for now). Pods are balanced between the minimum and maximum number of pods that you specify. With the autoscaler, pods are automatically created or deleted to ensure that the average CPU usage of the pods is below the CPU request target as defined. In general, you probably want to start scaling up when you get near <code>50</code>-<code>90</code>% of the CPU usage of a pod. In our case, let&apos;s make it <code>1</code>% to test the autoscaler since we are generating minimal load.</p>
+<ol>
+<li><p>Navigate to <strong>Workloads &gt; Horizontal Pod Autoscalers</strong>, then hit <strong>Create Horizontal Pod Autoscaler</strong>.</p>
+<p>      <a href="../assets/ocp-hpa.png" rel="grouped" title="HPA" target="_self" class="fancybox">
+       <img src="../assets/ocp-hpa.png" alt="HPA">
+     </a></p>
+<pre class="language-"><code class="lang-yaml"> <span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> autoscaling/v2beta1
+ <span class="token key atrule">kind</span><span class="token punctuation">:</span> HorizontalPodAutoscaler
+ <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+   <span class="token key atrule">name</span><span class="token punctuation">:</span> patient<span class="token punctuation">-</span>hpa
+   <span class="token key atrule">namespace</span><span class="token punctuation">:</span> example<span class="token punctuation">-</span>health
+ <span class="token key atrule">spec</span><span class="token punctuation">:</span>
+   <span class="token key atrule">scaleTargetRef</span><span class="token punctuation">:</span>
+     <span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
+     <span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+     <span class="token key atrule">name</span><span class="token punctuation">:</span> patient<span class="token punctuation">-</span>ui
+   <span class="token key atrule">minReplicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
+   <span class="token key atrule">maxReplicas</span><span class="token punctuation">:</span> <span class="token number">10</span>
+   <span class="token key atrule">metrics</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> Resource
+       <span class="token key atrule">resource</span><span class="token punctuation">:</span>
+         <span class="token key atrule">name</span><span class="token punctuation">:</span> cpu
+         <span class="token key atrule">targetAverageUtilization</span><span class="token punctuation">:</span> <span class="token number">1</span>
+</code></pre>
+</li>
+<li><p>Hit <strong>Create</strong>.</p>
+</li>
+</ol>
+<h2 id="test-autoscaler">Test Autoscaler</h2>
+<p>If you&apos;re not running the script from the <a href="exercise-2.html#simulate-load-on-the-application">previous exercise</a>, the number of pods should stay at 1.</p>
+<ol>
+<li><p>Check by going to the <strong>Overview</strong> page of <strong>Deployments</strong>.</p>
+<p>      <a href="../assets/ocp-hpa-before.png" rel="grouped" title="Scaled to 1 pod" target="_self" class="fancybox">
+       <img src="../assets/ocp-hpa-before.png" alt="Scaled to 1 pod">
+     </a></p>
+</li>
+<li><p>Start simulating load by hitting the page several times, or running the script. You&apos;ll see that it starts to scale up:</p>
+<p>     <a href="../assets/ocp-hpa-after.png" rel="grouped" title="Scaled to 4/10 pods" target="_self" class="fancybox">
+       <img src="../assets/ocp-hpa-after.png" alt="Scaled to 4/10 pods">
+     </a></p>
+</li>
+</ol>
+<p>That&apos;s it! You now have a highly available and automatically scaled front-end Node.js application. OpenShift is automatically scaling your application pods since the CPU usage of the pods greatly exceeded <code>1</code>% of the resource limit, <code>30</code> millicores.</p>
+<h3 id="optional">Optional</h3>
+<p>If you&apos;re interested in setting up the CLI, <a href="../getting-started/setup_cli.html">follow the steps here</a>. Then, run the following command in your CLI <code>oc get hpa</code> to get information about your horizontal pod autoscaler. Remember to switch to your project first with <code>oc project <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project-name</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<p>You could have created the autoscaler with the command <code>oc autoscale deployment/patient-ui --min 1 --max 10 --cpu-percent=1</code>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="exercise-3.html" class="navigation navigation-prev " aria-label="Previous page: Metrics and Dashboards">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../part2-openshift_ibmcloud/exercise-5.html" class="navigation navigation-next " aria-label="Next page: Cloudant with OperatorHub">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Scaling the App","level":"3.4","depth":1,"next":{"title":"Cloudant with OperatorHub","level":"4.1","depth":1,"path":"part2-openshift_ibmcloud/exercise-5.md","ref":"part2-openshift_ibmcloud/exercise-5.md","articles":[]},"previous":{"title":"Metrics and Dashboards","level":"3.3","depth":1,"path":"part1-learn_openshift/exercise-3.md","ref":"part1-learn_openshift/exercise-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4.3 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4.3 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part1-learn_openshift/exercise-4.md","mtime":"2020-03-17T10:43:51.175Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T10:45:43.487Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-web-header/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

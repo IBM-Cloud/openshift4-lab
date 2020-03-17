@@ -1,0 +1,723 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Cloudant with OperatorHub · Bring it all together on OpenShift 4.3 on IBM Cloud</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-hints/plugin-hints.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-web-header/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-codetabs/codetabs.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="exercise-6.html" />
+    
+    
+    <link rel="prev" href="../part1-learn_openshift/exercise-4.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                        <b>1.1.</b>
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Getting Started</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../getting-started/get_started.html">
+            
+                <a href="../getting-started/get_started.html">
+            
+                    
+                        <b>2.1.</b>
+                    
+                    Create Account and Get Cluster
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../getting-started/setup_cli.html">
+            
+                <a href="../getting-started/setup_cli.html">
+            
+                    
+                        <b>2.2.</b>
+                    
+                    Configure Shell Access
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Learning OpenShift 4.3</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../part1-learn_openshift/exercise-1.html">
+            
+                <a href="../part1-learn_openshift/exercise-1.html">
+            
+                    
+                        <b>3.1.</b>
+                    
+                    Deploying an App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../part1-learn_openshift/exercise-2.html">
+            
+                <a href="../part1-learn_openshift/exercise-2.html">
+            
+                    
+                        <b>3.2.</b>
+                    
+                    Logging and Monitoring
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../part1-learn_openshift/exercise-3.html">
+            
+                <a href="../part1-learn_openshift/exercise-3.html">
+            
+                    
+                        <b>3.3.</b>
+                    
+                    Metrics and Dashboards
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../part1-learn_openshift/exercise-4.html">
+            
+                <a href="../part1-learn_openshift/exercise-4.html">
+            
+                    
+                        <b>3.4.</b>
+                    
+                    Scaling the App
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">OpenShift 4.3 and IBM Cloud</li>
+        
+        
+    
+        <li class="chapter active" data-level="4.1" data-path="exercise-5.html">
+            
+                <a href="exercise-5.html">
+            
+                    
+                        <b>4.1.</b>
+                    
+                    Cloudant with OperatorHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="exercise-6.html">
+            
+                <a href="exercise-6.html">
+            
+                    
+                        <b>4.2.</b>
+                    
+                    Configure Sysdig Agent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="exercise-7.html">
+            
+                <a href="exercise-7.html">
+            
+                    
+                        <b>4.3.</b>
+                    
+                    Configure LogDNA Agent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="exercise-8.html">
+            
+                <a href="exercise-8.html">
+            
+                    
+                        <b>4.4.</b>
+                    
+                    Analyze Logs w/ LogDNA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="exercise-9.html">
+            
+                <a href="exercise-9.html">
+            
+                    
+                        <b>4.5.</b>
+                    
+                    Monitor Cluster w/ SysDig
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Resources</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" >
+            
+                <a target="_blank" href="https://cloud.ibm.com/docs/openshift">
+            
+                    
+                        <b>5.1.</b>
+                    
+                    Docs: Red Hat OpenShift on IBM Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" >
+            
+                <a target="_blank" href="https://docs.openshift.com/container-platform/4.3/welcome/index.html">
+            
+                    
+                        <b>5.2.</b>
+                    
+                    Docs: OpenShift Container Platform 4.3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Cloudant with OperatorHub</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="cloudant-db-with-ibm-cloud-operator">Cloudant DB with IBM Cloud Operator</h1>
+<p>Currently, the Example Health <code>patient-ui</code> app is using a dummy in-memory patient. In this exercise, you&apos;ll create a Cloudant service in IBM Cloud and populate it with patient data. Cloudant is a NoSQL database-as-a-service, based on CouchDB.</p>
+<h2 id="enable-the-ibm-cloud-operator">Enable the IBM Cloud Operator</h2>
+<p>Let&apos;s understand exactly how Operators work. In the first exercise, you deployed a simple application using a DeploymentConfig and Pods -- these are &quot;default resources&quot; that come with OpenShift. A custom resource definition allows you to create resources that are not necessarily running within Kubernetes, such an IBM Cloud service. Operators manage the lifecycle of resources and create CRDs, allowing you to manage custom resources the native &quot;Kubernetes&quot; way.</p>
+<ol>
+<li><p>Navigate to your OpenShift console, access the <strong>Administrator</strong> view, and click <strong>Operators &gt; OperatorHub</strong></p>
+<p>     <a href="../assets/operatorhub.png" rel="grouped" title="OperatorHub" target="_self" class="fancybox">
+       <img src="../assets/operatorhub.png" alt="OperatorHub">
+     </a></p>
+</li>
+<li><p>Find the <strong>IBM Cloud Operator</strong>, and hit <strong>Install</strong></p>
+<p>     <a href="../assets/cloudoperatorinstall.png" rel="grouped" title="Operator Install" target="_self" class="fancybox">
+       <img src="../assets/cloudoperatorinstall.png" alt="Operator Install">
+     </a></p>
+</li>
+<li><p>Keep the default options and hit <strong>Subscribe</strong>:</p>
+<p>     <a href="../assets/operatorsubscribe.png" rel="grouped" title="Operator Subscribe" target="_self" class="fancybox">
+       <img src="../assets/operatorsubscribe.png" alt="Operator Subscribe">
+     </a></p>
+</li>
+<li><p>You may need to wait a few seconds and refresh for the operator to show up as <code>Installed</code>:</p>
+<p>     <a href="../assets/installedoperators.png" rel="grouped" title="Installed Operators" target="_self" class="fancybox">
+       <img src="../assets/installedoperators.png" alt="Installed Operators">
+     </a></p>
+</li>
+<li><p>Next, you&apos;ll need to set your IBM Cloud credentials so that the Operator knows how/where to create your Cloudant service. The operator needs to create the service in your own account, rather than the shared IBM lab account.</p>
+<pre class="language-"><code class="lang-sh"> ibmcloud login --sso
+</code></pre>
+<p>Remember: Pick your own account, not IBM.</p>
+<pre class="language-"><code> Select an account:
+ 1. Sai Vennam&apos;s Account (d815248d6ad0cc354df42d43db45ce09) <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>-</span><span class="token punctuation">&gt;</span></span> 1909673
+ 2. IBM (3a4766a7bcab032d4ffc980d360fbf23) <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>-</span><span class="token punctuation">&gt;</span></span> 338150
+ Enter a number&gt; 1
+</code></pre></li>
+<li><p>Next, set your CF org, space and resource group where the Cloudant service will be created. Resource group is usually named <code>default</code> or <code>Default</code> -- case-sensitive.</p>
+<pre class="language-"><code class="lang-sh"> ibmcloud target --cf -g Default
+ or
+ ibmcloud target --cf -g default
+</code></pre>
+</li>
+<li><p>Verify that all fields are set:</p>
+<pre class="language-"><code class="lang-sh"> ibmcloud target
+</code></pre>
+<pre class="language-"><code> API endpoint:      https://cloud.ibm.com   
+ Region:            us-south   
+ User:              svennam@us.ibm.com   
+ Account:           Sai Vennam&apos;s Account (d815248d6ad0cc354df42d43db45ce09) <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>-</span><span class="token punctuation">&gt;</span></span> 1909673   
+ Resource group:    default   
+ CF API endpoint:   https://api.us-south.cf.cloud.ibm.com (API version: 2.144.0)   
+ Org:               svennam@us.ibm.com   
+ Space:             dev
+</code></pre><p>If any of these fields are not set, the Operator will fail to create your service!</p>
+</li>
+<li><p>Make sure you&apos;re logged in to the cluster in this terminal session. Otherwise you must re-run the command <code>oc login</code> with the cluster information:</p>
+<p> <a href="../getting-started/setup_cli.html#access-the-openShift-web-console">Access your cluster using the oc CLI</a>.</p>
+</li>
+<li><p>Use the helper script provided by IBM to create a new API token, and register it as a secret in your OpenShift cluster:</p>
+<pre class="language-"><code class="lang-sh"> <span class="token function">curl</span> -sL https://raw.githubusercontent.com/IBM/cloud-operators/master/hack/config-operator.sh <span class="token operator">|</span> <span class="token function">bash</span>
+</code></pre>
+</li>
+<li><p>Verify that all the fields in <code>data</code> are set for the configmap (<code>org</code>, <code>region</code>, <code>resourceGroup</code> and <code>space</code>) and secret (<code>api-key</code> and <code>region</code>):</p>
+<pre class="language-"><code class="lang-sh">oc get configmap/seed-defaults -o yaml -n default
+oc get secret/seed-secret -o yaml -n default
+</code></pre>
+<p>Output:</p>
+<pre class="language-"><code>apiVersion: v1
+data:
+    org: svennam@us.ibm.com
+    region: us-south
+    resourceGroup: default
+    space: dev
+...
+
+apiVersion: v1
+data:
+    api-key: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>PRIVATE_API_TOKEN</span><span class="token punctuation">&gt;</span></span>=
+    region: dXMtc291dGg=
+...
+</code></pre></li>
+</ol>
+<h2 id="create-a-cloudant-service-using-the-crds">Create a Cloudant Service using the CRDs</h2>
+<ol>
+<li><p>Once the Operator is installed, the Custom Resource Definitions to create the Cloudant service are also available. Navigate to your OpenShift dashboard, ensure you&apos;re in the <strong>Administrator</strong> view, navigate to your <strong>Installed Operators</strong> and click the IBM Cloud Operator:</p>
+<p>     <a href="../assets/ibmcloudoperator.png" rel="grouped" title="IBM Cloud Operator" target="_self" class="fancybox">
+       <img src="../assets/ibmcloudoperator.png" alt="IBM Cloud Operator">
+     </a></p>
+</li>
+<li><p>You&apos;ll see that there&apos;s two APIs available -- a Service and a Binding. A <strong>Service</strong> will allow us to create the actual Cloudant service itself -- do that first by clicking <strong>Create Instance</strong> under <strong>Service</strong>. Copy and replace the following YAML:</p>
+<blockquote>
+<pre class="language-"><code>apiVersion: ibmcloud.ibm.com/v1alpha1
+kind: Service
+metadata:
+  name: cloudant-service
+spec:
+  plan: lite
+  serviceClass: cloudantnosqldb
+</code></pre></blockquote>
+<p>     <a href="../assets/cloudantservice.png" rel="grouped" title="cloudantservice" target="_self" class="fancybox">
+       <img src="../assets/cloudantservice.png" alt="cloudantservice">
+     </a></p>
+<p>Hit <strong>Create</strong>.</p>
+</li>
+<li><p>Wait a couple minutes for the service to provision. You can check the status by clicking on your service, and looking for <strong>Message: Online</strong>:</p>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p> You can also debug any potential issues here. If you already have a Cloudant &quot;Lite&quot; service, you won&apos;t be able to create another. To work around this issue, edit the service yaml to use <code>standard</code> instead of <code>lite</code>. Note that &quot;Standard Cloudant&quot; is a paid service. Another option is to navigate to your IBM Cloud dashboard and delete your existing instance of the <code>lite</code> Cloudant. </p>
+</div></div></p>
+<p>     <a href="../assets/servicedone.png" rel="grouped" title="servicedone" target="_self" class="fancybox">
+       <img src="../assets/servicedone.png" alt="servicedone">
+     </a></p>
+</li>
+<li><p>After verifying that there&apos;s no bugs and the service is &quot;online&quot;, double-check that the Cloudant service exists in your account: <a href="https://cloud.ibm.com/resources" target="_blank">https://cloud.ibm.com/resources</a></p>
+<p>You may need to switch to your own account using the switcher on the top right.</p>
+<p>     <a href="../assets/resourcelist.png" rel="grouped" title="resourcelist" target="_self" class="fancybox">
+       <img src="../assets/resourcelist.png" alt="resourcelist">
+     </a></p>
+</li>
+<li><p>Next, create the &quot;binding&quot; resource for your Operator (instead of Service as you did above):</p>
+<blockquote>
+<pre class="language-"><code class="lang-shell">apiVersion: ibmcloud.ibm.com/v1alpha1
+kind: Binding
+metadata:
+  name: cloudant-binding
+spec:
+  serviceName: cloudant-service
+</code></pre>
+</blockquote>
+<p>     <a href="../assets/cloudantbinding.png" rel="grouped" title="bindingresource" target="_self" class="fancybox">
+       <img src="../assets/cloudantbinding.png" alt="bindingresource">
+     </a></p>
+</li>
+<li><p>The binding should get created fairly quickly -- you can check the status by clicking on your binding, and looking for <strong>Message: Online</strong>. By navigating to the <strong>Resources</strong> tab, you can see that the <strong>cloudant-binding</strong> secret is created. Click that to see your credentials for accessing your Cloudant DB, stored securely in a secret:</p>
+<p>     <a href="../assets/bindingsecret.png" rel="grouped" title="binding secret" target="_self" class="fancybox">
+       <img src="../assets/bindingsecret.png" alt="binding secret">
+     </a></p>
+</li>
+</ol>
+<h2 id="deploy-the-nodejs-patient-database-app">Deploy the Node.js Patient Database App</h2>
+<p>Now you&apos;ll create the Node.js app that will populate your Cloudant DB with patient data. It will also serve data to the front-end application that we deployed in the first exercise.</p>
+<ol>
+<li><p>Make sure you&apos;re in the project <strong>example-health</strong>:</p>
+<pre class="language-"><code class="lang-sh"> oc project example-health
+</code></pre>
+</li>
+<li><p>Run the following command to create this application:</p>
+<pre class="language-"><code class="lang-sh"> oc new-app --name<span class="token operator">=</span>patient-db centos/nodejs-10-centos7~https://github.com/svennam92/nodejs-patientdb-cloudant
+</code></pre>
+</li>
+<li><p>The app will crash and fail to start repeatedly because the credentials to the Cloudant DB haven&apos;t been set yet.</p>
+<p>     <a href="../assets/crashing.png" rel="grouped" title="Crashing" target="_self" class="fancybox">
+       <img src="../assets/crashing.png" alt="Crashing">
+     </a></p>
+</li>
+<li><p>Let&apos;s fix this by setting the environment variable to the <strong>cloudant-binding</strong> secret we created earlier. Navigate to the deployment config for the <code>patient-db</code> app by clicking the app, and then selecting the name next to <strong>DC</strong>:</p>
+<p>     <a href="../assets/deploymentconfig.png" rel="grouped" title="Deployment Config" target="_self" class="fancybox">
+       <img src="../assets/deploymentconfig.png" alt="Deployment Config">
+     </a></p>
+</li>
+<li><p>Go to the <strong>Environment</strong> tab, click <strong>Add from Config Map or Secret</strong> and create a new environment variable named <strong>CLOUDANT_URL</strong>. Choose the <strong>cloudant-binding</strong> secret, then choose <strong>url</strong> for the Key. Hit the <strong>Save</strong> button.</p>
+<p>     <a href="../assets/envfromsecret.png" rel="grouped" title="Environment from Secret" target="_self" class="fancybox">
+       <img src="../assets/envfromsecret.png" alt="Environment from Secret">
+     </a></p>
+</li>
+<li><p>Go back to the <strong>Topology</strong> tab, and the <strong>patient-db</strong> should successfully start shortly.</p>
+<p>     <a href="../assets/runningapps.png" rel="grouped" title="Apps Running" target="_self" class="fancybox">
+       <img src="../assets/runningapps.png" alt="Apps Running">
+     </a></p>
+</li>
+</ol>
+<h2 id="configure-front-end-patient-health-app-to-use-cloudant-database-backend">Configure Front-End Patient Health App to use Cloudant Database Backend</h2>
+<p>The <code>patient-ui</code> application has a configuration option for the backend database. To start using the database you configured above, follow the steps below to configure it.</p>
+<ol>
+<li><p>Access your <strong>patient-ui</strong> application again and click <strong>Settings</strong>.</p>
+<p>To find your routes, you can use the OpenShift console or type <code>oc get routes</code>.</p>
+<p>     <a href="../assets/clicksettings.png" rel="grouped" title="clicksettings" target="_self" class="fancybox">
+       <img src="../assets/clicksettings.png" alt="clicksettings">
+     </a></p>
+</li>
+<li><p>Input the route <code>http://patient-db:8080/</code> and hit the <strong>node</strong> OpenShift icon.</p>
+<p>You won&apos;t need to expose this application with the <code>oc expose</code> command. This is because your frontend <code>patient-ui</code> application can talk to the backend <code>patient-db</code> without the network request leaving the cluster. Kubernetes keeps an internal DNS record of the services which resolve to the IPs of the running application.</p>
+<p>     <a href="../assets/inputurl.png" rel="grouped" title="inputurl" target="_self" class="fancybox">
+       <img src="../assets/inputurl.png" alt="inputurl">
+     </a></p>
+</li>
+</ol>
+<p>Your application is now backed by the mock patient data in the Cloudant DB! You can log-in using any user-id/password in the Cloudant DB, for example &quot;<strong>opall:opall</strong>&quot;.</p>
+<ol>
+<li><p>In a real-world application, these passwords should <strong>not</strong> be stored as plain-text. To review the patients (and alternate logins) in the Cloudant DB, navigate to your services in IBM Cloud <a href="https://cloud.ibm.com/resources" target="_blank">Resource List</a>. Click <strong>cloudant-service</strong>.</p>
+<p>     <a href="../assets/cloudantdb.png" rel="grouped" title="cloudantdb" target="_self" class="fancybox">
+       <img src="../assets/cloudantdb.png" alt="cloudantdb">
+     </a></p>
+</li>
+<li><p>Launch the Cloudant dashboard and click the <code>patients</code> db.</p>
+<p>     <a href="../assets/databases.png" rel="grouped" title="databases" target="_self" class="fancybox">
+       <img src="../assets/databases.png" alt="databases">
+     </a></p>
+</li>
+<li><p>Click through the different patients you can log-in as.</p>
+<p>     <a href="../assets/credentials.png" rel="grouped" title="credentials" target="_self" class="fancybox">
+       <img src="../assets/credentials.png" alt="credentials">
+     </a></p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../part1-learn_openshift/exercise-4.html" class="navigation navigation-prev " aria-label="Previous page: Scaling the App">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="exercise-6.html" class="navigation navigation-next " aria-label="Next page: Configure Sysdig Agent">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Cloudant with OperatorHub","level":"4.1","depth":1,"next":{"title":"Configure Sysdig Agent","level":"4.2","depth":1,"path":"part2-openshift_ibmcloud/exercise-6.md","ref":"part2-openshift_ibmcloud/exercise-6.md","articles":[]},"previous":{"title":"Scaling the App","level":"3.4","depth":1,"path":"part1-learn_openshift/exercise-4.md","ref":"part1-learn_openshift/exercise-4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4.3 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4.3 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part2-openshift_ibmcloud/exercise-5.md","mtime":"2020-03-17T10:43:51.175Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T10:45:43.487Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-collapsible-chapters/collapsible-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.mousewheel.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox.pack.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/jquery.fancybox-buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fancybox/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-web-header/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-codetabs/codetabs.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
