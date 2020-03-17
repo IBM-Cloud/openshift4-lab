@@ -3,7 +3,7 @@ dist: trusty
 sudo: required
 
 node_js:
-  - "6.9.1"
+  - "6.17.1"
 
 script:
   - ./publish.sh

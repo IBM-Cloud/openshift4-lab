@@ -8,5 +8,8 @@
   "devDependencies": {},
   "dependencies": {
     "gitbook-cli": "2.3.2"
+  },
+  "engines": {
+    "node": ">= 6.17.1"
   }
 }
