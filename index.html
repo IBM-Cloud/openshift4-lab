@@ -400,55 +400,28 @@
                                 
                                 <h1 id="introduction">Introduction</h1>
 <h2 id="red-hat-openshift-4-on-ibm-cloud---bring-it-all-together">Red Hat OpenShift 4 on IBM Cloud - Bring it all together</h2>
-<p>A recent study by McKinsey &amp; Company reveals that only 20 percent of enterprise applications have moved to the cloud. We believe that a hybrid cloud approach, built on open source and a vibrant open ecosystem, is the best way to move the remaining 80 percent.</p>
-<p>Red Hat OpenShift represents a common platform, based on the industry-standard Kubernetes, that allows you to build on premises, on the IBM Cloud, or on any other leading cloud platform. You want freedom of choice; Red Hat OpenShift offers exactly that.</p>
-<p>The goals of this workshop are:</p>
-<ul>
-<li>To familiarize the reader with OpenShift</li>
-<li>Deploy a Node.js application to OpenShift</li>
-<li>Use OpenShift&apos;s features to monitor, scale the application</li>
-</ul>
+<p>In this hands-on lab you will learn how to use the OpenShift 4 Container Platform on IBM Cloud. The goal of OpenShift is to provide a great experience for both Developers and System Administrators to develop, deploy, and run containerized applications.</p>
+<p>You will familiarize yourself with OpenShift 4, deploy a micro-service Node.js application to OpenShift, scale the application, connect to a Cloudant DBaaS, check logs with LogDNA and monitor with Sysdig.</p>
 <h2 id="architecture">Architecture</h2>
 <p>     <a href="assets/app-architecture.png" rel="grouped" title="" target="_self" class="fancybox">
        <img src="assets/app-architecture.png" alt="">
      </a></p>
 <ol>
-<li>A developer generates a starter application with IBM Cloud Developer Tools.</li>
+<li>A developer deploy a Node.js micro service application from the OpenShift Console.</li>
 <li>Building the application produces a Docker container image.</li>
 <li>The image is pushed to a project in OpenShift cluster.</li>
 <li>The application is deployed to a OpenShift cluster.</li>
 <li>Users access the application.</li>
-<li>A developer connects the application to a Cloudant database with Operator.</li>
-<li>A developper monitors the app with LogDNA and Sysdig.</li>
+<li>A developer connects the application to a Cloudant database with IBM Cloud Operator.</li>
+<li>An Ops monitors the app with LogDNA and Sysdig.</li>
 </ol>
-<h2 id="services-used">Services used</h2>
-<p>This tutorial uses the following Cloud Services:</p>
+<h2 id="cloud-services-used">Cloud Services used</h2>
+<p>This tutorial uses the following IBM Cloud Services:</p>
 <ul>
 <li><a href="https://cloud.ibm.com/kubernetes/catalog/create?platformType=openshift" target="_blank">Red Hat OpenShift on IBM Cloud</a></li>
 <li><a href="https://cloud.ibm.com/catalog/services/cloudant" target="_blank">Cloudant</a></li>
 <li><a href="https://cloud.ibm.com/observe/logging/create" target="_blank">IBM Log Analysis with LogDNA</a></li>
 <li><a href="https://cloud.ibm.com/observe/monitoring/create" target="_blank">IBM Cloud Monitoring with Sysdig</a></li>
-</ul>
-<h2 id="agenda">Agenda</h2>
-<h3 id="getting-started">Getting Started</h3>
-<ul>
-<li><a href="getting-started/get_started.html">Create account and get cluster</a></li>
-<li><a href="getting-started/setup_cli.html">Access the cluster using the command line</a></li>
-</ul>
-<h3 id="part-1---learning-openshift">Part 1 - Learning OpenShift</h3>
-<ul>
-<li><a href="part1-learn_openshift/exercise-1.html">1.1. Deploying an application</a></li>
-<li><a href="part1-learn_openshift/exercise-2.html">1.2. Logging and monitoring</a></li>
-<li><a href="part1-learn_openshift/exercise-3.html">1.3. Metrics and dashboards</a></li>
-<li><a href="part1-learn_openshift/exercise-4.html">1.4. Scaling the application</a></li>
-</ul>
-<h3 id="part-2---openshift-and-ibm-cloud">Part 2 - OpenShift and IBM Cloud</h3>
-<ul>
-<li><a href="part2-openshift_ibmcloud/exercise-5.html">2.5. Cloudant DB with IBM Cloud Operator</a></li>
-<li><a href="part2-openshift_ibmcloud/exercise-6.html">2.6. Configure the Sysdig Agent</a></li>
-<li><a href="part2-openshift_ibmcloud/exercise-7.html">2.7. Configure the LogDNA Agent</a></li>
-<li><a href="part2-openshift_ibmcloud/exercise-8.html">2.8. Analyze your logs with LogDNA</a></li>
-<li><a href="part2-openshift_ibmcloud/exercise-9.html">2.9. Monitor your Cluster with SysDig</a></li>
 </ul>
 <h2 id="credits">Credits</h2>
 <p>Many folks have contributed to help shape, test, and contribute the workshop.</p>
@@ -496,7 +469,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Create Account and Get Cluster","level":"2.1","depth":1,"path":"getting-started/get_started.md","ref":"getting-started/get_started.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4.3 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4.3 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"README.md","mtime":"2018-11-11T11:11:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T13:25:51.001Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"Create Account and Get Cluster","level":"2.1","depth":1,"path":"getting-started/get_started.md","ref":"getting-started/get_started.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4.3 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4.3 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"README.md","mtime":"2018-11-11T11:11:11.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-17T14:52:05.914Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
