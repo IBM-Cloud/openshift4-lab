@@ -1,14 +1,8 @@
 # Red Hat OpenShift 4 on IBM Cloud - Bring it all together
 
-A recent study by McKinsey & Company reveals that only 20 percent of enterprise applications have moved to the cloud. We believe that a hybrid cloud approach, built on open source and a vibrant open ecosystem, is the best way to move the remaining 80 percent.
+In this hands-on lab you will learn how to use the OpenShift 4 Container Platform on IBM Cloud. The goal of OpenShift is to provide a great experience for both Developers and System Administrators to develop, deploy, and run containerized applications.
 
-Red Hat OpenShift represents a common platform, based on the industry-standard Kubernetes, that allows you to build on premises, on the IBM Cloud, or on any other leading cloud platform. You want freedom of choice; Red Hat OpenShift offers exactly that.
-
-## Objectives
-
-* To familiarize yourself with OpenShift 4
-* Deploy a Node.js application to OpenShift
-* Use OpenShift's features to monitor, scale the application
+You will familiarize yourself with OpenShift 4, deploy a micro-service Node.js application to OpenShift, scale the application, connect to a Cloudant DBaaS, check logs with LogDNA and monitor with Sysdig.
 
 ## Architecture
 
@@ -23,9 +17,9 @@ Red Hat OpenShift represents a common platform, based on the industry-standard K
 1. A developper monitors the app with LogDNA and Sysdig.
 
 
-## Services used
+## Cloud Services used
 
-This tutorial uses the following Cloud Services:
+This tutorial uses the following IBM Cloud Services:
 * [Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/kubernetes/catalog/create?platformType=openshift)
 * [Cloudant](https://cloud.ibm.com/catalog/services/cloudant)
 * [IBM Log Analysis with LogDNA](https://cloud.ibm.com/observe/logging/create)
