@@ -1,38 +1,62 @@
-# Hands on with OpenShift on IBM Cloud
+# Red Hat OpenShift 4 on IBM Cloud - Bring it all together
 
-This is the repository for the OpenShift 101 workshop presented by IBM
+A recent study by McKinsey & Company reveals that only 20 percent of enterprise applications have moved to the cloud. We believe that a hybrid cloud approach, built on open source and a vibrant open ecosystem, is the best way to move the remaining 80 percent.
 
-- [presentation](./presentation) -- the data for the teacher/leader of the workshop
-- [workshop](./workshop) -- the vanilla code for the code of the workshop
+Red Hat OpenShift represents a common platform, based on the industry-standard Kubernetes, that allows you to build on premises, on the IBM Cloud, or on any other leading cloud platform. You want freedom of choice; Red Hat OpenShift offers exactly that.
 
-## Other IBM Workshops
+## Objectives
 
-Many people and groups worked on the following workshops and classes, parts of which have ended up here.
+* To familiarize yourself with OpenShift 4
+* Deploy a Node.js application to OpenShift
+* Use OpenShift's features to monitor, scale the application
 
-* https://github.com/beemarie/kube-code-camp
-* https://gitlab.com/ibm/kube101
-* https://github.com/ibm/kube101
-* https://github.com/ibm/istio101
+## Architecture
 
-## License & Authors
+![](./assets/app-architecture.png)
 
-If you would like to see the detailed LICENSE click [here](LICENSE).
+1. A developer generates a starter application with IBM Cloud Developer Tools.
+1. Building the application produces a Docker container image.
+1. The image is pushed to a project in OpenShift cluster.
+1. The application is deployed to a OpenShift cluster.
+1. Users access the application.
+1. A developer connects the application to a Cloudant database with Operator.
+1. A developper monitors the app with LogDNA and Sysdig.
 
-- Author: Sai Vennam <svennam@us.ibm.com>, IBM Cloud Offering Manager
-- Maintainers: Developer Advocates from IBM Cloud
 
-```
-Copyright:: 2019- IBM, Inc
+## Services used
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+This tutorial uses the following Cloud Services:
+* [Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/kubernetes/catalog/create?platformType=openshift)
+* [Cloudant](https://cloud.ibm.com/catalog/services/cloudant)
+* [IBM Log Analysis with LogDNA](https://cloud.ibm.com/observe/logging/create)
+* [IBM Cloud Monitoring with Sysdig](https://cloud.ibm.com/observe/monitoring/create)
 
-http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
+## Agenda
+
+### Getting Started
+* [Create account and get cluster](getting-started/get_started.md)
+* [Access the cluster using the command line](getting-started/setup_cli.md)
+
+### Part 1 - Learning OpenShift
+* [1.1. Deploying an application](part1-learn_openshift/exercise-1.md)
+* [1.2. Logging and monitoring](part1-learn_openshift/exercise-2.md)
+* [1.3. Metrics and dashboards](part1-learn_openshift/exercise-3.md)
+* [1.4. Scaling the application](part1-learn_openshift/exercise-4.md)
+
+### Part 2 - OpenShift and IBM Cloud
+* [2.5. Cloudant DB with IBM Cloud Operator](part2-openshift_ibmcloud/exercise-5.md)
+* [2.6. Configure the Sysdig Agent](part2-openshift_ibmcloud/exercise-6.md)
+* [2.7. Configure the LogDNA Agent](part2-openshift_ibmcloud/exercise-7.md)
+* [2.8. Analyze your logs with LogDNA](part2-openshift_ibmcloud/exercise-8.md)
+* [2.9. Monitor your Cluster with SysDig](part2-openshift_ibmcloud/exercise-9.md)
+
+
+## Credits
+
+Many folks have contributed to help shape, test, and contribute the workshop.
+
+* [Sai Vennam](https://github.com/svennam92)
+* [Lionel Mace](https://github.com/lionelmace)
+* [Marisa Lopez de Silanes Ruiz](https://github.com/lopezdsr)
+
