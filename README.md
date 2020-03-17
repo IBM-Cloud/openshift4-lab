@@ -12,7 +12,7 @@ Red Hat OpenShift represents a common platform, based on the industry-standard K
 
 ## Architecture
 
-![](./assets/app-architecture.png)
+![](./workshop/assets/app-architecture.png)
 
 1. A developer generates a starter application with IBM Cloud Developer Tools.
 1. Building the application produces a Docker container image.
