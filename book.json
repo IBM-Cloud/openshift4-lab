@@ -1,0 +1,33 @@
+{
+    "root": "workshop",
+    "title": "Bring it all together on OpenShift 4.3 on IBM Cloud",
+    "pluginsConfig": {
+      "theme-default": {
+        "showLevel": true
+      },
+      "fancybox": {
+        "openEffect": "elastic",
+        "closeEffect": "elastic"
+      },
+      "prism": {
+        "css": [
+          "prismjs/themes/prism-tomorrow.css"
+        ]
+      },
+      "webheader": {
+        "headerTitle" : "Bring it all together on OpenShift 4.3 on IBM Cloud"
+      }
+    },
+    "plugins": [
+      "prism", "-highlight",
+      "collapsible-chapters",
+      "hints",
+      "copy-code-button",
+      "back-to-top-button",
+      "fancybox",
+      "web-header",
+      "codetabs"
+    ],
+    "gitbook": "3.2.3"
+  }
+  
