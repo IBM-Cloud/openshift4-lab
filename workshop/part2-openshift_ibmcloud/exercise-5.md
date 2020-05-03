@@ -24,7 +24,7 @@ Let's understand exactly how Operators work. In the first exercise, you deployed
 
 5. Next, you'll need to set your IBM Cloud credentials so that the Operator knows how/where to create your Cloudant service. The operator needs to create the service in your own account, rather than the shared IBM lab account.
 
-Switch back to the IBM Cloud Shell -- create a new tab in the Cloud shell for this. Your first tab will be authenticated with the `IBM` account and the second shell will be authenticated with your personal account.
+6. Switch back to the IBM Cloud Shell -- create a new tab in the Cloud shell for this. Your first tab will be authenticated with the `IBM` account and the second shell will be authenticated with your personal account.
 
    ```sh
     ibmcloud login --sso
@@ -39,7 +39,7 @@ Switch back to the IBM Cloud Shell -- create a new tab in the Cloud shell for th
     Enter a number> 1
    ```
 
-6. Next, set your CF org, space and resource group where the Cloudant service will be created. Resource group is usually named `default` or `Default` -- case-sensitive.
+7. Next, set your CF org, space and resource group where the Cloudant service will be created. Resource group is usually named `default` or `Default` -- case-sensitive.
 
     ```sh
     ibmcloud target --cf -g Default
@@ -47,7 +47,7 @@ Switch back to the IBM Cloud Shell -- create a new tab in the Cloud shell for th
     ibmcloud target --cf -g default
     ```
 
-7. Verify that all fields are set:
+8. Verify that all fields are set:
 
     ```sh
     ibmcloud target
@@ -66,17 +66,17 @@ Switch back to the IBM Cloud Shell -- create a new tab in the Cloud shell for th
 
    If any of these fields are not set, the Operator will fail to create your service!
 
-8. Make sure you're logged in to the cluster in this terminal session. Otherwise you must re-run the command `oc login` with the cluster information:
+9. Make sure you're logged in to the cluster in this terminal session. Otherwise you must re-run the command `oc login` with the cluster information:
 
     [Access your cluster using the oc CLI](../getting-started/setup_cli.md#access-the-openShift-web-console).
 
-9. Use the helper script provided by IBM to create a new API token, and register it as a secret in your OpenShift cluster:
+10. Use the helper script provided by IBM to create a new API token, and register it as a secret in your OpenShift cluster:
 
     ```sh
     curl -sL https://raw.githubusercontent.com/IBM/cloud-operators/master/hack/config-operator.sh | bash
     ```
 
-10. Verify that all the fields in `data` are set for the configmap \(`org`, `region`, `resourceGroup` and `space`\) and secret \(`api-key` and `region`\):
+11. Verify that all the fields in `data` are set for the configmap \(`org`, `region`, `resourceGroup` and `space`\) and secret \(`api-key` and `region`\):
 
     ```sh
     oc get configmap/config-ibm-cloud-operator -o yaml -n default
