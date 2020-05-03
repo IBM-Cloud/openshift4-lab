@@ -12,7 +12,8 @@ OR
 
 ## Access the Cluster using the Console
 
-1. Instructors will provide a URL to a web app. Enter your IBMid \(the email you used to sign up\) and the lab key \(also provided by the instructor\).
+<!-- 1. Instructors will provide a URL to a web app. Enter your IBMid \(the email you used to sign up\) and the lab key \(also provided by the instructor\). -->
+1. Access the [Grant Cluster](https://5356.mybluemix.net/) app to get a cluster. Enter your IBMid \(the email you used to sign up\) and the lab key \(also provided by the instructor\).
 
     ![Get clusters app](../assets/get-clusters.png)
 
@@ -20,7 +21,7 @@ OR
 
     ![Instructions to access cluster](../assets/access-clusters.png)
 
-3. Back in IBM Cloud, refresh the [IBM Cloud Dashboard](https://cloud.ibm.com). If required, switch to the **1860103 - IBM** account by clicking on the account selection drop down in the top nav bar.
+3. Back in IBM Cloud, refresh the [IBM Cloud Dashboard](https://cloud.ibm.com). If required, switch to the **1835659 - IBM** account by clicking on the account selection drop down in the top nav bar.
 
     ![IBM Account](../assets/ibmaccount.png)
 

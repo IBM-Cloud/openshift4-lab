@@ -24,6 +24,8 @@ Let's understand exactly how Operators work. In the first exercise, you deployed
 
 5. Next, you'll need to set your IBM Cloud credentials so that the Operator knows how/where to create your Cloudant service. The operator needs to create the service in your own account, rather than the shared IBM lab account.
 
+Switch back to the IBM Cloud Shell -- create a new tab in the Cloud shell for this. Your first tab will be authenticated with the `IBM` account and the second shell will be authenticated with your personal account.
+
    ```sh
     ibmcloud login --sso
    ```
@@ -77,8 +79,8 @@ Let's understand exactly how Operators work. In the first exercise, you deployed
 10. Verify that all the fields in `data` are set for the configmap \(`org`, `region`, `resourceGroup` and `space`\) and secret \(`api-key` and `region`\):
 
     ```sh
-    oc get configmap/seed-defaults -o yaml -n default
-    oc get secret/seed-secret -o yaml -n default
+    oc get configmap/config-ibm-cloud-operator -o yaml -n default
+    oc get secret/secret-ibm-cloud-operator -o yaml -n default
     ```
 
     Output:
