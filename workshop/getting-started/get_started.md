@@ -12,8 +12,8 @@ OR
 
 ## Access the Cluster using the Console
 
-<!-- 1. Instructors will provide a URL to a web app. Enter your IBMid \(the email you used to sign up\) and the lab key \(also provided by the instructor\). -->
-1. Access the [Grant Cluster](https://5356.mybluemix.net/) app to get a cluster. Enter your IBMid \(the email you used to sign up\) and the lab key \(also provided by the instructor\).
+1. Instructors will provide a URL to a web app. Enter your IBMid \(the email you used to sign up\) and the lab key \(also provided by the instructor\).
+<!-- 1. Access the [Grant Cluster](https://5356.mybluemix.net/) app to get a cluster. Enter your IBMid \(the email you used to sign up\) and the lab key \(also provided by the instructor\). -->
 
     ![Get clusters app](../assets/get-clusters.png)
 
