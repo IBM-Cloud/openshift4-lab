@@ -8,7 +8,7 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     ![](../assets/ocp-console.png)
 
-1. Select the **Projects** view to display all the projects.
+1. Select the **Projects** view to display all the projects. This view might empty based on your permission.
 
     ![](../assets/ocp-projects.png)
 
@@ -16,11 +16,11 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     ![](../assets/ocp-create-project.png)
 
-    {% hint style='info' %} If you've been invited to a lab account where the project was already created, skip this project creation step and the select the project lab-<yourlastname>. {% endhint %}
+    {% hint style='info' %} If you've been invited to a lab account where the project was already created, skip this project creation step and the select the project lab-yourlastname. {% endhint %}
 
-1. You should see a view that looks like this.
+1. Access the **Project Details** under the section **More** on the left side menu.
 
-    ![](../assets/ocp-admin-project.png)
+    ![Project Details](../assets/ocp43-project-details.png)
 
 1. Switch from the Administrator to the **Developer** view. Make sure your project is selected.
 

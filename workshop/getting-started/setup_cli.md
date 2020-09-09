@@ -26,11 +26,7 @@ It's preconfigured with the full IBM Cloud CLI and tons of plug-ins and tools th
     ![Copy the login credentials](../assets/copy-login-command.png)
 
 
-1. In a Shell termimal, paste the login command you copied from the web console.
-
-    ```bash
-    oc login https://c100-e.us-south.containers.cloud.ibm.com:30360 --token=NYVkVysxxxxxxxxxxxxxxxxxxxxRQa8tM
-    ```
+1. In a Shell termimal, paste the `oc login` command you copied from the web console.
 
     You should see a success message similar to the one below:
 

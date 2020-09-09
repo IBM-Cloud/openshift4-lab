@@ -8,8 +8,8 @@
 
 ## Learning OpenShift 4.3
 * [Deploying an App](part1-learn_openshift/exercise-1.md)
-* [Logging and Monitoring](part1-learn_openshift/exercise-2.md)
-* [Metrics and Dashboards](part1-learn_openshift/exercise-3.md)
+* [Logging](part1-learn_openshift/exercise-2.md)
+* [Monitoring](part1-learn_openshift/exercise-3.md)
 * [Scaling the App](part1-learn_openshift/exercise-4.md)
 
 ## OpenShift 4.3 and IBM Cloud

@@ -1,6 +1,19 @@
-# Metrics and dashboards
+# Monitoring
 
-In this exercise, we'll explore the third-party monitoring and metrics dashboards that are installed for free with OpenShift!
+In this exercise, we'll explore the built-in and third-party monitoring dashboards that are installed for free with OpenShift!
+
+## Developer Monitoring
+
+1. In the **Developer** perspective, go to the **Dashboard** to review the CPU, Memory usage and more
+
+    ![Monitoring Dashboard](../assets/monitoring-dashboard.png)
+
+2. You can also dive in a bit deeper - the **Events** view is useful for identifying the timeline of events and finding potential error messages. When tracking the state of a new rollout, managing existing assets, or even something simple like exposing a route, the Events view is critical in identifying the timeline of activity. This becomes even more useful when considering that multiple operators may be working against a single cluster.
+
+    ![Monitoring Events](../assets/monitoring-events.png)
+
+You'll want to refer to this view throughout the lab. Almost all actions we take in in OpenShift will result in an event being fired in this view. As it is updated real-time, it's a great way to track changes to state.
+
 
 ## Grafana
 
@@ -23,18 +36,3 @@ Red Hat OpenShift on IBM Cloud comes with [Grafana](https://grafana.com/) preins
 5. You should be able to see the CPU and Memory usage for your application. In production environments, this is helpful for identifying the average amount of CPU or Memory your application uses, especially as it can fluctuate through the day. We'll use this information in the next exercise to set up auto-scaling for our pods.
 
     ![Grafana also project](../assets/ocp43-grafana-cpu.png)
-
-## Prometheus and Alert Manager
-
-Navigating back to the cluster console, you can also launch:
-
-* [**Prometheus**](https://prometheus.io/) - a monitoring system with an efficient time series database
-* [**Alertmanager**](https://prometheus.io/docs/alerting/alertmanager/) - an extension of Prometheus focused on managing alerts
-
-## Prometheus
-
-OpenShift provides a web interface to Prometheus, which enables you to run Prometheus Query Language \(PromQL\) queries and examine the metrics visualized on a plot. This functionality provides an extensive overview of the cluster state and enables you to troubleshoot problems. Take a look around, and try the **Insert Example Query**.
-
-1. The Metrics page is accessible by clicking **Monitoring → Metrics**.
-
-    ![Metrics, Alerts and Dashboards](../assets/ocp43-monitoring-prometheus.png)
