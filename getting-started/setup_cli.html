@@ -442,14 +442,6 @@
 </ol>
 <h2 id="validate-cluster-access-using-oc-commands">Validate cluster access using <code>oc</code> commands</h2>
 <ol>
-<li><p>View nodes in the cluster.</p>
-<pre class="language-"><code class="lang-bash"> oc get node
-</code></pre>
-</li>
-<li><p>View services, deployments, and pods.</p>
-<pre class="language-"><code class="lang-bash"> oc get svc,deploy,po --all-namespaces
-</code></pre>
-</li>
 <li><p>View projects</p>
 <pre class="language-"><code class="lang-bash"> oc get projects
 </code></pre>
@@ -460,31 +452,6 @@
 <li>Got an OpenShift cluster and accessed its Web Console.</li>
 <li>Connected your local CLI to a running OpenShift cluster on IBM Cloud</li>
 </ul>
-<h2 id="install-openshift-cli-tools-optional">Install OpenShift CLI tools (Optional)</h2>
-<p>The <code>oc</code> CLI will be the main mechanism to interact with your OpenShift cluster. We&apos;ll be downloading and installing the CLI, and adding it to your environment path.</p>
-<blockquote>
-<p><em>NOTE</em>: Check for newer releases on the <a href="https://github.com/openshift/origin/releases/" target="_blank">OpenShift Origin Releases</a> page.</p>
-</blockquote>
-<p>Download the <code>oc</code> tarball.</p>
-<pre class="language-"><code class="lang-bash"><span class="token function">wget</span> https://github.com/openshift/origin/releases/download/v3.11.0/openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit.tar.gz
-</code></pre>
-<p>Unpack the tarball</p>
-<pre class="language-"><code class="lang-bash"><span class="token function">tar</span> -xvzf openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit.tar.gz
-</code></pre>
-<p>Rename it for ease of use</p>
-<pre class="language-"><code class="lang-bash"><span class="token function">mv</span> openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit <span class="token variable">${<span class="token environment constant">HOME</span>}</span>/oc-cli
-</code></pre>
-<p>Update <code>PATH</code>.</p>
-<blockquote>
-<p><em>NOTE</em>: If you restart your cloud shell, you may need to re-run this command.</p>
-</blockquote>
-<pre class="language-"><code class="lang-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token variable">${<span class="token environment constant">PATH</span>}</span><span class="token builtin class-name">:</span><span class="token variable">${<span class="token environment constant">HOME</span>}</span>/oc-cli
-</code></pre>
-<p>Verify the utility is available by using <code>which</code> and the help command.</p>
-<pre class="language-"><code class="lang-bash"><span class="token function">which</span> oc
-</code></pre>
-<pre class="language-"><code class="lang-bash">oc <span class="token builtin class-name">help</span>
-</code></pre>
 
                                 
                                 </section>
@@ -528,7 +495,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Configure Shell Access","level":"2.2","depth":1,"next":{"title":"Deploying an App","level":"3.1","depth":1,"path":"part1-learn_openshift/exercise-1.md","ref":"part1-learn_openshift/exercise-1.md","articles":[]},"previous":{"title":"Create Account and Get Cluster","level":"2.1","depth":1,"path":"getting-started/get_started.md","ref":"getting-started/get_started.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4.3 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4.3 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"getting-started/setup_cli.md","mtime":"2020-05-07T17:38:29.864Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-07T17:40:30.358Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Configure Shell Access","level":"2.2","depth":1,"next":{"title":"Deploying an App","level":"3.1","depth":1,"path":"part1-learn_openshift/exercise-1.md","ref":"part1-learn_openshift/exercise-1.md","articles":[]},"previous":{"title":"Create Account and Get Cluster","level":"2.1","depth":1,"path":"getting-started/get_started.md","ref":"getting-started/get_started.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4.3 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4.3 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"getting-started/setup_cli.md","mtime":"2020-09-09T12:25:28.431Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-09T12:27:26.715Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
