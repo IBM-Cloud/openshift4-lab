@@ -79,7 +79,7 @@ One of the great things about Kubernetes is the ability to quickly debug your ap
 
 When deploying new apps, making configuration changes, or simply inspecting the state of your cluster, the Project-scope Dashboard gives Developer Clear Insights.
 
-1. Access the **Dashboard** now by going to the **Advanced > Project Details** tab on the left side menu.
+1. Access the **Dashboard** now by going to the **More > Project Details** tab on the left side menu.
 
     ![View Details](../assets/ocp43-project-details.png)
 

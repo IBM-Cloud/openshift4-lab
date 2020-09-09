@@ -46,19 +46,7 @@ Your CLI is now connected to your Red Hat OpenShift cluster running in IBM Cloud
 
 ## Validate cluster access using `oc` commands
 
-1. View nodes in the cluster.
-
-    ```bash
-    oc get node
-    ```
-
-2. View services, deployments, and pods.
-
-    ```bash
-    oc get svc,deploy,po --all-namespaces
-    ```
-
-3. View projects
+1. View projects
 
     ```bash
     oc get projects
@@ -68,45 +56,3 @@ You've completed the getting started! Let's recap -- in this section, you:
 
 * Got an OpenShift cluster and accessed its Web Console.
 * Connected your local CLI to a running OpenShift cluster on IBM Cloud
-
-## Install OpenShift CLI tools (Optional)
-
-The `oc` CLI will be the main mechanism to interact with your OpenShift cluster. We'll be downloading and installing the CLI, and adding it to your environment path.
-
-> _NOTE_: Check for newer releases on the [OpenShift Origin Releases](https://github.com/openshift/origin/releases/) page.
-
-Download the `oc` tarball.
-
-```bash
-wget https://github.com/openshift/origin/releases/download/v3.11.0/openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit.tar.gz
-```
-
-Unpack the tarball
-
-```bash
-tar -xvzf openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit.tar.gz
-```
-
-Rename it for ease of use
-
-```bash
-mv openshift-origin-client-tools-v3.11.0-0cbc58b-linux-64bit ${HOME}/oc-cli
-```
-
-Update `PATH`.
-
-> _NOTE_: If you restart your cloud shell, you may need to re-run this command.
-
-```bash
-export PATH=${PATH}:${HOME}/oc-cli
-```
-
-Verify the utility is available by using `which` and the help command.
-
-```bash
-which oc
-```
-
-```bash
-oc help
-```

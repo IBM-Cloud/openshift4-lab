@@ -16,6 +16,8 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     ![](../assets/ocp-create-project.png)
 
+    {% hint style='info' %} If you've been invited to a lab account where the project was already created, skip this project creation step and the select the project lab-<yourlastname>. {% endhint %}
+
 1. You should see a view that looks like this.
 
     ![](../assets/ocp-admin-project.png)
