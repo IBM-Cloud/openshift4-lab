@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Metrics and Dashboards · Bring it all together on OpenShift 4.3 on IBM Cloud</title>
+        <title>Monitoring · Bring it all together on OpenShift 4.3 on IBM Cloud</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -198,7 +198,7 @@
                     
                         <b>3.2.</b>
                     
-                    Logging and Monitoring
+                    Logging
             
                 </a>
             
@@ -213,7 +213,7 @@
                     
                         <b>3.3.</b>
                     
-                    Metrics and Dashboards
+                    Monitoring
             
                 </a>
             
@@ -385,7 +385,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Metrics and Dashboards</a>
+        <a href=".." >Monitoring</a>
     </h1>
 </div>
 
@@ -400,8 +400,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="metrics-and-dashboards">Metrics and dashboards</h1>
-<p>In this exercise, we&apos;ll explore the third-party monitoring and metrics dashboards that are installed for free with OpenShift!</p>
+                                <h1 id="monitoring">Monitoring</h1>
+<p>In this exercise, we&apos;ll explore the built-in and third-party monitoring dashboards that are installed for free with OpenShift!</p>
+<h2 id="developer-monitoring">Developer Monitoring</h2>
+<ol>
+<li><p>In the <strong>Developer</strong> perspective, go to the <strong>Dashboard</strong> to review the CPU, Memory usage and more</p>
+<p>      <a href="../assets/monitoring-dashboard.png" rel="grouped" title="Monitoring Dashboard" target="_self" class="fancybox">
+       <img src="../assets/monitoring-dashboard.png" alt="Monitoring Dashboard">
+     </a></p>
+</li>
+<li><p>You can also dive in a bit deeper - the <strong>Events</strong> view is useful for identifying the timeline of events and finding potential error messages. When tracking the state of a new rollout, managing existing assets, or even something simple like exposing a route, the Events view is critical in identifying the timeline of activity. This becomes even more useful when considering that multiple operators may be working against a single cluster.</p>
+<p>      <a href="../assets/monitoring-events.png" rel="grouped" title="Monitoring Events" target="_self" class="fancybox">
+       <img src="../assets/monitoring-events.png" alt="Monitoring Events">
+     </a></p>
+</li>
+</ol>
+<p>You&apos;ll want to refer to this view throughout the lab. Almost all actions we take in in OpenShift will result in an event being fired in this view. As it is updated real-time, it&apos;s a great way to track changes to state.</p>
 <h2 id="grafana">Grafana</h2>
 <p>Red Hat OpenShift on IBM Cloud comes with <a href="https://grafana.com/" target="_blank">Grafana</a> preinstalled.</p>
 <ol>
@@ -425,21 +439,6 @@
 <li><p>You should be able to see the CPU and Memory usage for your application. In production environments, this is helpful for identifying the average amount of CPU or Memory your application uses, especially as it can fluctuate through the day. We&apos;ll use this information in the next exercise to set up auto-scaling for our pods.</p>
 <p>      <a href="../assets/ocp43-grafana-cpu.png" rel="grouped" title="Grafana also project" target="_self" class="fancybox">
        <img src="../assets/ocp43-grafana-cpu.png" alt="Grafana also project">
-     </a></p>
-</li>
-</ol>
-<h2 id="prometheus-and-alert-manager">Prometheus and Alert Manager</h2>
-<p>Navigating back to the cluster console, you can also launch:</p>
-<ul>
-<li><a href="https://prometheus.io/" target="_blank"><strong>Prometheus</strong></a> - a monitoring system with an efficient time series database</li>
-<li><a href="https://prometheus.io/docs/alerting/alertmanager/" target="_blank"><strong>Alertmanager</strong></a> - an extension of Prometheus focused on managing alerts</li>
-</ul>
-<h2 id="prometheus">Prometheus</h2>
-<p>OpenShift provides a web interface to Prometheus, which enables you to run Prometheus Query Language (PromQL) queries and examine the metrics visualized on a plot. This functionality provides an extensive overview of the cluster state and enables you to troubleshoot problems. Take a look around, and try the <strong>Insert Example Query</strong>.</p>
-<ol>
-<li><p>The Metrics page is accessible by clicking <strong>Monitoring &#x2192; Metrics</strong>.</p>
-<p>      <a href="../assets/ocp43-monitoring-prometheus.png" rel="grouped" title="Metrics, Alerts and Dashboards" target="_self" class="fancybox">
-       <img src="../assets/ocp43-monitoring-prometheus.png" alt="Metrics, Alerts and Dashboards">
      </a></p>
 </li>
 </ol>
@@ -470,7 +469,7 @@
 
             
                 
-                <a href="exercise-2.html" class="navigation navigation-prev " aria-label="Previous page: Logging and Monitoring">
+                <a href="exercise-2.html" class="navigation navigation-prev " aria-label="Previous page: Logging">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -486,7 +485,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Metrics and Dashboards","level":"3.3","depth":1,"next":{"title":"Scaling the App","level":"3.4","depth":1,"path":"part1-learn_openshift/exercise-4.md","ref":"part1-learn_openshift/exercise-4.md","articles":[]},"previous":{"title":"Logging and Monitoring","level":"3.2","depth":1,"path":"part1-learn_openshift/exercise-2.md","ref":"part1-learn_openshift/exercise-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4.3 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4.3 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part1-learn_openshift/exercise-3.md","mtime":"2020-09-09T12:25:28.431Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-09T12:27:26.715Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Monitoring","level":"3.3","depth":1,"next":{"title":"Scaling the App","level":"3.4","depth":1,"path":"part1-learn_openshift/exercise-4.md","ref":"part1-learn_openshift/exercise-4.md","articles":[]},"previous":{"title":"Logging","level":"3.2","depth":1,"path":"part1-learn_openshift/exercise-2.md","ref":"part1-learn_openshift/exercise-2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4.3 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4.3 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part1-learn_openshift/exercise-3.md","mtime":"2020-09-09T13:19:50.435Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-09T13:21:46.820Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
