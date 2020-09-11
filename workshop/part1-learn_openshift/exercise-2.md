@@ -17,13 +17,13 @@ Let's simulate some load on our application.
     ```
     oc get routes
     ```
-    Output looks similar to this (_remember not to copy this exact host_):
+    Output looks similar to this:
     ```
     NAME         HOST/PORT                                                                                                 PATH      SERVICES     PORT       TERMINATION   WILDCARD
     patient-ui   patient-ui-example-health.roks07-872b77d77f69503584da5a379a38af9c-0000.eu-de.containers.appdomain.cloud             patient-ui   8080-tcp                 None
     ```
 
-1. Run the following script which will endlessly spam our app with requests:
+1. Run the following script which will endlessly spam our app with requests. Make sure to replace the host variable by the host retrieved above:
 
     With Linux/MacOS:
 

@@ -14,7 +14,7 @@ Let's understand exactly how Operators work. In the first exercise, you deployed
 
    ![Operator Install](../assets/cloudoperatorinstall.png)
 
-3. Keep the default options and hit **Subscribe**:
+3. Select the namespace you created on the cluster and hit **Subscribe**:
 
    ![Operator Subscribe](../assets/operatorsubscribe.png)
 
@@ -56,11 +56,11 @@ Let's understand exactly how Operators work. In the first exercise, you deployed
     ```
     API endpoint:      https://cloud.ibm.com   
     Region:            us-south   
-    User:              svennam@us.ibm.com   
+    User:              firstname.lastname@us.ibm.com   
     Account:           Sai Vennam's Account (d815248d6ad0cc354df42d43db45ce09) <-> 1909673   
     Resource group:    default   
     CF API endpoint:   https://api.us-south.cf.cloud.ibm.com (API version: 2.144.0)   
-    Org:               svennam@us.ibm.com   
+    Org:               firstname.lastname@us.ibm.com   
     Space:             dev
     ```
 
@@ -87,7 +87,7 @@ Let's understand exactly how Operators work. In the first exercise, you deployed
     ```
     apiVersion: v1
     data:
-        org: svennam@us.ibm.com
+        org: firstname.lastname@us.ibm.com
         region: us-south
         resourceGroup: default
         space: dev
