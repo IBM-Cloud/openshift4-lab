@@ -69,10 +69,8 @@ One of the great things about Kubernetes is the ability to quickly debug your ap
 
 3. Run the following Shell commands:
 
-    | Command | Description | 
-    | :--- | :--- |
-    | ls | List the project files. |
-    | ps aux | List the running processes. |
-    | cat /etc/redhat-release | Show the underlying OS. |
-
-
+| Command | Description | 
+| :--- | :--- |
+| ls | List the project files. |
+| ps aux | List the running processes. |
+| cat /etc/redhat-release | Show the underlying OS. |
