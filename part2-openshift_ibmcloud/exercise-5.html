@@ -415,7 +415,7 @@
        <img src="../assets/cloudoperatorinstall.png" alt="Operator Install">
      </a></p>
 </li>
-<li><p>Keep the default options and hit <strong>Subscribe</strong>:</p>
+<li><p>Select the namespace you created on the cluster and hit <strong>Subscribe</strong>:</p>
 <p>     <a href="../assets/operatorsubscribe.png" rel="grouped" title="Operator Subscribe" target="_self" class="fancybox">
        <img src="../assets/operatorsubscribe.png" alt="Operator Subscribe">
      </a></p>
@@ -447,11 +447,11 @@
 </code></pre>
 <pre class="language-"><code> API endpoint:      https://cloud.ibm.com   
  Region:            us-south   
- User:              svennam@us.ibm.com   
+ User:              firstname.lastname@us.ibm.com   
  Account:           Sai Vennam&apos;s Account (d815248d6ad0cc354df42d43db45ce09) <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>-</span><span class="token punctuation">&gt;</span></span> 1909673   
  Resource group:    default   
  CF API endpoint:   https://api.us-south.cf.cloud.ibm.com (API version: 2.144.0)   
- Org:               svennam@us.ibm.com   
+ Org:               firstname.lastname@us.ibm.com   
  Space:             dev
 </code></pre><p>If any of these fields are not set, the Operator will fail to create your service!</p>
 </li>
@@ -469,7 +469,7 @@ oc get secret/secret-ibm-cloud-operator -o yaml -n default
 <p>Output:</p>
 <pre class="language-"><code>apiVersion: v1
 data:
-    org: svennam@us.ibm.com
+    org: firstname.lastname@us.ibm.com
     region: us-south
     resourceGroup: default
     space: dev
@@ -646,7 +646,7 @@ spec:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Cloudant with OperatorHub","level":"4.1","depth":1,"next":{"title":"Configure Sysdig Agent","level":"4.2","depth":1,"path":"part2-openshift_ibmcloud/exercise-6.md","ref":"part2-openshift_ibmcloud/exercise-6.md","articles":[]},"previous":{"title":"Scaling the App","level":"3.4","depth":1,"path":"part1-learn_openshift/exercise-4.md","ref":"part1-learn_openshift/exercise-4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4.3 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4.3 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part2-openshift_ibmcloud/exercise-5.md","mtime":"2020-09-11T10:19:17.361Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-11T10:21:13.467Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Cloudant with OperatorHub","level":"4.1","depth":1,"next":{"title":"Configure Sysdig Agent","level":"4.2","depth":1,"path":"part2-openshift_ibmcloud/exercise-6.md","ref":"part2-openshift_ibmcloud/exercise-6.md","articles":[]},"previous":{"title":"Scaling the App","level":"3.4","depth":1,"path":"part1-learn_openshift/exercise-4.md","ref":"part1-learn_openshift/exercise-4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4.3 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4.3 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part2-openshift_ibmcloud/exercise-5.md","mtime":"2020-09-11T11:02:24.095Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-09-11T11:04:19.650Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
