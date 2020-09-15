@@ -8,19 +8,19 @@ Let's understand exactly how Operators work. In the first exercise, you deployed
 
 1. Navigate to your OpenShift console, access the **Administrator** view, and click **Operators > OperatorHub**
 
-   ![OperatorHub](../assets/operatorhub.png)
+   ![OperatorHub](../assets/operator-hub.png)
 
 2. Find the **IBM Cloud Operator**, and hit **Install**
 
-   ![Operator Install](../assets/cloudoperatorinstall.png)
+   ![Operator Install](../assets/operator-install.png)
 
 3. Select the namespace you created on the cluster and hit **Subscribe**:
 
-   ![Operator Subscribe](../assets/operatorsubscribe.png)
+   ![Operator Subscribe](../assets/operator-subscribe.png)
 
 4. You may need to wait a few seconds and refresh for the operator to show up as `Installed`:
 
-   ![Installed Operators](../assets/installedoperators.png)
+   ![Installed Operators](../assets/operator-installed.png)
 
 5. Next, you'll need to set your IBM Cloud credentials so that the Operator knows how/where to create your Cloudant service. The operator needs to create the service in your own account, rather than the shared IBM lab account.
 
