@@ -1,6 +1,6 @@
 {
     "root": "workshop",
-    "title": "Bring it all together on OpenShift 4.3 on IBM Cloud",
+    "title": "Bring it all together on OpenShift 4 on IBM Cloud",
     "pluginsConfig": {
       "theme-default": {
         "showLevel": true
@@ -15,7 +15,7 @@
         ]
       },
       "webheader": {
-        "headerTitle" : "Bring it all together on OpenShift 4.3 on IBM Cloud"
+        "headerTitle" : "Bring it all together on OpenShift 4 on IBM Cloud"
       }
     },
     "plugins": [
