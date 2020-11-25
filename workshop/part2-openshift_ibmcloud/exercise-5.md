@@ -39,29 +39,24 @@ Let's understand exactly how Operators work. In the first exercise, you deployed
     Enter a number> 1
    ```
 
-7. Next, set your CF org, space and resource group where the Cloudant service will be created. Resource group is usually named `default` or `Default` -- case-sensitive.
+7. Next, set the **Resource Group** where the Cloudant service will be created. Resource group is usually named `default` or `Default` -- case-sensitive.
 
     ```sh
-    ibmcloud target --cf -g Default
+    ibmcloud target -g Default
     or
-    ibmcloud target --cf -g default
+    ibmcloud target -g default
     ```
 
-8. Verify that all fields are set:
-
-    ```sh
-    ibmcloud target
-    ```
-
+   Output:
     ```
     API endpoint:      https://cloud.ibm.com   
-    Region:            us-south   
+    Region:            us-south
     User:              firstname.lastname@us.ibm.com   
-    Account:           Sai Vennam's Account (d815248d6ad0cc354df42d43db45ce09) <-> 1909673   
+    Account:           Firstname Lastname's Account (d815248d6ad0cc354df42d43db45ce09) <-> 1909673   
     Resource group:    default   
-    CF API endpoint:   https://api.us-south.cf.cloud.ibm.com (API version: 2.144.0)   
-    Org:               firstname.lastname@us.ibm.com   
-    Space:             dev
+    CF API endpoint:   
+    Org:               
+    Space:             
     ```
 
    If any of these fields are not set, the Operator will fail to create your service!
@@ -70,11 +65,12 @@ Let's understand exactly how Operators work. In the first exercise, you deployed
 
     [Access your cluster using the oc CLI](../getting-started/setup_cli.md#access-the-openShift-web-console).
 
-10. Use the helper script provided by IBM to create a new API token, and register it as a secret in your OpenShift cluster:
+10. To install the latest stable release of the operator, run the below script.
 
     ```sh
     curl -sL https://raw.githubusercontent.com/IBM/cloud-operators/master/hack/config-operator.sh | bash
     ```
+   > The above script stores an API key in a Kubernetes secret that can be accessed by the operator.
 
 11. Verify that all the fields in `data` are set for the configmap \(`org`, `region`, `resourceGroup` and `space`\) and secret \(`api-key` and `region`\):
 
