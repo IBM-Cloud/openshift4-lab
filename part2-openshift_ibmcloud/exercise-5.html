@@ -403,7 +403,7 @@
                                 <h1 id="cloudant-db-with-ibm-cloud-operator">Cloudant DB with IBM Cloud Operator</h1>
 <p>Currently, the Example Health <code>patient-ui</code> app is using a dummy in-memory patient. In this exercise, you&apos;ll create a Cloudant service in IBM Cloud and populate it with patient data. Cloudant is a NoSQL database-as-a-service, based on CouchDB.</p>
 <h2 id="enable-the-ibm-cloud-operator">Enable the IBM Cloud Operator</h2>
-<p>Let&apos;s understand exactly how Operators work. In the first exercise, you deployed a simple application using a DeploymentConfig and Pods -- these are &quot;default resources&quot; that come with OpenShift. A custom resource definition allows you to create resources that are not necessarily running within Kubernetes, such an IBM Cloud service. Operators manage the lifecycle of resources and create CRDs, allowing you to manage custom resources the native &quot;Kubernetes&quot; way.</p>
+<p>Let&apos;s understand exactly how Operators work. In the first exercise, you deploy a simple application using a DeploymentConfig and Pods -- these are &quot;default resources&quot; that come with OpenShift. A custom resource definition allows you to create resources that are not necessarily running within Kubernetes, such an IBM Cloud service. Operators manage the lifecycle of resources and create CRDs, allowing you to manage custom resources the native &quot;Kubernetes&quot; way.</p>
 <ol>
 <li><p>Navigate to your OpenShift console, access the <strong>Administrator</strong> view, and click <strong>Operators &gt; OperatorHub</strong></p>
 <p>     <a href="../assets/operator-hub.png" rel="grouped" title="OperatorHub" target="_self" class="fancybox">
@@ -438,8 +438,9 @@
 </code></pre></li>
 <li><p>Next, set the <strong>Resource Group</strong> where the Cloudant service will be created. Resource group is usually named <code>default</code> or <code>Default</code> -- case-sensitive.</p>
 <pre class="language-"><code class="lang-sh"> ibmcloud target -g Default
- or
- ibmcloud target -g default
+</code></pre>
+<p> or</p>
+<pre class="language-"><code class="lang-sh"> ibmcloud target -g default
 </code></pre>
 <p>Output:</p>
 <pre class="language-"><code> API endpoint:      https://cloud.ibm.com   
@@ -450,21 +451,20 @@
  CF API endpoint:   
  Org:               
  Space:
-</code></pre><p>If any of these fields are not set, the Operator will fail to create your service!</p>
-</li>
+</code></pre></li>
 <li><p>Make sure you&apos;re logged in to the cluster in this terminal session. Otherwise you must re-run the command <code>oc login</code> with the cluster information:</p>
 <p> <a href="../getting-started/setup_cli.html#access-the-openShift-web-console">Access your cluster using the oc CLI</a>.</p>
 </li>
 <li><p>To install the latest stable release of the operator, run the below script.</p>
-<pre class="language-"><code class="lang-sh"><span class="token function">curl</span> -sL https://raw.githubusercontent.com/IBM/cloud-operators/master/hack/config-operator.sh <span class="token operator">|</span> <span class="token function">bash</span>
+<pre class="language-"><code class="lang-sh"><span class="token function">curl</span> -sL https://raw.githubusercontent.com/IBM/cloud-operators/master/hack/configure-operator.sh <span class="token operator">|</span> <span class="token function">sed</span> <span class="token string">&quot;s?namespace: default?namespace: <span class="token variable"><span class="token variable">$(</span>oc project -q<span class="token variable">)</span></span>?g&quot;</span> <span class="token operator">|</span> <span class="token function">bash</span>
 </code></pre>
 <blockquote>
 <p>The above script stores an API key in a Kubernetes secret that can be accessed by the operator.</p>
 </blockquote>
 </li>
 <li><p>Verify that all the fields in <code>data</code> are set for the configmap (<code>org</code>, <code>region</code>, <code>resourceGroup</code> and <code>space</code>) and secret (<code>api-key</code> and <code>region</code>):</p>
-<pre class="language-"><code class="lang-sh">oc get configmap/config-ibm-cloud-operator -o yaml -n default
-oc get secret/secret-ibm-cloud-operator -o yaml -n default
+<pre class="language-"><code class="lang-sh">oc get configmap/ibm-cloud-operator-defaults -o yaml -n default
+oc get secret/ibmcloud-operator-secret -o yaml -n default
 </code></pre>
 <p>Output:</p>
 <pre class="language-"><code>apiVersion: v1
@@ -646,7 +646,7 @@ spec:
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Cloudant with OperatorHub","level":"4.1","depth":1,"next":{"title":"Configure Sysdig Agent","level":"4.2","depth":1,"path":"part2-openshift_ibmcloud/exercise-6.md","ref":"part2-openshift_ibmcloud/exercise-6.md","articles":[]},"previous":{"title":"Scaling the App","level":"3.4","depth":1,"path":"part1-learn_openshift/exercise-4.md","ref":"part1-learn_openshift/exercise-4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part2-openshift_ibmcloud/exercise-5.md","mtime":"2020-11-25T11:46:16.332Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-25T11:48:09.017Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Cloudant with OperatorHub","level":"4.1","depth":1,"next":{"title":"Configure Sysdig Agent","level":"4.2","depth":1,"path":"part2-openshift_ibmcloud/exercise-6.md","ref":"part2-openshift_ibmcloud/exercise-6.md","articles":[]},"previous":{"title":"Scaling the App","level":"3.4","depth":1,"path":"part1-learn_openshift/exercise-4.md","ref":"part1-learn_openshift/exercise-4.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part2-openshift_ibmcloud/exercise-5.md","mtime":"2020-11-25T13:55:37.724Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-25T13:57:20.015Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
