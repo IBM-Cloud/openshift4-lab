@@ -8,15 +8,15 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     ![](../assets/ocp-console.png)
 
-1. Select the **Projects** view to display all the projects. This view might empty based on your permission.
+1. Select the **Projects** view to display all the projects. This view might be empty based on your permission.
 
     ![](../assets/ocp-projects.png)
 
 1. Create a new project by selecting **Create Project**. Call the project "example-health".
 
-    ![](../assets/ocp-create-project.png)
-
     {% hint style='info' %} If you've been invited to a lab account where the project was already created, skip this project creation step and the select the project lab-yourlastname. {% endhint %}
+
+    ![](../assets/ocp-create-project.png)
 
 1. Access the **Project Details** under the section **More** on the left side menu.
 
@@ -26,7 +26,7 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     ![](../assets/ocp-project-view.png)
 
-1. Let's deploy the application by selecting **From Git**.
+1. Select **Topology** in the left side menu. Let's deploy the application by selecting **From Git**.
 
 1. Enter the repository `https://github.com/svennam92/node-s2i-openshift` in the Git Repo URL field.
 

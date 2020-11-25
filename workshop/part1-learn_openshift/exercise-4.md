@@ -12,7 +12,7 @@ Hopefully you have your running script simulating load \(if not go [here](exerci
 
     ![](../assets/ocp-deployments.png)
 
-2. In the YAML editor, go to line 44. In the section **template > spec > containers**, add the following resource limits into the empty resources. Replace the `resources {}`, and ensure the spacing is correct -- YAML uses strict indentation.
+2. In the YAML editor, search the section **template > spec > containers** to add some resource limits. Replace the `resources {}`, and ensure the spacing is correct -- YAML uses strict indentation.
 
     ![](../assets/ocp-limits-yaml.png)
 
@@ -63,6 +63,8 @@ By default, the autoscaler allows you to scale based on CPU or Memory. The UI al
     ```
 
 2. Hit **Create**.
+
+    > If you get the error "User cannot create resource horizontalpodautoscalers in API group autoscaling in the namespace example-health", make sure to enter the correct project/namespace.
 
 ## Test Autoscaler
 

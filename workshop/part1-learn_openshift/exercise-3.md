@@ -4,7 +4,7 @@ In this exercise, we'll explore the built-in and third-party monitoring dashboar
 
 ## Developer Monitoring
 
-1. In the **Developer** perspective, go to the **Dashboard** to review the CPU, Memory usage and more
+1. In the **Developer** perspective, go to the **Monitoring Dashboard** to review the CPU, Memory usage and more
 
     ![Monitoring Dashboard](../assets/monitoring-dashboard.png)
 
