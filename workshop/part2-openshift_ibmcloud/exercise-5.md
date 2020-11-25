@@ -4,7 +4,7 @@ Currently, the Example Health `patient-ui` app is using a dummy in-memory patien
 
 ## Enable the IBM Cloud Operator
 
-Let's understand exactly how Operators work. In the first exercise, you deployed a simple application using a DeploymentConfig and Pods -- these are "default resources" that come with OpenShift. A custom resource definition allows you to create resources that are not necessarily running within Kubernetes, such an IBM Cloud service. Operators manage the lifecycle of resources and create CRDs, allowing you to manage custom resources the native "Kubernetes" way.
+Let's understand exactly how Operators work. In the first exercise, you deploy a simple application using a DeploymentConfig and Pods -- these are "default resources" that come with OpenShift. A custom resource definition allows you to create resources that are not necessarily running within Kubernetes, such an IBM Cloud service. Operators manage the lifecycle of resources and create CRDs, allowing you to manage custom resources the native "Kubernetes" way.
 
 1. Navigate to your OpenShift console, access the **Administrator** view, and click **Operators > OperatorHub**
 
@@ -43,7 +43,9 @@ Let's understand exactly how Operators work. In the first exercise, you deployed
 
     ```sh
     ibmcloud target -g Default
+    ```
     or
+    ```sh
     ibmcloud target -g default
     ```
 
@@ -59,8 +61,6 @@ Let's understand exactly how Operators work. In the first exercise, you deployed
     Space:             
     ```
 
-   If any of these fields are not set, the Operator will fail to create your service!
-
 9. Make sure you're logged in to the cluster in this terminal session. Otherwise you must re-run the command `oc login` with the cluster information:
 
     [Access your cluster using the oc CLI](../getting-started/setup_cli.md#access-the-openShift-web-console).
@@ -68,15 +68,15 @@ Let's understand exactly how Operators work. In the first exercise, you deployed
 10. To install the latest stable release of the operator, run the below script.
 
     ```sh
-    curl -sL https://raw.githubusercontent.com/IBM/cloud-operators/master/hack/config-operator.sh | bash
+    curl -sL https://raw.githubusercontent.com/IBM/cloud-operators/master/hack/configure-operator.sh | sed "s?namespace: default?namespace: $(oc project -q)?g" | bash
     ```
    > The above script stores an API key in a Kubernetes secret that can be accessed by the operator.
 
 11. Verify that all the fields in `data` are set for the configmap \(`org`, `region`, `resourceGroup` and `space`\) and secret \(`api-key` and `region`\):
 
     ```sh
-    oc get configmap/config-ibm-cloud-operator -o yaml -n default
-    oc get secret/secret-ibm-cloud-operator -o yaml -n default
+    oc get configmap/ibm-cloud-operator-defaults -o yaml -n default
+    oc get secret/ibmcloud-operator-secret -o yaml -n default
     ```
 
     Output:
