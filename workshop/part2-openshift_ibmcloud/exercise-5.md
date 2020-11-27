@@ -75,8 +75,8 @@ Let's understand exactly how Operators work. In the first exercise, you deploy a
 11. Verify that all the fields in `data` are set for the configmap \(`org`, `region`, `resourceGroup` and `space`\) and secret \(`api-key` and `region`\):
 
     ```sh
-    oc get configmap/ibm-cloud-operator-defaults -o yaml -n default
-    oc get secret/ibmcloud-operator-secret -o yaml -n default
+    oc get configmap/ibm-cloud-operator-defaults -o yaml
+    oc get secret/ibmcloud-operator-secret -o yaml
     ```
 
     Output:
