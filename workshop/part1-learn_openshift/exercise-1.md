@@ -34,7 +34,7 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     Note that the builder image automatically detected the language Node.js.
 
-1. Name your application such as `patient-ui`. Keep the default options and click **Create** at the bottom of the window to build and deploy the application.
+1. Name your application such as `patient-ui`. Leave the application name field empty and hit **Create** at the bottom of the window to build and deploy the application.
 
     ![](../assets/ocp-app-name-short.png)
 

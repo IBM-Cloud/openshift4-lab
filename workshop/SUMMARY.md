@@ -4,7 +4,7 @@
 
 ## Getting Started
 * [Create Account and Get Cluster](getting-started/get_started.md)
-* [Configure Shell Access](getting-started/setup_cli.md)
+* [Access the cluster](getting-started/setup_cli.md)
 
 ## Learning OpenShift 4
 * [Deploying an App](part1-learn_openshift/exercise-1.md)

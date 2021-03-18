@@ -1,4 +1,4 @@
-# Access the cluster using the command line (CLI)
+# Access the cluster using the console (UI) and the command line (CLI)
 
 To easily connect to the cluster, you need the OpenShift CLI `oc` that exposes commands for managing your applications, as well as lower level tools to interact with each component of your system. 
 

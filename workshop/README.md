@@ -27,6 +27,11 @@ This tutorial uses the following IBM Cloud Services:
 * [IBM Log Analysis with LogDNA](https://cloud.ibm.com/observe/logging/create)
 * [IBM Cloud Monitoring with Sysdig](https://cloud.ibm.com/observe/monitoring/create)
 
+## Command Lines
+
+This diagram gives you an overview of the task, services and main command lines you will be using during the lab.
+
+![](./assets/command-lines.png)
 
 ## Credits
 

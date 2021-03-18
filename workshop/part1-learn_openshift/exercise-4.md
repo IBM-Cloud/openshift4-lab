@@ -43,23 +43,24 @@ By default, the autoscaler allows you to scale based on CPU or Memory. The UI al
     ![HPA](../assets/ocp-hpa.png)
 
     ```yaml
-    apiVersion: autoscaling/v2beta1
+    apiVersion: autoscaling/v2beta2
     kind: HorizontalPodAutoscaler
     metadata:
       name: patient-hpa
-      namespace: example-health
     spec:
       scaleTargetRef:
         apiVersion: apps/v1
         kind: Deployment
         name: patient-ui
       minReplicas: 1
-      maxReplicas: 10
+      maxReplicas: 5
       metrics:
         - type: Resource
           resource:
             name: cpu
-            targetAverageUtilization: 1
+            target:
+              averageUtilization: 1
+              type: Utilization
     ```
 
 2. Hit **Create**.
