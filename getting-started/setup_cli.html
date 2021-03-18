@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Configure Shell Access · Bring it all together on OpenShift 4 on IBM Cloud</title>
+        <title>Access the cluster · Bring it all together on OpenShift 4 on IBM Cloud</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -161,7 +161,7 @@
                     
                         <b>2.2.</b>
                     
-                    Configure Shell Access
+                    Access the cluster
             
                 </a>
             
@@ -385,7 +385,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Configure Shell Access</a>
+        <a href=".." >Access the cluster</a>
     </h1>
 </div>
 
@@ -400,7 +400,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="access-the-cluster-using-the-command-line-cli">Access the cluster using the command line (CLI)</h1>
+                                <h1 id="access-the-cluster-using-the-console-ui-and-the-command-line-cli">Access the cluster using the console (UI) and the command line (CLI)</h1>
 <p>To easily connect to the cluster, you need the OpenShift CLI <code>oc</code> that exposes commands for managing your applications, as well as lower level tools to interact with each component of your system. </p>
 <p>This topic guides you through getting started with the CLI, including installation and logging in.</p>
 <h2 id="use-ibm-cloud-shell">Use IBM Cloud Shell</h2>
@@ -493,7 +493,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Configure Shell Access","level":"2.2","depth":1,"next":{"title":"Deploying an App","level":"3.1","depth":1,"path":"part1-learn_openshift/exercise-1.md","ref":"part1-learn_openshift/exercise-1.md","articles":[]},"previous":{"title":"Create Account and Get Cluster","level":"2.1","depth":1,"path":"getting-started/get_started.md","ref":"getting-started/get_started.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"getting-started/setup_cli.md","mtime":"2020-11-27T12:14:26.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-27T12:16:22.074Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Access the cluster","level":"2.2","depth":1,"next":{"title":"Deploying an App","level":"3.1","depth":1,"path":"part1-learn_openshift/exercise-1.md","ref":"part1-learn_openshift/exercise-1.md","articles":[]},"previous":{"title":"Create Account and Get Cluster","level":"2.1","depth":1,"path":"getting-started/get_started.md","ref":"getting-started/get_started.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"getting-started/setup_cli.md","mtime":"2021-03-18T11:18:15.960Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-18T11:20:07.707Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

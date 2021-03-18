@@ -161,7 +161,7 @@
                     
                         <b>2.2.</b>
                     
-                    Configure Shell Access
+                    Access the cluster
             
                 </a>
             
@@ -440,23 +440,24 @@
 <p>      <a href="../assets/ocp-hpa.png" rel="grouped" title="HPA" target="_self" class="fancybox">
        <img src="../assets/ocp-hpa.png" alt="HPA">
      </a></p>
-<pre class="language-"><code class="lang-yaml"> <span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> autoscaling/v2beta1
+<pre class="language-"><code class="lang-yaml"> <span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> autoscaling/v2beta2
  <span class="token key atrule">kind</span><span class="token punctuation">:</span> HorizontalPodAutoscaler
  <span class="token key atrule">metadata</span><span class="token punctuation">:</span>
    <span class="token key atrule">name</span><span class="token punctuation">:</span> patient<span class="token punctuation">-</span>hpa
-   <span class="token key atrule">namespace</span><span class="token punctuation">:</span> example<span class="token punctuation">-</span>health
  <span class="token key atrule">spec</span><span class="token punctuation">:</span>
    <span class="token key atrule">scaleTargetRef</span><span class="token punctuation">:</span>
      <span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> apps/v1
      <span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
      <span class="token key atrule">name</span><span class="token punctuation">:</span> patient<span class="token punctuation">-</span>ui
    <span class="token key atrule">minReplicas</span><span class="token punctuation">:</span> <span class="token number">1</span>
-   <span class="token key atrule">maxReplicas</span><span class="token punctuation">:</span> <span class="token number">10</span>
+   <span class="token key atrule">maxReplicas</span><span class="token punctuation">:</span> <span class="token number">5</span>
    <span class="token key atrule">metrics</span><span class="token punctuation">:</span>
      <span class="token punctuation">-</span> <span class="token key atrule">type</span><span class="token punctuation">:</span> Resource
        <span class="token key atrule">resource</span><span class="token punctuation">:</span>
          <span class="token key atrule">name</span><span class="token punctuation">:</span> cpu
-         <span class="token key atrule">targetAverageUtilization</span><span class="token punctuation">:</span> <span class="token number">1</span>
+         <span class="token key atrule">target</span><span class="token punctuation">:</span>
+           <span class="token key atrule">averageUtilization</span><span class="token punctuation">:</span> <span class="token number">1</span>
+           <span class="token key atrule">type</span><span class="token punctuation">:</span> Utilization
 </code></pre>
 </li>
 <li><p>Hit <strong>Create</strong>.</p>
@@ -526,7 +527,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Scaling the App","level":"3.4","depth":1,"next":{"title":"Cloudant with OperatorHub","level":"4.1","depth":1,"path":"part2-openshift_ibmcloud/exercise-5.md","ref":"part2-openshift_ibmcloud/exercise-5.md","articles":[]},"previous":{"title":"Monitoring","level":"3.3","depth":1,"path":"part1-learn_openshift/exercise-3.md","ref":"part1-learn_openshift/exercise-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part1-learn_openshift/exercise-4.md","mtime":"2020-11-27T12:14:26.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-11-27T12:16:22.074Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scaling the App","level":"3.4","depth":1,"next":{"title":"Cloudant with OperatorHub","level":"4.1","depth":1,"path":"part2-openshift_ibmcloud/exercise-5.md","ref":"part2-openshift_ibmcloud/exercise-5.md","articles":[]},"previous":{"title":"Monitoring","level":"3.3","depth":1,"path":"part1-learn_openshift/exercise-3.md","ref":"part1-learn_openshift/exercise-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part1-learn_openshift/exercise-4.md","mtime":"2021-03-18T11:18:15.960Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-18T11:20:07.707Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
