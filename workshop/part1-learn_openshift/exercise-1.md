@@ -8,9 +8,9 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     ![](../assets/ocp-console.png)
 
-1. Select the **Projects** view to display all the projects. This view might be empty based on your permission.
+1. Select the **Project** view to display all the projects. This view might be empty based on your permission.
 
-    ![](../assets/ocp-projects.png)
+    ![](../assets/ocp-project.png)
 
 1. Create a new project by selecting **Create Project**. Call the project "example-health".
 
