@@ -61,21 +61,21 @@ Let's understand exactly how Operators work. In the first exercise, you deploy a
     Space:             
     ```
 
-9. Make sure you're logged in to the cluster in this terminal session. Otherwise you must re-run the command `oc login` with the cluster information:
+8. Make sure you're logged in to the cluster in this terminal session. Otherwise you must re-run the command `oc login` with the cluster information:
 
     [Access your cluster using the oc CLI](../getting-started/setup_cli.md#access-the-openShift-web-console).
 
-10. To install the latest stable release of the operator, run the below script.
+9. To install the latest stable release of the operator, run the below script.
 
     ```sh
     curl -sL https://raw.githubusercontent.com/IBM/cloud-operators/master/hack/configure-operator.sh | sed "s?namespace: default?namespace: $(oc project -q)?g" | bash
     ```
    > The above script stores an API key in a Kubernetes secret that can be accessed by the operator.
 
-11. Verify that all the fields in `data` are set for the configmap \(`org`, `region`, `resourceGroup` and `space`\) and secret \(`api-key` and `region`\):
+10. Verify that all the fields in `data` are set for the configmap \(`org`, `region`, `resourceGroup` and `space`\) and secret \(`api-key` and `region`\):
 
     ```sh
-    oc get configmap/ibm-cloud-operator-defaults -o yaml
+    oc get configmap/ibmcloud-operator-defaults -o yaml
     oc get secret/ibmcloud-operator-secret -o yaml
     ```
 
