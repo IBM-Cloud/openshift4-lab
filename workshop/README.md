@@ -1,10 +1,10 @@
 # Introduction
 
-## Red Hat OpenShift 4 on IBM Cloud - Bring it all together
+## Red Hat OpenShift on IBM Cloud - Bring it all together
 
-In this hands-on lab you will learn how to use the OpenShift 4 Container Platform on IBM Cloud. The goal of OpenShift is to provide a great experience for both Developers and System Administrators to develop, deploy, and run containerized applications.
+In this hands-on lab you will learn how to use the OpenShift Container Platform on IBM Cloud. The goal of OpenShift is to provide a great experience for both Developers and System Administrators to develop, deploy, and run containerized applications.
 
-You will familiarize yourself with OpenShift 4, deploy a micro-service Node.js application to OpenShift, scale the application, connect to a Cloudant DBaaS, check logs with LogDNA and monitor with Sysdig.
+You will familiarize yourself with OpenShift, deploy a micro-service Node.js application to OpenShift, scale the application, connect to a Cloudant DBaaS, check logs with LogDNA and monitor with Sysdig.
 
 ## Architecture
 
