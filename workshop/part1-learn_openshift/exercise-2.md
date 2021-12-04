@@ -14,11 +14,13 @@ Let's simulate some load on our application.
 
 1. Retrieve the public route to access your Example Health application:
 
-    ```
+    ```sh
     oc get routes
     ```
+
     Output looks similar to this:
-    ```
+
+    ```sh
     NAME         HOST/PORT                                                                                                 PATH      SERVICES     PORT       TERMINATION   WILDCARD
     patient-ui   patient-ui-example-health.roks07-872b77d77f69503584da5a379a38af9c-0000.eu-de.containers.appdomain.cloud             patient-ui   8080-tcp                 None
     ```
@@ -27,10 +29,10 @@ Let's simulate some load on our application.
 
     With Linux/MacOS:
 
-    ```bash
+    ```sh
     while sleep 1; do curl -s http://<host>/info; done
     ```
-    
+
     With Windows:
     
     ```bash
@@ -50,7 +52,7 @@ Since we only created one pod, seeing our logs will be straight forward.
 2. Navigate to your Pod by selecting your app, then clicking the name of the Pod under **Pods**.
 
     ![Navigate to Pod](../assets/ocp-topo-pod.png)
-   
+
 3. Click on **View Logs** next to your Pods to see streaming logs from your running application. If you're still generating traffic, you should see log messages for every request being made.
 
     ![Pod Logs](../assets/ocp43-pod-logs.png)
@@ -69,7 +71,7 @@ One of the great things about Kubernetes is the ability to quickly debug your ap
 
 3. Run the following Shell commands:
 
-| Command | Description | 
+| Command | Description |
 | :--- | :--- |
 | ls | List the project files. |
 | ps aux | List the running processes. |

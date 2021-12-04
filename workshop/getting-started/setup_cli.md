@@ -12,19 +12,17 @@ It's preconfigured with the full IBM Cloud CLI and tons of plug-ins and tools th
 
 1. In the Console menu bar, click the IBM Cloud Shell icon to start a session
 
-    ![](../assets/cloud-shell-access.png)
+    ![shell1](../assets/cloud-shell-access.png)
 
 1. A session starts and automatically logs you in through the IBM Cloud CLI.
 
-    ![](../assets/cloud-shell-login.png)
-
+    ![shell2](../assets/cloud-shell-login.png)
 
 ## Connect to the OpenShift cluster
 
 1. In the OpenShift web console, click on the email/ID in the upper right. Choose the _Copy Login Command_ option.
 
     ![Copy the login credentials](../assets/copy-login-command.png)
-
 
 1. In a Shell termimal, paste the `oc login` command you copied from the web console.
 
@@ -37,8 +35,8 @@ It's preconfigured with the full IBM Cloud CLI and tons of plug-ins and tools th
 
     You have access to the following projects and can switch between them with 'oc project <projectname>'
     ```
-Your CLI is now connected to your Red Hat OpenShift cluster running in IBM Cloud.
 
+Your CLI is now connected to your Red Hat OpenShift cluster running in IBM Cloud.
 
 ## Validate cluster access using `oc` commands
 

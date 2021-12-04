@@ -10,11 +10,11 @@ Hopefully you have your running script simulating load \(if not go [here](exerci
 
 1. Switch to the **Administrator** view and then navigate to **Workloads > Deployments** in the left-hand bar. Choose the `patient-ui` Deployment, then choose **Actions > Edit Deployment**.
 
-    ![](../assets/ocp-deployments.png)
+    ![deployments](../assets/ocp-deployments.png)
 
 2. In the YAML editor, search the section **template > spec > containers** to add some resource limits. Replace the `resources {}`, and ensure the spacing is correct -- YAML uses strict indentation.
 
-    ![](../assets/ocp-limits-yaml.png)
+    ![limits](../assets/ocp-limits-yaml.png)
 
   ```yaml
              resources:
@@ -86,4 +86,3 @@ That's it! You now have a highly available and automatically scaled front-end No
 If you're interested in setting up the CLI, [follow the steps here](../getting-started/setup_cli.md). Then, run the following command in your CLI `oc get hpa` to get information about your horizontal pod autoscaler. Remember to switch to your project first with `oc project <project-name>`.
 
 You could have created the autoscaler with the command `oc autoscale deployment/patient-ui --min 1 --max 10 --cpu-percent=1`.
-

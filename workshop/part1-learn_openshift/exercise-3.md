@@ -14,7 +14,6 @@ In this exercise, we'll explore the built-in and third-party monitoring dashboar
 
 You'll want to refer to this view throughout the lab. Almost all actions we take in in OpenShift will result in an event being fired in this view. As it is updated real-time, it's a great way to track changes to state.
 
-
 ## Grafana
 
 Red Hat OpenShift on IBM Cloud comes with [Grafana](https://grafana.com/) preinstalled.

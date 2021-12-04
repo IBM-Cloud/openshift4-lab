@@ -8,7 +8,7 @@ You will familiarize yourself with OpenShift, deploy a micro-service Node.js app
 
 ## Architecture
 
-![](./assets/app-architecture.png)
+![architecture](./assets/app-architecture.png)
 
 1. A developer deploy a Node.js micro service application from the OpenShift Console.
 1. Building the application produces a Docker container image.
@@ -18,10 +18,10 @@ You will familiarize yourself with OpenShift, deploy a micro-service Node.js app
 1. A developer connects the application to a Cloudant database with IBM Cloud Operator.
 1. An Ops monitors the app with LogDNA and Sysdig.
 
-
 ## Cloud Services used
 
 This tutorial uses the following IBM Cloud Services:
+
 * [Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/kubernetes/catalog/create?platformType=openshift)
 * [Cloudant](https://cloud.ibm.com/catalog/services/cloudant)
 * [IBM Log Analysis with LogDNA](https://cloud.ibm.com/observe/logging/create)
@@ -31,7 +31,7 @@ This tutorial uses the following IBM Cloud Services:
 
 This diagram gives you an overview of the task, services and main command lines you will be using during the lab.
 
-![](./assets/command-lines.png)
+![cli](./assets/command-lines.png)
 
 ## Credits
 
@@ -40,4 +40,3 @@ Many folks have contributed to help shape, test, and contribute the workshop.
 * [Sai Vennam](https://github.com/svennam92)
 * [Lionel Mace](https://github.com/lionelmace)
 * [Marisa Lopez de Silanes Ruiz](https://github.com/lopezdsr)
-
