@@ -342,12 +342,12 @@
     
         <li class="chapter " data-level="5.2" >
             
-                <a target="_blank" href="https://docs.openshift.com/container-platform/4.3/welcome/index.html">
+                <a target="_blank" href="https://docs.openshift.com/container-platform/4.8/welcome/index.html">
             
                     
                         <b>5.2.</b>
                     
-                    Docs: OpenShift Container Platform 4.3
+                    Docs: OpenShift Container Platform 4.8
             
                 </a>
             
@@ -407,13 +407,13 @@
 <p>Hopefully you have your running script simulating load (if not go <a href="exercise-2.html#simulate-load-on-the-application">here</a>), Grafana showed you that your application was consuming anywhere between &quot;.002&quot; to &quot;.02&quot; cores. This translates to 2-20 &quot;millicores&quot;. That seems like a good range for our CPU request, but to be safe, let&apos;s bump the higher-end up to 30 millicores. In addition, Grafana showed that the app consumes about <code>25</code>-<code>35</code> MB of RAM. Set the following resource limits for your deployment now.</p>
 <ol>
 <li><p>Switch to the <strong>Administrator</strong> view and then navigate to <strong>Workloads &gt; Deployments</strong> in the left-hand bar. Choose the <code>patient-ui</code> Deployment, then choose <strong>Actions &gt; Edit Deployment</strong>.</p>
-<p>      <a href="../assets/ocp-deployments.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="../assets/ocp-deployments.png" alt="">
+<p>      <a href="../assets/ocp-deployments.png" rel="grouped" title="deployments" target="_self" class="fancybox">
+       <img src="../assets/ocp-deployments.png" alt="deployments">
      </a></p>
 </li>
 <li><p>In the YAML editor, search the section <strong>template &gt; spec &gt; containers</strong> to add some resource limits. Replace the <code>resources {}</code>, and ensure the spacing is correct -- YAML uses strict indentation.</p>
-<p>      <a href="../assets/ocp-limits-yaml.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="../assets/ocp-limits-yaml.png" alt="">
+<p>      <a href="../assets/ocp-limits-yaml.png" rel="grouped" title="limits" target="_self" class="fancybox">
+       <img src="../assets/ocp-limits-yaml.png" alt="limits">
      </a></p>
 <pre class="language-"><code class="lang-yaml">          <span class="token key atrule">resources</span><span class="token punctuation">:</span>
             <span class="token key atrule">limits</span><span class="token punctuation">:</span>
@@ -527,7 +527,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Scaling the App","level":"3.4","depth":1,"next":{"title":"Cloudant with OperatorHub","level":"4.1","depth":1,"path":"part2-openshift_ibmcloud/exercise-5.md","ref":"part2-openshift_ibmcloud/exercise-5.md","articles":[]},"previous":{"title":"Monitoring","level":"3.3","depth":1,"path":"part1-learn_openshift/exercise-3.md","ref":"part1-learn_openshift/exercise-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part1-learn_openshift/exercise-4.md","mtime":"2021-12-04T08:22:51.389Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-04T08:24:38.625Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Scaling the App","level":"3.4","depth":1,"next":{"title":"Cloudant with OperatorHub","level":"4.1","depth":1,"path":"part2-openshift_ibmcloud/exercise-5.md","ref":"part2-openshift_ibmcloud/exercise-5.md","articles":[]},"previous":{"title":"Monitoring","level":"3.3","depth":1,"path":"part1-learn_openshift/exercise-3.md","ref":"part1-learn_openshift/exercise-3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part1-learn_openshift/exercise-4.md","mtime":"2021-12-04T08:27:18.359Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-04T08:29:03.855Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
