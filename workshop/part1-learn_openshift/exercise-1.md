@@ -12,7 +12,7 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     ![project](../assets/ocp-project.png)
 
-1. Create a new project by selecting **Create Project**. Call the project "lab-yourfirstandlastname".
+1. Create a new project by selecting **Create Project**. Call the project `lab-<your-initials>`.
 
     {% hint style='info' %} If you've been invited to a lab account, make sure to give a unique project name using your last name. {% endhint %}
 
