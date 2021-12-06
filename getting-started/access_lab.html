@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Configure LogDNA Agent · Bring it all together on OpenShift 4 on IBM Cloud</title>
+        <title>Access Lab · Bring it all together on OpenShift 4 on IBM Cloud</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -85,10 +85,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="exercise-8.html" />
+    <link rel="next" href="create_account.html" />
     
     
-    <link rel="prev" href="exercise-6.html" />
+    <link rel="prev" href="../" />
     
 
     </head>
@@ -139,9 +139,9 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="../getting-started/access_lab.html">
+        <li class="chapter active" data-level="2.1" data-path="access_lab.html">
             
-                <a href="../getting-started/access_lab.html">
+                <a href="access_lab.html">
             
                     
                         <b>2.1.</b>
@@ -154,9 +154,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.2" data-path="../getting-started/create_account.html">
+        <li class="chapter " data-level="2.2" data-path="create_account.html">
             
-                <a href="../getting-started/create_account.html">
+                <a href="create_account.html">
             
                     
                         <b>2.2.</b>
@@ -169,9 +169,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.3" data-path="../getting-started/access_cluster.html">
+        <li class="chapter " data-level="2.3" data-path="access_cluster.html">
             
-                <a href="../getting-started/access_cluster.html">
+                <a href="access_cluster.html">
             
                     
                         <b>2.3.</b>
@@ -184,9 +184,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="../getting-started/access_cluster_cli.html">
+        <li class="chapter " data-level="2.4" data-path="access_cluster_cli.html">
             
-                <a href="../getting-started/access_cluster_cli.html">
+                <a href="access_cluster_cli.html">
             
                     
                         <b>2.4.</b>
@@ -273,9 +273,9 @@
         
         
     
-        <li class="chapter " data-level="4.1" data-path="exercise-5.html">
+        <li class="chapter " data-level="4.1" data-path="../part2-openshift_ibmcloud/exercise-5.html">
             
-                <a href="exercise-5.html">
+                <a href="../part2-openshift_ibmcloud/exercise-5.html">
             
                     
                         <b>4.1.</b>
@@ -288,9 +288,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.2" data-path="exercise-6.html">
+        <li class="chapter " data-level="4.2" data-path="../part2-openshift_ibmcloud/exercise-6.html">
             
-                <a href="exercise-6.html">
+                <a href="../part2-openshift_ibmcloud/exercise-6.html">
             
                     
                         <b>4.2.</b>
@@ -303,9 +303,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.3" data-path="exercise-7.html">
+        <li class="chapter " data-level="4.3" data-path="../part2-openshift_ibmcloud/exercise-7.html">
             
-                <a href="exercise-7.html">
+                <a href="../part2-openshift_ibmcloud/exercise-7.html">
             
                     
                         <b>4.3.</b>
@@ -318,9 +318,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.4" data-path="exercise-8.html">
+        <li class="chapter " data-level="4.4" data-path="../part2-openshift_ibmcloud/exercise-8.html">
             
-                <a href="exercise-8.html">
+                <a href="../part2-openshift_ibmcloud/exercise-8.html">
             
                     
                         <b>4.4.</b>
@@ -333,9 +333,9 @@
             
         </li>
     
-        <li class="chapter " data-level="4.5" data-path="exercise-9.html">
+        <li class="chapter " data-level="4.5" data-path="../part2-openshift_ibmcloud/exercise-9.html">
             
-                <a href="exercise-9.html">
+                <a href="../part2-openshift_ibmcloud/exercise-9.html">
             
                     
                         <b>4.5.</b>
@@ -415,7 +415,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Configure LogDNA Agent</a>
+        <a href=".." >Access Lab</a>
     </h1>
 </div>
 
@@ -430,56 +430,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="configure-logdna-agent-for-openshift--cluster">Configure LogDNA agent for OpenShift  cluster</h1>
-<p>The LogDNA agent is responsible for collecting and forwarding logs to your IBM Log Analysis with LogDNA instance. After you provision an instance of IBM Log Analysis with LogDNA, you must configure a LogDNA agent for each log source that you want to monitor.</p>
-<p>To configure your Kubernetes cluster to send logs to your IBM Log Analysis with LogDNA instance, you must install a <em>LogDNA-agent</em> pod on each node of your cluster. The LogDNA agent reads log files from the pod where it is installed, and forwards the log data to your LogDNA instance.</p>
-<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p> If you&apos;ve been invited to a lab account where an instance of LogDNA has already been provisioned and configured, skip the create and deploy steps and go to the step Verify the agent at the bottom. Find your LogDNA instance by looking at the cluster name in the tags attached to the instance. </p>
-</div></div></p>
-<h2 id="create-a-logdna-service-instance">Create a LogDNA service instance</h2>
+                                <h1 id="access-the-lab-environment">Access the lab environment</h1>
+<p>In this section, you will get access to an IBM Cloud Lab account which contains pre-provisioned clusters. Each lab attendee will be granted access to one cluster.</p>
+<h2 id="access-the-lab">Access the lab</h2>
 <ol>
-<li>Create an instance of <a href="https://cloud.ibm.com/observe/logging/create" target="_blank">IBM Cloud Logging with LogDNA</a> from the catalog:<ol>
-<li>Set the <strong>Service name</strong> to <strong>YOUR_IBM_ID-logdna</strong>.</li>
-<li>Select the location where your cluster is created. If the location is not in the list, pick the closest region (e.g. us-south).</li>
-<li>Use the default resource group.</li>
-<li>Click <strong>Create</strong>.</li>
-</ol>
-</li>
-<li>In the <a href="https://cloud.ibm.com/observe/logging" target="_blank"><strong>Observability</strong> category, under Logging</a>, locate the service instance you created.</li>
-</ol>
-<h2 id="deploy-the-logdna-agent-in-the-cluster">Deploy the LogDNA agent in the cluster</h2>
-<ol>
-<li><p>On your instance, click <strong>Edit log sources</strong>.</p>
-</li>
-<li><p>Before running the curl command in the next step, make sure you&apos;re still logged in to the cluster. <a href="../getting-started/setup_cli#access-your-cluster-using-the-oc-cli">Access your cluster using the oc CLI</a>. </p>
-</li>
-<li><p>Select the <strong>OpenShift</strong> tab and run the 5 steps command:</p>
-<p>      <a href="../assets/logdna-install.png" rel="grouped" title="" target="_self" class="fancybox">
-       <img src="../assets/logdna-install.png" alt="">
+<li><p>Instructors will provide a URL to a web app. Enter your email and the lab key provided by the instructor.</p>
+<p>      <a href="../assets/get-clusters.png" rel="grouped" title="Get clusters app" target="_self" class="fancybox">
+       <img src="../assets/get-clusters.png" alt="Get clusters app">
      </a></p>
-<p> The LogDNA agent collects logs with the extension <code>*.log</code> and extensionsless files that are stored in the <code>/var/log</code> directory of your pod. By default, logs are collected from all namespaces, including <code>kube-system</code>, and automatically forwarded to the IBM Log Analysis with LogDNA service.</p>
+</li>
+<li><p>Follow the instructions on the next page. You will be added to the IBM Workshop account and granted access to a cluster.</p>
+<p>      <a href="../assets/access-clusters2.png" rel="grouped" title="Instructions to access cluster" target="_self" class="fancybox">
+       <img src="../assets/access-clusters2.png" alt="Instructions to access cluster">
+     </a></p>
 </li>
 </ol>
-<h2 id="verify-that-the-logdna-agent-is-deployed-successfully">Verify that the LogDNA agent is deployed successfully</h2>
-<p>To verify that the LogDNA agent is deployed successfully, run the following command:</p>
-<ol>
-<li><p>Verify that the <code>logdna-agent</code> pods on each node in the <code>ibm-observe</code> project are in a <strong>Running</strong> status.</p>
-<pre class="language-"><code> oc get pods -n ibm-observe
-</code></pre></li>
-</ol>
-<p>The deployment is successful when you see one or more LogDNA pods.</p>
-<ul>
-<li><strong>The number of LogDNA pods equals the number of worker nodes in your cluster.</strong></li>
-<li>All pods must be in a <code>Running</code> state.</li>
-<li><em>Stdout</em> and <em>stderr</em> are automatically collected and forwarded from all containers. Log data includes application logs and worker logs.</li>
-<li>By default, the LogDNA agent pod that runs on a worker collects logs from all namespaces on that node.</li>
-</ul>
-<p>After the agent is configured, you should start seeing logs from this cluster in the LogDNA web UI. If after a period of time you cannot see logs, check the agent logs.</p>
-<p>To check the logs that are generated by a LogDNA agent, run the following command:</p>
-<pre class="language-"><code>oc logs logdna-agent-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ID</span><span class="token punctuation">&gt;</span></span> -n ibm-observe
-</code></pre><p>Where <em>ID</em> is the ID for a LogDNA agent pod. </p>
-<p>For example, </p>
-<pre class="language-"><code>oc logs logdna-agent-xxxkz -n ibm-observe
-</code></pre>
+
                                 
                                 </section>
                             
@@ -506,12 +472,12 @@
 
             
                 
-                <a href="exercise-6.html" class="navigation navigation-prev " aria-label="Previous page: Configure Sysdig Agent">
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="exercise-8.html" class="navigation navigation-next " aria-label="Next page: Analyze Logs w/ LogDNA">
+                <a href="create_account.html" class="navigation navigation-next " aria-label="Next page: Join IBM Cloud">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -522,7 +488,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Configure LogDNA Agent","level":"4.3","depth":1,"next":{"title":"Analyze Logs w/ LogDNA","level":"4.4","depth":1,"path":"part2-openshift_ibmcloud/exercise-8.md","ref":"part2-openshift_ibmcloud/exercise-8.md","articles":[]},"previous":{"title":"Configure Sysdig Agent","level":"4.2","depth":1,"path":"part2-openshift_ibmcloud/exercise-6.md","ref":"part2-openshift_ibmcloud/exercise-6.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part2-openshift_ibmcloud/exercise-7.md","mtime":"2021-12-06T09:32:21.277Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-06T09:34:12.085Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Access Lab","level":"2.1","depth":1,"next":{"title":"Join IBM Cloud","level":"2.2","depth":1,"path":"getting-started/create_account.md","ref":"getting-started/create_account.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"getting-started/access_lab.md","mtime":"2021-12-06T09:32:21.277Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-06T09:34:12.085Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

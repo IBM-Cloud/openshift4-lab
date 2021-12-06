@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Access the cluster · Bring it all together on OpenShift 4 on IBM Cloud</title>
+        <title>Join IBM Cloud · Bring it all together on OpenShift 4 on IBM Cloud</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -85,10 +85,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../part1-learn_openshift/exercise-1.html" />
+    <link rel="next" href="access_cluster.html" />
     
     
-    <link rel="prev" href="get_started.html" />
+    <link rel="prev" href="access_lab.html" />
     
 
     </head>
@@ -139,14 +139,14 @@
         
         
     
-        <li class="chapter " data-level="2.1" data-path="get_started.html">
+        <li class="chapter " data-level="2.1" data-path="access_lab.html">
             
-                <a href="get_started.html">
+                <a href="access_lab.html">
             
                     
                         <b>2.1.</b>
                     
-                    Create Account and Get Cluster
+                    Access Lab
             
                 </a>
             
@@ -154,14 +154,44 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.2" data-path="setup_cli.html">
+        <li class="chapter active" data-level="2.2" data-path="create_account.html">
             
-                <a href="setup_cli.html">
+                <a href="create_account.html">
             
                     
                         <b>2.2.</b>
                     
-                    Access the cluster
+                    Join IBM Cloud
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="access_cluster.html">
+            
+                <a href="access_cluster.html">
+            
+                    
+                        <b>2.3.</b>
+                    
+                    Access OpenShift Console
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="access_cluster_cli.html">
+            
+                <a href="access_cluster_cli.html">
+            
+                    
+                        <b>2.4.</b>
+                    
+                    Connect to OpenShift with CLI
             
                 </a>
             
@@ -332,7 +362,7 @@
                     
                         <b>5.1.</b>
                     
-                    Docs: Red Hat OpenShift on IBM Cloud
+                    Doc: OpenShift on IBM Cloud
             
                 </a>
             
@@ -342,12 +372,12 @@
     
         <li class="chapter " data-level="5.2" >
             
-                <a target="_blank" href="https://docs.openshift.com/container-platform/4.8/welcome/index.html">
+                <a target="_blank" href="https://docs.openshift.com/container-platform/4.8">
             
                     
                         <b>5.2.</b>
                     
-                    Docs: OpenShift Container Platform 4.8
+                    Doc: OpenShift Container Platform 4.8
             
                 </a>
             
@@ -385,7 +415,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Access the cluster</a>
+        <a href=".." >Join IBM Cloud</a>
     </h1>
 </div>
 
@@ -400,54 +430,26 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="access-the-cluster-using-the-console-ui-and-the-command-line-cli">Access the cluster using the console (UI) and the command line (CLI)</h1>
-<p>To easily connect to the cluster, you need the OpenShift CLI <code>oc</code> that exposes commands for managing your applications, as well as lower level tools to interact with each component of your system. </p>
-<p>This topic guides you through getting started with the CLI, including installation and logging in.</p>
-<h2 id="use-ibm-cloud-shell">Use IBM Cloud Shell</h2>
-<p>To avoid installing the command line, the recommended approach is to use the IBM Cloud Shell is a cloud-based shell workspace that you can access through your browser.</p>
-<p>It&apos;s preconfigured with the full IBM Cloud CLI and tons of plug-ins and tools that you can use to manage apps, resources, and infrastructure.</p>
+                                <h1 id="join-an-account-in-ibm-cloud">Join an account in IBM Cloud</h1>
+<p>In this section, you will login to your own IBM Cloud account.</p>
+<h2 id="join-an-existing-account-in-ibm-cloud">Join an existing account in IBM Cloud</h2>
 <ol>
-<li><p>In the Console menu bar, click the IBM Cloud Shell icon to start a session</p>
-<p>      <a href="../assets/cloud-shell-access.png" rel="grouped" title="shell1" target="_self" class="fancybox">
-       <img src="../assets/cloud-shell-access.png" alt="shell1">
+<li><p>If you&apos;ve been invited to an account, check your email. You should have received an email similar to this.</p>
+<p>      <a href="../assets/email-invite.png" rel="grouped" title="Email invite" target="_self" class="fancybox">
+       <img src="../assets/email-invite.png" alt="Email invite">
      </a></p>
 </li>
-<li><p>A session starts and automatically logs you in through the IBM Cloud CLI.</p>
-<p>      <a href="../assets/cloud-shell-login.png" rel="grouped" title="shell2" target="_self" class="fancybox">
-       <img src="../assets/cloud-shell-login.png" alt="shell2">
-     </a></p>
+<li><p>You need to access the invite to be able to log into this existing IBM Cloud account.</p>
+</li>
+<li><p>Once you accepted the invite, you will be able to access <a href="https://cloud.ibm.com" target="_blank">https://cloud.ibm.com</a></p>
 </li>
 </ol>
-<h2 id="connect-to-the-openshift-cluster">Connect to the OpenShift cluster</h2>
+<p><div class="alert alert-info hints-alert"><div class="hints-icon"><i class="fa fa-info-circle"></i></div><div class="hints-container"><p> When joining an existing account, you do NOT require to enter any credit card information. </p>
+</div></div></p>
+<h2 id="create-your-own-account">Create your own account</h2>
 <ol>
-<li><p>In the OpenShift web console, click on the email/ID in the upper right. Choose the <em>Copy Login Command</em> option.</p>
-<p>      <a href="../assets/copy-login-command.png" rel="grouped" title="Copy the login credentials" target="_self" class="fancybox">
-       <img src="../assets/copy-login-command.png" alt="Copy the login credentials">
-     </a></p>
-</li>
-<li><p>In a Shell termimal, paste the <code>oc login</code> command you copied from the web console.</p>
-<p> You should see a success message similar to the one below:</p>
-<pre class="language-"><code class="lang-bash"> oc login https://c100-e.us-south.containers.cloud.ibm.com:30360 --token<span class="token operator">=</span>NYVkVysxxxxxxxxxxxxxxxxxxxxRQa8tM
-
- Logged into <span class="token string">&quot;https://c100-e.us-south.containers.cloud.ibm.com:30360&quot;</span> as <span class="token string">&quot;IAM#firstname.lasname@ibm.com&quot;</span> using the token provided.
-
- You have access to the following projects and can switch between them with <span class="token string">&apos;oc project &lt;projectname&gt;&apos;</span>
-</code></pre>
-</li>
+<li>Register for your own account: <a href="http://cloud.ibm.com/registration" target="_blank">http://cloud.ibm.com/registration</a></li>
 </ol>
-<p>Your CLI is now connected to your Red Hat OpenShift cluster running in IBM Cloud.</p>
-<h2 id="validate-cluster-access-using-oc-commands">Validate cluster access using <code>oc</code> commands</h2>
-<ol>
-<li><p>View projects</p>
-<pre class="language-"><code class="lang-bash"> oc get projects
-</code></pre>
-</li>
-</ol>
-<p>You&apos;ve completed the getting started! Let&apos;s recap -- in this section, you:</p>
-<ul>
-<li>Got an OpenShift cluster and accessed its Web Console.</li>
-<li>Connected your local CLI to a running OpenShift cluster on IBM Cloud</li>
-</ul>
 
                                 
                                 </section>
@@ -475,12 +477,12 @@
 
             
                 
-                <a href="get_started.html" class="navigation navigation-prev " aria-label="Previous page: Create Account and Get Cluster">
+                <a href="access_lab.html" class="navigation navigation-prev " aria-label="Previous page: Access Lab">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../part1-learn_openshift/exercise-1.html" class="navigation navigation-next " aria-label="Next page: Deploying an App">
+                <a href="access_cluster.html" class="navigation navigation-next " aria-label="Next page: Access OpenShift Console">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -491,7 +493,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Access the cluster","level":"2.2","depth":1,"next":{"title":"Deploying an App","level":"3.1","depth":1,"path":"part1-learn_openshift/exercise-1.md","ref":"part1-learn_openshift/exercise-1.md","articles":[]},"previous":{"title":"Create Account and Get Cluster","level":"2.1","depth":1,"path":"getting-started/get_started.md","ref":"getting-started/get_started.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"getting-started/setup_cli.md","mtime":"2021-12-04T08:27:18.359Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-04T08:29:03.855Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Join IBM Cloud","level":"2.2","depth":1,"next":{"title":"Access OpenShift Console","level":"2.3","depth":1,"path":"getting-started/access_cluster.md","ref":"getting-started/access_cluster.md","articles":[]},"previous":{"title":"Access Lab","level":"2.1","depth":1,"path":"getting-started/access_lab.md","ref":"getting-started/access_lab.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"getting-started/create_account.md","mtime":"2021-12-06T09:32:21.277Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-06T09:34:12.085Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
