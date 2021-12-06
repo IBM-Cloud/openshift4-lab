@@ -11,10 +11,10 @@
 
 ## Learning OpenShift 4
 
-* [Deploying an App](part1-learn_openshift/exercise-1.md)
-* [Logging](part1-learn_openshift/exercise-2.md)
-* [Monitoring](part1-learn_openshift/exercise-3.md)
-* [Scaling the App](part1-learn_openshift/exercise-4.md)
+* [Deploying an App](part1-learn_openshift/ex-1-deploy.md)
+* [Logging](part1-learn_openshift/ex-2-log.md)
+* [Monitoring](part1-learn_openshift/ex-3-monitor.md)
+* [Scaling the App](part1-learn_openshift/ex-4-scale.md)
 
 ## OpenShift 4 and IBM Cloud
 
