@@ -24,19 +24,17 @@ It's preconfigured with the full IBM Cloud CLI and tons of plug-ins and tools th
 
     ![Copy the login credentials](../assets/copy-login-command.png)
 
-1. In a Shell termimal, paste the `oc login` command you copied from the web console.
+1. A new page will open with a link **Display Token**. Click this link.
 
-    You should see a success message similar to the one below:
+1. Copy the log in with this token line.
 
-    ```bash
-    oc login https://c100-e.us-south.containers.cloud.ibm.com:30360 --token=NYVkVysxxxxxxxxxxxxxxxxxxxxRQa8tM
+    ![OCP API Token](../assets/ocp-api-token.png)
 
-    Logged into "https://c100-e.us-south.containers.cloud.ibm.com:30360" as "IAM#firstname.lasname@ibm.com" using the token provided.
+1. In the Cloud Shell, paste the `oc login` command you copied in the previous step.
 
-    You have access to the following projects and can switch between them with 'oc project <projectname>'
-    ```
+    ![OCP API Token](../assets/ocp-shell-login.png)
 
-Your CLI is now connected to your Red Hat OpenShift cluster running in IBM Cloud.
+Your CLI is now connected to your  OpenShift cluster running in IBM Cloud.
 
 ## Validate cluster access using `oc` commands
 
@@ -48,5 +46,4 @@ Your CLI is now connected to your Red Hat OpenShift cluster running in IBM Cloud
 
 You've completed the getting started! Let's recap -- in this section, you:
 
-* Got an OpenShift cluster and accessed its Web Console.
 * Connected your local CLI to a running OpenShift cluster on IBM Cloud
