@@ -431,45 +431,68 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="monitoring">Monitoring</h1>
-<p>In this exercise, we&apos;ll explore the built-in and third-party monitoring dashboards that are installed for free with OpenShift!</p>
-<h2 id="developer-monitoring">Developer Monitoring</h2>
+<p>In this section, you will learn to monitor the health and performance of your application. OpenShift Container Platform ships with a pre-configured and self-updating monitoring stack that is based on the Prometheus open source project and its wider eco-system. It provides monitoring of cluster components and ships with a set of Grafana dashboards</p>
+<h2 id="access-prometheus">Access Prometheus</h2>
 <ol>
 <li><p>In the <strong>Developer</strong> perspective, go to the <strong>Monitoring Dashboard</strong> to review the CPU, Memory usage and more</p>
-<p>      <a href="../assets/monitoring-dashboard.png" rel="grouped" title="Monitoring Dashboard" target="_self" class="fancybox">
-       <img src="../assets/monitoring-dashboard.png" alt="Monitoring Dashboard">
+<p>      <a href="../assets/ocp-monitoring-dashboard.png" rel="grouped" title="Monitoring Dashboard" target="_self" class="fancybox">
+       <img src="../assets/ocp-monitoring-dashboard.png" alt="Monitoring Dashboard">
      </a></p>
 </li>
-<li><p>You can also dive in a bit deeper - the <strong>Events</strong> view is useful for identifying the timeline of events and finding potential error messages. When tracking the state of a new rollout, managing existing assets, or even something simple like exposing a route, the Events view is critical in identifying the timeline of activity. This becomes even more useful when considering that multiple operators may be working against a single cluster.</p>
-<p>      <a href="../assets/monitoring-events.png" rel="grouped" title="Monitoring Events" target="_self" class="fancybox">
-       <img src="../assets/monitoring-events.png" alt="Monitoring Events">
+<li><p>Let&apos;s re-use the same commmand we load in the section before to generate some requests, this will in turn generate data into Prometheus.</p>
+<p> ```sh
+ while sleep 1; do curl -s <a href="http://$HOST/info" target="_blank">http://$HOST/info</a>; done</p>
+</li>
+<li><p>Swith to the <code>Metrics</code> tab</p>
+<p>      <a href="../assets/ocp-monitoring-metrics.png" rel="grouped" title="Metrics" target="_self" class="fancybox">
+       <img src="../assets/ocp-monitoring-metrics.png" alt="Metrics">
+     </a></p>
+</li>
+<li><p>Create a <code>custom Query</code> to see the total container cpu usage in seconds on a Graph.</p>
+<pre class="language-"><code class="lang-sh"> sum<span class="token punctuation">(</span>node_namespace_pod_container:container_cpu_usage_seconds_total:sum_rate<span class="token punctuation">{</span>namespace<span class="token operator">=</span><span class="token string">&quot;&lt;MYPROJECT&gt;&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span> by <span class="token punctuation">(</span>container<span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>The following graph should appear</p>
+<p>      <a href="../assets/ocp-monitoring-query.png" rel="grouped" title="Custom Query" target="_self" class="fancybox">
+       <img src="../assets/ocp-monitoring-query.png" alt="Custom Query">
+     </a></p>
+</li>
+<li><p>The <strong>Events</strong> view is useful for identifying the timeline of events and finding potential error messages. When tracking the state of a new rollout, managing existing assets, or even something simple like exposing a route, the Events view is critical in identifying the timeline of activity. This becomes even more useful when considering that multiple operators may be working against a single cluster.</p>
+<p>      <a href="../assets/ocp-monitoring-events.png" rel="grouped" title="Monitoring Events" target="_self" class="fancybox">
+       <img src="../assets/ocp-monitoring-events.png" alt="Monitoring Events">
      </a></p>
 </li>
 </ol>
 <p>You&apos;ll want to refer to this view throughout the lab. Almost all actions we take in in OpenShift will result in an event being fired in this view. As it is updated real-time, it&apos;s a great way to track changes to state.</p>
-<h2 id="grafana">Grafana</h2>
+<h2 id="access-grafana">Access Grafana</h2>
 <p>Red Hat OpenShift on IBM Cloud comes with <a href="https://grafana.com/" target="_blank">Grafana</a> preinstalled.</p>
 <ol>
-<li><p>Get started by switching to the <strong>Administrator</strong> perspective:</p>
-<p>      <a href="../assets/ocp43-adminview.png" rel="grouped" title="Administrator Perspective" target="_self" class="fancybox">
-       <img src="../assets/ocp43-adminview.png" alt="Administrator Perspective">
+<li><p>To retrieve the web UIs of Graphan, run the command</p>
+<pre class="language-"><code class="lang-sh"> oc get routes -n openshift-monitoring <span class="token operator">|</span> <span class="token function">grep</span> grafana <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&apos;{ print $2}&apos;</span>
+</code></pre>
+<p> You should be getting something similar to this</p>
+<pre class="language-"><code class="lang-sh"> grafana-openshift-monitoring.labinabox-5c19b80d0b42bf06f50309d5c8a080e8-0000.eu-de.containers.appdomain.cloud
+</code></pre>
+</li>
+<li><p>Open this url to launch the Grafana dashboard. You&apos;ll be asked to login with OpenShift and then click through some permissions.</p>
+<p>      <a href="../assets/ocp-grafana-accept.png" rel="grouped" title="Monitoring Dashboards" target="_self" class="fancybox">
+       <img src="../assets/ocp-grafana-accept.png" alt="Monitoring Dashboards">
      </a></p>
 </li>
-<li><p>Navigate to <strong>Monitoring &gt; Dashboards</strong> in the left-hand bar. You&apos;ll be asked to login with OpenShift and then click through some permissions.</p>
-<p>      <a href="../assets/ocp43-monitoring-dashboard.png" rel="grouped" title="Monitoring Dashboards" target="_self" class="fancybox">
-       <img src="../assets/ocp43-monitoring-dashboard.png" alt="Monitoring Dashboards">
+<li><p>In the Grafana dashboard, click the search icon in the left, and type <strong>Kubernetes / Compute Resources / Namespace (Pods)</strong>.</p>
+<p>      <a href="../assets/ocp-grafana-search.png" rel="grouped" title="Grafana" target="_self" class="fancybox">
+       <img src="../assets/ocp-grafana-search.png" alt="Grafana">
      </a></p>
 </li>
-<li><p>You should then see your Grafana dashboard. Hit <strong>Home</strong> on the top left, and choose <strong>Kubernetes / Compute Resources / Namespace (Pods)</strong>.</p>
-<p>      <a href="../assets/ocp43-grafana.png" rel="grouped" title="Grafana" target="_self" class="fancybox">
-       <img src="../assets/ocp43-grafana.png" alt="Grafana">
-     </a></p>
+<li><p>For the <strong>Namespace</strong> field, choose your project which is the name of the project your app resides in.</p>
 </li>
-<li><p>For the <strong>Namespace</strong> field, choose <code>example-health</code> which is the name of the project your app resides in.</p>
-</li>
-<li><p>You should be able to see the CPU and Memory usage for your application. In production environments, this is helpful for identifying the average amount of CPU or Memory your application uses, especially as it can fluctuate through the day. We&apos;ll use this information in the next exercise to set up auto-scaling for our pods.</p>
-<p>      <a href="../assets/ocp43-grafana-cpu.png" rel="grouped" title="Grafana also project" target="_self" class="fancybox">
-       <img src="../assets/ocp43-grafana-cpu.png" alt="Grafana also project">
+<li><p>You should be able to see the CPU and Memory usage for your application.</p>
+<p>      <a href="../assets/ocp-grafana-cpu.png" rel="grouped" title="Grafana also project" target="_self" class="fancybox">
+       <img src="../assets/ocp-grafana-cpu.png" alt="Grafana also project">
      </a></p>
+<blockquote>
+<p>In production environments, this is helpful for identifying the average amount of CPU or Memory your application uses, especially as it can fluctuate through the day. We&apos;ll use this information in the next exercise to set up auto-scaling for our pods.</p>
+</blockquote>
 </li>
 </ol>
 
@@ -515,7 +538,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Monitoring","level":"3.3","depth":1,"next":{"title":"Scaling the App","level":"3.4","depth":1,"path":"part1-learn_openshift/ex-4-scale.md","ref":"part1-learn_openshift/ex-4-scale.md","articles":[]},"previous":{"title":"Logging","level":"3.2","depth":1,"path":"part1-learn_openshift/ex-2-log.md","ref":"part1-learn_openshift/ex-2-log.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part1-learn_openshift/ex-3-monitor.md","mtime":"2021-12-06T15:37:44.084Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-06T15:39:35.175Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Monitoring","level":"3.3","depth":1,"next":{"title":"Scaling the App","level":"3.4","depth":1,"path":"part1-learn_openshift/ex-4-scale.md","ref":"part1-learn_openshift/ex-4-scale.md","articles":[]},"previous":{"title":"Logging","level":"3.2","depth":1,"path":"part1-learn_openshift/ex-2-log.md","ref":"part1-learn_openshift/ex-2-log.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part1-learn_openshift/ex-3-monitor.md","mtime":"2021-12-06T16:16:02.336Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-06T16:18:02.738Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
