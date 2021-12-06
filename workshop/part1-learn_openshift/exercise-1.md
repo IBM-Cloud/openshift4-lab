@@ -12,21 +12,23 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     ![project](../assets/ocp-project.png)
 
-1. Create a new project by selecting **Create Project**. Call the project "example-health".
+1. Create a new project by selecting **Create Project**. Call the project "lab-yourfirstandlastname".
 
-    {% hint style='info' %} If you've been invited to a lab account where the project was already created, skip this project creation step and the select the project lab-yourlastname. {% endhint %}
+    {% hint style='info' %} If you've been invited to a lab account, make sure to give a unique project name using your last name. {% endhint %}
 
     ![create](../assets/ocp-create-project.png)
 
 1. Access the **Project Details** under the section **More** on the left side menu.
 
-    ![Project Details](../assets/ocp43-project-details.png)
+    ![Project Details](../assets/ocp48-project-details.png)
 
-1. Switch from the Administrator to the **Developer** view. Make sure your project is selected.
+1. Switch from the **Administrator** to the **Developer** view.
 
-    ![view](../assets/ocp-project-view.png)
+    ![switch](../assets/ocp-switch.png)
 
-1. Select **Topology** in the left side menu. Let's deploy the application by selecting **From Git**.
+1. In the **Developer** view, make sure your project is selected and select **From Git** to deploy the app.
+
+    ![fromgit](../assets/ocp-project-view.png)
 
 1. Enter the repository `https://github.com/svennam92/node-s2i-openshift` in the Git Repo URL field.
 
@@ -34,7 +36,7 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     Note that the builder image automatically detected the language Node.js.
 
-1. Name your application such as `patient-ui`. Leave the application name field empty and hit **Create** at the bottom of the window to build and deploy the application.
+1. Enter `health` for the application name field. Name your application such as `patient-ui`. Hit **Create** at the bottom of the window to build and deploy the application.
 
     ![app](../assets/ocp-app-name-short.png)
 
@@ -46,7 +48,7 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     ![topology](../assets/ocp-topology-app.png)
 
-1. Select the app. You should see a single Deployment where you can see your Pods, Builds, Services and Routes.
+1. Select the app by clicking the icon nodejs in the middle of the circle. A contextual panel will pop up with the app details including the Deployment, the Pods, Builds, Services and Routes.
 
     ![details](../assets/ocp-topo-app-details.png)
 
@@ -62,7 +64,7 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
     You should see that looks like this:
 
     ```bash
-    Successfully pushed image-registry.openshift-image-registry.svc:5000/example-health/patient-ui@sha256:f9385e010144f36353a74d16b6af10a028c12d005ab4fc0b1437137f6bd9e20a
+    Successfully pushed image-registry.openshift-image-registry...
     Push successful
     ```
 
