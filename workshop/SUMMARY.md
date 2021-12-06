@@ -4,8 +4,10 @@
 
 ## Getting Started
 
-* [Create Account and Get Cluster](getting-started/get_started.md)
-* [Access the cluster](getting-started/setup_cli.md)
+* [Access Lab](getting-started/access_lab.md)
+* [Join IBM Cloud](getting-started/create_account.md)
+* [Access OpenShift Console](getting-started/access_cluster.md)
+* [Connect to OpenShift with CLI](getting-started/access_cluster_cli.md)
 
 ## Learning OpenShift 4
 
@@ -24,6 +26,5 @@
 
 ## Resources
 
-* [Docs: Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/docs/openshift)
-* [Docs: OpenShift Container Platform 4.8](https://docs.openshift.com/container-platform/4.8/welcome/index.html)
-
+* [Doc: OpenShift on IBM Cloud](https://cloud.ibm.com/docs/openshift)
+* [Doc: OpenShift Container Platform 4.8](https://docs.openshift.com/container-platform/4.8)

@@ -1,7 +1,5 @@
 # Introduction
 
-## Red Hat OpenShift on IBM Cloud - Bring it all together
-
 In this hands-on lab you will learn how to use the OpenShift Container Platform on IBM Cloud. The goal of OpenShift is to provide a great experience for both Developers and System Administrators to develop, deploy, and run containerized applications.
 
 You will familiarize yourself with OpenShift, deploy a micro-service Node.js application to OpenShift, scale the application, connect to a Cloudant DBaaS, check logs with LogDNA and monitor with Sysdig.
@@ -29,7 +27,7 @@ This tutorial uses the following IBM Cloud Services:
 
 ## Command Lines
 
-This diagram gives you an overview of the task, services and main command lines you will be using during the lab.
+This diagram gives you an overview of the services and main command lines you will be using during the lab.
 
 ![cli](./assets/command-lines.png)
 
