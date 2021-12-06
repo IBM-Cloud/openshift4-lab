@@ -63,4 +63,4 @@ Red Hat OpenShift on IBM Cloud comes with [Grafana](https://grafana.com/) preins
 
     ![Grafana also project](../assets/ocp-grafana-cpu.png)
 
-    > In production environments, this is helpful for identifying the average amount of CPU or Memory your application uses, especially as it can fluctuate through the day. We'll use this information in the next exercise to set up auto-scaling for our pods.
+In production environments, this is helpful for identifying the average amount of CPU or Memory your application uses, especially as it can fluctuate through the day. We'll use this information in the next exercise to set up auto-scaling for our pods.

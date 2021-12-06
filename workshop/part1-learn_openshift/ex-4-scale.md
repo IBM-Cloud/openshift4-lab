@@ -1,18 +1,30 @@
 # Scaling the application
 
-In this exercise, we'll leverage the metrics we've observed in the previous step to automatically scale our UI application in response to load.
+In this section, you will learn how to manually and automatically scale your application.
+
+We'll also leverage the metrics we've observed in the previous step to automatically scale our UI application in response to load.
+
+## Manual scaling
+
+1. You can achieve manual scaling of your pods with `oc scale` command. The command sets a new size for a deployment configuration or replication controller
+
+  ```sh
+  oc scale deployment/patient-ui --replicas=2
+  ```
+
+1. You can see a new pod being provisioned by running oc get pods command.
 
 ## Enable Resource Limits
 
 Before we can setup autoscaling for our pods, we first need to set resource limits on the pods running in our cluster. Limits allows you to choose the minimum and maximum CPU and memory usage for a pod.
 
-Hopefully you have your running script simulating load \(if not go [here](exercise-2.md#simulate-load-on-the-application)\), Grafana showed you that your application was consuming anywhere between ".002" to ".02" cores. This translates to 2-20 "millicores". That seems like a good range for our CPU request, but to be safe, let's bump the higher-end up to 30 millicores. In addition, Grafana showed that the app consumes about `25`-`35` MB of RAM. Set the following resource limits for your deployment now.
+Hopefully you have your running script simulating load \(if not go [here](ex-2-log.md#simulate-load-on-the-application)\), Grafana showed you that your application was consuming anywhere between ".002" to ".02" cores. This translates to 2-20 "millicores". That seems like a good range for our CPU request, but to be safe, let's bump the higher-end up to 30 millicores. In addition, Grafana showed that the app consumes about `25`-`35` MB of RAM. Set the following resource limits for your deployment now.
 
 1. Switch to the **Administrator** view and then navigate to **Workloads > Deployments** in the left-hand bar. Choose the `patient-ui` Deployment, then choose **Actions > Edit Deployment**.
 
     ![deployments](../assets/ocp-deployments.png)
 
-2. In the YAML editor, search the section **template > spec > containers** to add some resource limits. Replace the `resources {}`, and ensure the spacing is correct -- YAML uses strict indentation.
+1. Switch to the the YAML view, search the section **template > spec > containers** to add some resource limits. Replace the `resources {}` (line 151), and ensure the spacing is correct -- YAML uses strict indentation.
 
     ![limits](../assets/ocp-limits-yaml.png)
 
@@ -26,17 +38,14 @@ Hopefully you have your running script simulating load \(if not go [here](exerci
                  memory: 40Mi
   ```
 
-3. **Save** and **Reload** to see the new version.
-
-4. Verify that the replication controller has been changed by navigating to **Events**
-
-    ![Resource Limits](../assets/ocp-dc-events.png)
+1. Click **Save**.
 
 ## Enable Autoscaler
 
 Now that we have resource limits, let's enable autoscaler.
 
-By default, the autoscaler allows you to scale based on CPU or Memory. The UI allows you to do CPU only \(for now\). Pods are balanced between the minimum and maximum number of pods that you specify. With the autoscaler, pods are automatically created or deleted to ensure that the average CPU usage of the pods is below the CPU request target as defined. In general, you probably want to start scaling up when you get near `50`-`90`% of the CPU usage of a pod. In our case, let's make it `1`% to test the autoscaler since we are generating minimal load.
+By default, the autoscaler allows you to scale based on CPU or Memory. The UI allows you to do CPU only \(for now\). Pods are balanced between the minimum and maximum number of pods that you specify. With the autoscaler, pods are automatically created or deleted to ensure that the average CPU usage of the pods is below the CPU request target as defined. In general, you probably want to start scaling up when you get near `50`-`90`% of the CPU usage of a pod.
+In our case, let's make it `1`% to test the autoscaler since we are generating minimal load.
 
 1. Navigate to **Workloads > Horizontal Pod Autoscalers**, then hit **Create Horizontal Pod Autoscaler**.
 
@@ -63,15 +72,15 @@ By default, the autoscaler allows you to scale based on CPU or Memory. The UI al
               type: Utilization
     ```
 
-2. Hit **Create**.
+1. Hit **Create**.
 
     > If you get the error "User cannot create resource horizontalpodautoscalers in API group autoscaling in the namespace example-health", make sure to enter the correct project/namespace.
 
 ## Test Autoscaler
 
-If you're not running the script from the [previous exercise](exercise-2.md#simulate-load-on-the-application), the number of pods should stay at 1.
+If you're not running the script from the [previous exercise](ex-2-log.md#simulate-load-on-the-application), the number of pods should stay at 2.
 
-1. Check by going to the **Overview** page of **Deployments**.
+1. Check by going to the **Details** page of **Deployments**.
 
     ![Scaled to 1 pod](../assets/ocp-hpa-before.png)
 
@@ -83,6 +92,6 @@ That's it! You now have a highly available and automatically scaled front-end No
 
 ### Optional
 
-If you're interested in setting up the CLI, [follow the steps here](../getting-started/setup_cli.md). Then, run the following command in your CLI `oc get hpa` to get information about your horizontal pod autoscaler. Remember to switch to your project first with `oc project <project-name>`.
+Run the command `oc get hpa` to get additional information about the horizontal pod autoscaler. Remember to switch to your project first with `oc project <project-name>`.
 
 You could have created the autoscaler with the command `oc autoscale deployment/patient-ui --min 1 --max 10 --cpu-percent=1`.
