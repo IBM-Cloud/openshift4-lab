@@ -4,26 +4,22 @@ In this section, you will get access to an IBM Cloud Lab account which contains 
 
 ## Navigate to the OpenShift Console
 
-1. Go to the list of [IBM Cloud Resources](https://cloud.ibm.com/resources).
+1. Go to the Resource List [https://cloud.ibm.com/resources](https://cloud.ibm.com/resources). Expand the section **Clusters**. Click on the cluster that has been assigned to you.
 
     ![Resources](../assets/icp-resource-list.png)
 
-2. Expand the section **Clusters**. Click on the cluster that has been assigned to you.
-
-    ![Cluster Overview](../assets/clusters-overview.png)
-
-3. You can also access the cluster directly from the top menu bar.
+1. You can also access the cluster directly from the top menu bar.
 
    ![IBM Cloud Menu](../assets/icp-menu.png)
 
-4. Find your cluster in the list of OpenShift clusters [IBM Cloud Clusters Dashboard](https://cloud.ibm.com/kubernetes/clusters?platformType=openshift)
+1. Find your cluster in the list of OpenShift clusters [IBM Cloud Clusters Dashboard](https://cloud.ibm.com/kubernetes/clusters?platformType=openshift)
  
     ![Clusters Dashboard](../assets/icp-ocp-list.png)
 
-5. Have a look at the cluster overview!
+1. Have a look at the cluster overview!
 
     ![Launch the OpenShift](../assets/cluster-overview.png)
 
-6. Click on **OpenShift web console** on the top right to launch the web console.
+1. Click on **OpenShift web console** on the top right to launch the web console.
 
     ![OpenShift Console](../assets/ocp-console.png)

@@ -16,4 +16,6 @@ In this section, you will login to your own IBM Cloud account.
 
 ## Create your own account
 
+{% hint style='info' %} If you have been invited to an account, creating an account is optionnal. {% endhint %}
+
 1. Register for your own account: [http://cloud.ibm.com/registration](http://cloud.ibm.com/registration)
