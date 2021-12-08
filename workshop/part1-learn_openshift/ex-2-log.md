@@ -6,10 +6,10 @@ In this exercise, we'll explore the out-of-the-box logging capabilities that are
 
 Let's simulate some load on our application.
 
-1. Define an environment variable named `MYPROJECT` and set the project name by replacing `<your-initials>` with your own initials. This project is the same project as the one used in the console to deploy the app.
+1. Define an environment variable named `MYPROJECT` and set the project name by replacing `<your-lastname>` with your own last name. This project is the same project as the one used in the console to deploy the app.
 
     ```sh
-    export MYPROJECT=lab-<your-initials>
+    export MYPROJECT=lab-<your-lastname>
     ```
 
 1. Make sure you're connected to the project where you deployed your app.
@@ -43,12 +43,6 @@ Let's simulate some load on our application.
 
     ```sh
     while sleep 1; do curl -s http://$HOST/info; done
-    ```
-
-    With Windows:
-
-    ```bash
-    while($true){curl http://$HOST/info}
     ```
 
 1. Hitting the `/info` endpoint will trigger some logs from our app.
