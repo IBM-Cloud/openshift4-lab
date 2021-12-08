@@ -39,8 +39,6 @@ Let's simulate some load on our application.
 
 1. Run the following script which will endlessly spam our app with requests.
 
-    With Linux/MacOS:
-
     ```sh
     while sleep 1; do curl -s http://$HOST/info; done
     ```
