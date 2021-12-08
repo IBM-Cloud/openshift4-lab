@@ -12,6 +12,7 @@ In this section, you will learn to monitor the health and performance of your ap
 
     ```sh
     while sleep 1; do curl -s http://$HOST/info; done
+    ```
 
 1. Swith to the `Metrics` tab
 
