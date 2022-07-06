@@ -21,7 +21,7 @@ In this section, you will learn to monitor the health and performance of your ap
 1. Create a `custom Query` to see the total container cpu usage in seconds on a Graph.
 
     ```sh
-    sum(node_namespace_pod_container:container_cpu_usage_seconds_total:sum_rate{namespace="<MYPROJECT>"}) by (container)
+    sum(node_namespace_pod_container:container_cpu_usage_seconds_total:sum_irate) by (container)
     ```
 
 1. The following graph should appear
