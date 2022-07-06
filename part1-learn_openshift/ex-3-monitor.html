@@ -432,15 +432,15 @@
                                 
                                 <h1 id="monitoring">Monitoring</h1>
 <p>In this section, you will learn to monitor the health and performance of your application. OpenShift Container Platform ships with a pre-configured and self-updating monitoring stack that is based on the Prometheus open source project and its wider eco-system. It provides monitoring of cluster components and ships with a set of Grafana dashboards</p>
-<h2 id="access-prometheus">Access Prometheus</h2>
+<h2 id="observe-metrics-in-the-developer-view">Observe Metrics in the Developer View</h2>
 <ol>
-<li><p>In the <strong>Developer</strong> perspective, go to the <strong>Monitoring Dashboard</strong> to review the CPU, Memory usage and more</p>
+<li><p>In the <strong>Developer</strong> perspective, go to the <strong>Observe</strong> to review the CPU, Memory usage and more</p>
 <p>      <a href="../assets/ocp-monitoring-dashboard.png" rel="grouped" title="Monitoring Dashboard" target="_self" class="fancybox">
        <img src="../assets/ocp-monitoring-dashboard.png" alt="Monitoring Dashboard">
      </a></p>
 </li>
 <li><p>Let&apos;s re-use the same commmand we load in the section before to generate some requests, this will in turn generate data into Prometheus.</p>
-<pre class="language-"><code class="lang-sh"> <span class="token keyword">while</span> <span class="token function">sleep</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token keyword">do</span> <span class="token function">curl</span> -s http://<span class="token variable">$HOST</span>/info<span class="token punctuation">;</span> <span class="token keyword">done</span>
+<pre class="language-"><code class="lang-sh"> <span class="token keyword">while</span> <span class="token function">sleep</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token keyword">do</span> <span class="token function">curl</span> -s https://<span class="token variable">$HOST</span>/info<span class="token punctuation">;</span> <span class="token keyword">done</span>
 </code></pre>
 </li>
 <li><p>Swith to the <code>Metrics</code> tab</p>
@@ -449,7 +449,7 @@
      </a></p>
 </li>
 <li><p>Create a <code>custom Query</code> to see the total container cpu usage in seconds on a Graph.</p>
-<pre class="language-"><code class="lang-sh"> sum<span class="token punctuation">(</span>node_namespace_pod_container:container_cpu_usage_seconds_total:sum_rate<span class="token punctuation">{</span>namespace<span class="token operator">=</span><span class="token string">&quot;&lt;MYPROJECT&gt;&quot;</span><span class="token punctuation">}</span><span class="token punctuation">)</span> by <span class="token punctuation">(</span>container<span class="token punctuation">)</span>
+<pre class="language-"><code class="lang-sh"> sum<span class="token punctuation">(</span>node_namespace_pod_container:container_cpu_usage_seconds_total:sum_irate<span class="token punctuation">)</span> by <span class="token punctuation">(</span>container<span class="token punctuation">)</span>
 </code></pre>
 </li>
 <li><p>The following graph should appear</p>
@@ -464,24 +464,17 @@
 </li>
 </ol>
 <p>You&apos;ll want to refer to this view throughout the lab. Almost all actions we take in in OpenShift will result in an event being fired in this view. As it is updated real-time, it&apos;s a great way to track changes to state.</p>
-<h2 id="access-grafana">Access Grafana</h2>
-<p>Red Hat OpenShift on IBM Cloud comes with <a href="https://grafana.com/" target="_blank">Grafana</a> preinstalled.</p>
+<h2 id="observe-metrics-in-the-administrator-view">Observe Metrics in the Administrator View</h2>
+<p>Red Hat OpenShift on IBM Cloud comes with <a href="https://grafana.com/" target="_blank">Grafana</a> dashboard bundled in the console.</p>
 <ol>
-<li><p>To retrieve the web UIs of Graphan, run the command</p>
-<pre class="language-"><code class="lang-sh"> oc get routes -n openshift-monitoring <span class="token operator">|</span> <span class="token function">grep</span> grafana <span class="token operator">|</span> <span class="token function">awk</span> <span class="token string">&apos;{ print $2}&apos;</span>
-</code></pre>
-<p> You should be getting something similar to this</p>
-<pre class="language-"><code class="lang-sh"> grafana-openshift-monitoring.labinabox-5c19b80d0b42bf06f50309d5c8a080e8-0000.eu-de.containers.appdomain.cloud
-</code></pre>
-</li>
-<li><p>Open this url to launch the Grafana dashboard. You&apos;ll be asked to login with OpenShift and then click through some permissions.</p>
-<p>      <a href="../assets/ocp-grafana-accept.png" rel="grouped" title="Monitoring Dashboards" target="_self" class="fancybox">
-       <img src="../assets/ocp-grafana-accept.png" alt="Monitoring Dashboards">
+<li><p>In the Administrator perspective, expand <strong>Observe</strong> and select <strong>Dashboards</strong>.</p>
+<p>      <a href="../assets/ocp-observe.png" rel="grouped" title="observe" target="_self" class="fancybox">
+       <img src="../assets/ocp-observe.png" alt="observe">
      </a></p>
 </li>
-<li><p>In the Grafana dashboard, click the search icon in the left, and type <strong>Kubernetes / Compute Resources / Namespace (Pods)</strong>.</p>
-<p>      <a href="../assets/ocp-grafana-search.png" rel="grouped" title="Grafana" target="_self" class="fancybox">
-       <img src="../assets/ocp-grafana-search.png" alt="Grafana">
+<li><p>Under the Dashboard, open the drop-down menu to replace <code>etcd</code> by  <strong>Kubernetes / Compute Resources / Namespace (Pods)</strong>.</p>
+<p>      <a href="../assets/ocp-grafana.png" rel="grouped" title="observe" target="_self" class="fancybox">
+       <img src="../assets/ocp-grafana.png" alt="observe">
      </a></p>
 </li>
 <li><p>For the <strong>Namespace</strong> field, choose your project which is the name of the project your app resides in.</p>
@@ -536,7 +529,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Monitoring","level":"3.3","depth":1,"next":{"title":"Scaling the App","level":"3.4","depth":1,"path":"part1-learn_openshift/ex-4-scale.md","ref":"part1-learn_openshift/ex-4-scale.md","articles":[]},"previous":{"title":"Logging","level":"3.2","depth":1,"path":"part1-learn_openshift/ex-2-log.md","ref":"part1-learn_openshift/ex-2-log.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part1-learn_openshift/ex-3-monitor.md","mtime":"2021-12-08T10:43:38.555Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-12-08T10:45:34.533Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Monitoring","level":"3.3","depth":1,"next":{"title":"Scaling the App","level":"3.4","depth":1,"path":"part1-learn_openshift/ex-4-scale.md","ref":"part1-learn_openshift/ex-4-scale.md","articles":[]},"previous":{"title":"Logging","level":"3.2","depth":1,"path":"part1-learn_openshift/ex-2-log.md","ref":"part1-learn_openshift/ex-2-log.md","articles":[]},"dir":"ltr"},"config":{"plugins":["prism","-highlight","collapsible-chapters","hints","copy-code-button","back-to-top-button","fancybox","web-header","codetabs"],"root":"workshop","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"webheader":{"headerTitle":"Bring it all together on OpenShift 4 on IBM Cloud"},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"fancybox":{"helpers":{"buttons":{}},"openEffect":"elastic","closeEffect":"elastic"},"web-header":{},"search":{},"collapsible-chapters":{},"codetabs":{},"hints":{"danger":"fa fa-exclamation-circle","info":"fa fa-info-circle","tip":"fa fa-mortar-board","working":"fa fa-wrench"},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"back-to-top-button":{},"copy-code-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":true}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Bring it all together on OpenShift 4 on IBM Cloud","gitbook":"3.2.3"},"file":{"path":"part1-learn_openshift/ex-3-monitor.md","mtime":"2022-07-06T12:55:02.585Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-07-06T12:56:51.228Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
