@@ -40,7 +40,7 @@ Let's simulate some load on our application.
 1. Run the following script which will endlessly spam our app with requests.
 
     ```sh
-    while sleep 1; do curl -s http://$HOST/info; done
+    while sleep 1; do curl -s https://$HOST/info; done
     ```
 
 1. Hitting the `/info` endpoint will trigger some logs from our app.

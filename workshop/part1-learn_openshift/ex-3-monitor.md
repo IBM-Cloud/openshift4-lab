@@ -11,7 +11,7 @@ In this section, you will learn to monitor the health and performance of your ap
 1. Let's re-use the same commmand we load in the section before to generate some requests, this will in turn generate data into Prometheus.
 
     ```sh
-    while sleep 1; do curl -s http://$HOST/info; done
+    while sleep 1; do curl -s https://$HOST/info; done
     ```
 
 1. Swith to the `Metrics` tab
