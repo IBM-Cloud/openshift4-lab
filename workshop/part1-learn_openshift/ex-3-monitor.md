@@ -2,9 +2,9 @@
 
 In this section, you will learn to monitor the health and performance of your application. OpenShift Container Platform ships with a pre-configured and self-updating monitoring stack that is based on the Prometheus open source project and its wider eco-system. It provides monitoring of cluster components and ships with a set of Grafana dashboards
 
-## Access Prometheus
+## Observe Metrics in the Developer View
 
-1. In the **Developer** perspective, go to the **Monitoring Dashboard** to review the CPU, Memory usage and more
+1. In the **Developer** perspective, go to the **Observe** to review the CPU, Memory usage and more
 
     ![Monitoring Dashboard](../assets/ocp-monitoring-dashboard.png)
 
@@ -34,33 +34,21 @@ In this section, you will learn to monitor the health and performance of your ap
 
 You'll want to refer to this view throughout the lab. Almost all actions we take in in OpenShift will result in an event being fired in this view. As it is updated real-time, it's a great way to track changes to state.
 
-## Access Grafana
+## Observe Metrics in the Administrator View
 
-Red Hat OpenShift on IBM Cloud comes with [Grafana](https://grafana.com/) preinstalled.
+Red Hat OpenShift on IBM Cloud comes with [Grafana](https://grafana.com/) dashboard bundled in the console.
 
-1. To retrieve the web UIs of Graphan, run the command
+1. In the Administrator perspective, expand **Observe** and select **Dashboards**.
 
-    ```sh
-    oc get routes -n openshift-monitoring | grep grafana | awk '{ print $2}'
-    ```
+    ![observe](../assets/ocp-observe.png)
 
-    You should be getting something similar to this
+2. Under the Dashboard, open the drop-down menu to replace `etcd` by  **Kubernetes / Compute Resources / Namespace (Pods)**.
 
-    ```sh
-    grafana-openshift-monitoring.labinabox-5c19b80d0b42bf06f50309d5c8a080e8-0000.eu-de.containers.appdomain.cloud
-    ```
+    ![observe](../assets/ocp-grafana.png)
 
-2. Open this url to launch the Grafana dashboard. You'll be asked to login with OpenShift and then click through some permissions.
+3. For the **Namespace** field, choose your project which is the name of the project your app resides in.
 
-    ![Monitoring Dashboards](../assets/ocp-grafana-accept.png)
-
-3. In the Grafana dashboard, click the search icon in the left, and type **Kubernetes / Compute Resources / Namespace (Pods)**.
-
-    ![Grafana](../assets/ocp-grafana-search.png)
-
-4. For the **Namespace** field, choose your project which is the name of the project your app resides in.
-
-5. You should be able to see the CPU and Memory usage for your application.
+4. You should be able to see the CPU and Memory usage for your application.
 
     ![Grafana also project](../assets/ocp-grafana-cpu.png)
 
