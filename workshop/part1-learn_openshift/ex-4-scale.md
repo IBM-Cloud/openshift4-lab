@@ -52,7 +52,7 @@ In our case, let's make it `1`% to test the autoscaler since we are generating m
     ![HPA](../assets/ocp-hpa.png)
 
     ```yaml
-    apiVersion: autoscaling/v2beta2
+    apiVersion: autoscaling/v2
     kind: HorizontalPodAutoscaler
     metadata:
       name: patient-hpa

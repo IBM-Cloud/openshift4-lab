@@ -34,21 +34,13 @@ In this section, you will learn to monitor the health and performance of your ap
 
 You'll want to refer to this view throughout the lab. Almost all actions we take in in OpenShift will result in an event being fired in this view. As it is updated real-time, it's a great way to track changes to state.
 
-## Observe Metrics in the Administrator View
+> Red Hat OpenShift on IBM Cloud comes with [Grafana](https://grafana.com/) dashboard bundled in the console.
 
-Red Hat OpenShift on IBM Cloud comes with [Grafana](https://grafana.com/) dashboard bundled in the console.
-
-1. In the Administrator perspective, expand **Observe** and select **Dashboards**.
-
-    ![observe](../assets/ocp-observe.png)
-
-2. Under the Dashboard, open the drop-down menu to replace `etcd` by  **Kubernetes / Compute Resources / Namespace (Pods)**.
+1. In the Dashboard tab, make sure to select **Kubernetes / Compute Resources / Namespace (Pods)** in the drop-down menu.
 
     ![observe](../assets/ocp-grafana.png)
 
-3. For the **Namespace** field, choose your project which is the name of the project your app resides in.
-
-4. You should be able to see the CPU and Memory usage for your application.
+2. You should be able to see the CPU and Memory usage for your application.
 
     ![Grafana also project](../assets/ocp-grafana-cpu.png)
 
