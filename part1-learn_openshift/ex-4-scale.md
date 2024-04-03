@@ -12,19 +12,23 @@ We'll also leverage the metrics we've observed in the previous step to automatic
   oc scale deployment/patient-ui --replicas=2
   ```
 
-1. You can see a new pod being provisioned by running oc get pods command.
+1. You can see a new pod being provisioned by running this command.
+
+  ```sh
+  oc get pods
+  ```
 
 ## Enable Resource Limits
 
 Before we can setup autoscaling for our pods, we first need to set resource limits on the pods running in our cluster. Limits allows you to choose the minimum and maximum CPU and memory usage for a pod.
 
-Hopefully you have your running script simulating load \(if not go [here](ex-2-log.md#simulate-load-on-the-application)\), Grafana showed you that your application was consuming anywhere between ".002" to ".02" cores. This translates to 2-20 "millicores". That seems like a good range for our CPU request, but to be safe, let's bump the higher-end up to 30 millicores. In addition, Grafana showed that the app consumes about `25`-`35` MB of RAM. Set the following resource limits for your deployment now.
+Hopefully you have your running script simulating load from **Step 2.2 Simulate load on the application**, Grafana showed you that your application was consuming anywhere between ".002" to ".02" cores. This translates to 2-20 "millicores". That seems like a good range for our CPU request, but to be safe, let's bump the higher-end up to 30 millicores. In addition, Grafana showed that the app consumes about `25`-`35` MB of RAM. Set the following resource limits for your deployment now.
 
 1. Switch to the **Administrator** view and then navigate to **Workloads > Deployments** in the left-hand bar. Choose the `patient-ui` Deployment, then choose **Actions > Edit Deployment**.
 
     ![deployments](../assets/ocp-deployments.png)
 
-1. Switch to the the YAML view, search the section **template > spec > containers** to add some resource limits. Replace the `resources {}` (line 151), and ensure the spacing is correct -- YAML uses strict indentation.
+2. Switch to the the YAML view, search the section **template > spec > containers** to add some resource limits. Replace the `resources {}` (line 161), and ensure the spacing is correct -- YAML uses strict indentation.
 
     ![limits](../assets/ocp-limits-yaml.png)
 
@@ -84,14 +88,24 @@ If you're not running the script from the [previous exercise](ex-2-log.md#simula
 
     ![Scaled to 1 pod](../assets/ocp-hpa-before.png)
 
-2. Start simulating load by hitting the page several times, or running the script. You'll see that it starts to scale up:
+1. Start simulating load by hitting the page several times, or running the script. You'll see that it starts to scale up:
 
    ![Scaled to 4/10 pods](../assets/ocp-hpa-after.png)
 
 That's it! You now have a highly available and automatically scaled front-end Node.js application. OpenShift is automatically scaling your application pods since the CPU usage of the pods greatly exceeded `1`% of the resource limit, `30` millicores.
 
-### Optional
+## Optional
 
-Run the command `oc get hpa` to get additional information about the horizontal pod autoscaler. Remember to switch to your project first with `oc project <project-name>`.
+1. To get additional information about the horizontal pod autoscaler, run the command
 
-You could have created the autoscaler with the command `oc autoscale deployment/patient-ui --min 1 --max 10 --cpu-percent=1`.
+    ```sh
+    oc get hpa
+    ```
+
+    > Remember to switch to your project first with `oc project <project-name>`.
+
+1. The autoscaler can also be created with this command
+
+    ```sh
+    oc autoscale deployment/patient-ui --min 1 --max 10 --cpu-percent=1
+    ```
