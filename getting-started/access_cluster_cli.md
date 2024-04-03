@@ -10,7 +10,7 @@ To avoid installing the command line, the recommended approach is to use the IBM
 
 It's preconfigured with the full IBM Cloud CLI and tons of plug-ins and tools that you can use to manage apps, resources, and infrastructure.
 
-1. In the Console menu bar, click the IBM Cloud Shell icon to start a session
+1. In the Console menu bar, click the IBM Cloud Shell [https://cloud.ibm.com/shell](https://cloud.ibm.com/shell) icon to start a session
 
     ![shell1](../assets/cloud-shell-access.png)
 
