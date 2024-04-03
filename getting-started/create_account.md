@@ -12,10 +12,10 @@ In this section, you will login to your own IBM Cloud account.
 
 3. Once you accepted the invite, you will be able to access [https://cloud.ibm.com](https://cloud.ibm.com)
 
-{% hint style='info' %} When joining an existing account, you do NOT require to enter any credit card information. {% endhint %}
+> When joining an existing account, you do NOT require to enter any credit card information.
 
 ## Create your own account
 
-{% hint style='info' %} If you have been invited to an account, creating an account is optionnal. {% endhint %}
+> If you have been invited to an account, creating an account is optionnal.
 
 1. Register for your own account: [http://cloud.ibm.com/registration](http://cloud.ibm.com/registration)
