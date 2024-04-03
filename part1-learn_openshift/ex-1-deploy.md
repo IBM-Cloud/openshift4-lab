@@ -14,7 +14,7 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
 1. Create a new project by selecting **Create Project**. Call the project `lab-<your-lastname>`.
 
-    {% hint style='info' %} If you've been invited to a lab account, make sure to give a unique project name using your last name. {% endhint %}
+    > If you've been invited to a lab account, an existing project may have been created for you. Otherwise, make sure to give a unique project name using your last name.
 
     ![create](../assets/ocp-create-project.png)
 
@@ -26,7 +26,7 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     ![switch](../assets/ocp-switch.png)
 
-1. In the **Developer** view, make sure your project is selected and select **From Git** to deploy the app.
+1. In the **Developer** view, make sure your project is selected. Click **+Add** in the right panel and select **Import From Git** to deploy the app.
 
     ![fromgit](../assets/ocp-project-view.png)
 

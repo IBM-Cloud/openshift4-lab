@@ -44,6 +44,14 @@ Your CLI is now connected to your  OpenShift cluster running in IBM Cloud.
     oc get projects
     ```
 
+1. Make sure you're connected to your project
+
+    ```bash
+    oc project <name-of-your-project>
+    ```
+
+    > Your project name starts with `lab-` and includes your last name.
+
 You've completed the getting started! Let's recap -- in this section, you:
 
-* Connected your local CLI to a running OpenShift cluster on IBM Cloud
+You connected your local CLI to a running OpenShift cluster on IBM Cloud.
