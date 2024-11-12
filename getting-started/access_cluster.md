@@ -4,7 +4,7 @@ In this section, you will get access to an IBM Cloud Lab account which contains 
 
 ## Navigate to the OpenShift Console
 
-1. Go to the Resource List [https://cloud.ibm.com/resources](https://cloud.ibm.com/resources). Expand the section **Clusters**. Click on the cluster that has been assigned to you.
+1. Go to the Resource List [https://cloud.ibm.com/resources](https://cloud.ibm.com/resources). Expand the section **Containers**. Click on the cluster that has been assigned to you.
 
     ![Resources](../assets/icp-resource-list.png)
 
