@@ -18,6 +18,8 @@ It's preconfigured with the full IBM Cloud CLI and tons of plug-ins and tools th
 
     ![shell2](../assets/cloud-shell-login.png)
 
+> If you wish to install the OpenShift Command Line on your laptop, you can do so by downloading the correct version from this [page](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/).
+
 ## Connect to the OpenShift cluster
 
 1. In the OpenShift web console, click on the email/ID in the upper right. Choose the _Copy Login Command_ option.
