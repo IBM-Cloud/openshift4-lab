@@ -13,7 +13,7 @@ In this section, you will get access to an IBM Cloud Lab account which contains 
    ![IBM Cloud Menu](../assets/icp-menu.png)
 
 1. Find your cluster in the list of OpenShift clusters [IBM Cloud Clusters Dashboard](https://cloud.ibm.com/kubernetes/clusters?platformType=openshift)
- 
+
     ![Clusters Dashboard](../assets/icp-ocp-list.png)
 
 1. Have a look at the cluster overview!
