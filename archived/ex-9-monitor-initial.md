@@ -1,42 +1,66 @@
-# Monitor your Cluster
+# Monitor your Cluster with SysDig
 
-IBM Cloud Monitoring with Sysdig is a co-branded cloud-native, and container-intelligence management system that you can include as part of your architecture.
-
-Use views and dashboards to monitor your infrastructure, applications, and services. You can use pre-defined dashboards. You can also create custom dashboards through the Web UI or programmatically.
-
-The following table lists the different types of pre-defined dashboards:
-
-| Type | Description |
-| :--- | :--- |
-| Applications | Dashboards that you can use to monitor your applications and infrastructure components. |
-| Host and containers | Dashboards that you can use to monitor resource utilization and system activity on your hosts and in your containers. |
-| Network | Dashboards that you can use to monitor your network connections and activity. |
-| Service | Dashboards that you can use to monitor the performance of your services, even if those services are deployed in orchestrated containers. |
-| Topology | Dashboards that you can use to monitor the logical dependencies of your application tiers and overlay metrics. |
+IBM Cloud Monitoring with Sysdig is a co-branded cloud-native, and container- intelligence management system that you can include as part of your IBM Cloud architecture. Use it to gain operational visibility into the performance and health of your applications, services, and platforms. It offers administrators, DevOps teams, and developers full stack telemetry with advanced features to monitor and troubleshoot performance issues, define alerts, and design custom dashboards. IBM Cloud Monitoring with Sysdig is operated by Sysdig in partnership with IBM. [Learn more](https://cloud.ibm.com/docs/Monitoring-with-Sysdig?topic=Sysdig-getting-started).
 
 In the next steps, you will learn how to use dashboards and metrics to monitor the health of your application.
 
-## View the Monitoring dashboard
+## View SysDig pre-defined views and dashboards
 
-1. Go the Monitoring section under [Observability](https://cloud.ibm.com/observability/monitoring)
+Use views and dashboards to monitor your infrastructure, applications, and services. You can use pre-defined dashboards. You can also create custom dashboards through the Web UI or programmatically. You can backup and restore dashboards by using Python scripts.
 
-1. Launch the Monitoring Dashboard.
+The following table lists the different types of pre-defined dashboards:
 
-    ![dashboard](../assets/icp-monitoring-launch.png)
+| Type | Description | 
+| :--- | :--- |
+| Applications | Dashboards that you can use to monitor your applications and infrastructure components. |
+| Host and containers | Dashboards that you can use to monitor resource utilization and system activity on your hosts and in your containers. |
+| Network | Dashboards that you can use to monitor your network connections and activity. | 
+| Service | Dashboards that you can use to monitor the performance of your services, even if those services are deployed in orchestrated containers. | 
+| Topology | Dashboards that you can use to monitor the logical dependencies of your application tiers and overlay metrics. | 
 
-1. Navigate the Monitoring console to get metrics on your Kubernetes cluster, nodes, deployments, pods, containers.
 
-1. Under the **Explore** section,select **Containerized Apps** to view raw metrics for all workloads running on the cluster.
+## Complete the Sysdig installation wizard
+
+1. Launch the Sysdig web UI.
+
+    ![](../assets/icp-monitoring-launch.png)
+
+2. In the Sysdig Welcome wizard, click **Next**
+   ![](../assets/sysdig-wizard1.png)
+
+3. Select **Kubernetes | GKE | OpenShift** as the installation method.
+   ![](../assets/sysdig-wizard2.png)
+
+4. You should see a message `You have X agents connected`. Click **GO TO NEXT STEP**. 
+   ![](../assets/sysdig-wizard3.png)
+
+5. Setup is complete. Click **LET'S GET STARTED**
+   ![](../assets/sysdig-wizard4.png)
+
+6. Select **Next**
+   ![](../assets/sysdig-wizard5.png)
+
+7. Finally **Complete Onboarding**
+
+   ![](../assets/sysdig-wizard6.png)
+
+
+## View the Sysdig dashboard
+
+1. Navigate the Sysdig console to get metrics on your Kubernetes cluster, nodes, deployments, pods, containers.
+
+2. Under the **Explore** section,select **Containerized Apps** to view raw metrics for all workloads running on the cluster.
 
    ![](../assets/sysdig-select-app.png)
 
-1. Under **Explore**, select **Nodes**, search `patient-ui`. Look for the partientui pod entry.
+3. Under **Explore**, select **Nodes**, search `patient-ui`. Look for the partientui pod entry.
 
    ![](../assets/sysdig-explore-node.png)
 
-1. Under **Dashboard**, select **Default Dashboards** &gt; **Applications**. Then select **HTTP** to get a global view of the cluster HTTP load.
+4. Under **Dashboard**, select **Default Dashboards** &gt; **Applications**. Then select **HTTP** to get a global view of the cluster HTTP load.
 
-1. Under Dashboard, select **Default Dashboards** &gt; **Hosts & Containers**. Then select **Overview by Host** to understand how nodes are currently performing.
+5. Under Dashboard, select **Default Dashboards** &gt; **Hosts & Containers**. Then select **Overview by Host** to understand how nodes are currently performing.
+
 
 ## Explore the normal traffic flow of the application
 
