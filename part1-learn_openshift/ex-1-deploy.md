@@ -18,7 +18,7 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     ![create](../assets/ocp-create-project.png)
 
-1. Access the **Project Details** under the section **More** on the left side menu.
+1. Access the **Project Details** under the section **Home** on the left side menu.
 
     ![Project Details](../assets/ocp48-project-details.png)
 
@@ -30,7 +30,7 @@ In this exercise, you'll deploy a simple Node.js Express application - "Example 
 
     ![fromgit](../assets/ocp-project-view.png)
 
-1. Enter the repository `https://github.com/svennam92/node-s2i-openshift` in the Git Repo URL field.
+1. Enter the repository `https://github.com/lionelmace/nodejs-openshift-patient` in the Git Repo URL field.
 
     ![git](../assets/ocp-configure-git.png)
 
