@@ -38,30 +38,25 @@ In the next steps, you will learn how to use dashboards and metrics to monitor t
 
 1. Under Dashboard, select **Default Dashboards** &gt; **Hosts & Containers**. Then select **Overview by Host** to understand how nodes are currently performing.
 
-## Explore the normal traffic flow of the application
+## Explore the Pod Status and Performance
 
-You can use the **Connection Table** dashboard to monitor how data flows between your application components.
+You can use the dashboard to monitor the CPU, Memory and traffic of your application components.
 
-1. From the **Explore** tab, select **Deployments**.
-2. Select your cluster (e.g. roks081). Then, select the namespace where you deployed your sample app.
-3. Select the _patientui_ pod entry.
-4. Select **Default Dashboards**.
+1. From the **Dashboards** tab, select **Pod Status and Performance** under the **Kubernetes** library
+
+1. Select your cluster. Then, select the namespace where you deployed your sample app.
 
    ![](../assets/explore-img-4.png)
 
-5. Check out the two dashboards under **Hosts & Containers**:
-   * **Overview by Host**
-   * **Overview by Container**.
+1. Check out the different panels.
 
 ## Explore the cluster and the node capacity
 
-1. From the **Explore** tab, select **Deployments**.
-2. Select your cluster (e.g. roks081). Then, select the namespace where you deployed your sample app.
-3. Select the _patientui_ pod entry.
-4. Select **Default Dashboards**.
-5. Select **Kubernetes > Kuberentes Cluster and Node Capacity**. 
+1. From the **Dashboards** tab, select **Cluster Capacity Planning** under the **Kubernetes** library
 
-   ![](../assets/explore-img-9.png)
+1. Select your cluster. Then, select the namespace where you deployed your sample app.
+
+  ![capacity](../assets/explore-img-9.png)
 
    Check the **Total CPU Capacity**. This is the CPU capacity that has been reserved for the node including system daemons.
 
@@ -73,26 +68,6 @@ You can use the **Connection Table** dashboard to monitor how data flows between
 
    Check the **Total Pod CPU Usage**. It is the total amount of CPU that is used by all Pods on the node or cluster.
 
-## Explore the Network
-
-1. From the **DASHBOARDS** tab, select **Default Dashboards**. Then, select **Network > Overview**.
-
-   The following dashboard is displayed. It shows information about all resources that are monitored thorugh the instance.
-
-   ![](../assets/dashboard-img-2.png)
-
-2. Change the scope of the dashboard to display information about your openshift cluster. Select **Edit scope** on the right side and change it:
-
-    ![](../assets/dashboard-img-4.png)
-
-    The dashboard now shows information about the ibm-observe namespace.
-
-    ![](../assets/dashboard-img-5.png)
-
 ## Congratulations!
 
-That's it, you're done with the Red Hat OpenShift 4.3 on IBM Cloud workshop. Thanks for joining us!
-
-{% hint style='tip' %}
-Find more about IBM Cloud Monitoring with Sysdig in the [IBM Cloud documentation](https://cloud.ibm.com/docs/services/Monitoring-with-Sysdig/index.html#getting-started).
-{% endhint %}
+That's it, you're done with the Red Hat OpenShift on IBM Cloud workshop. Thanks for joining us!
