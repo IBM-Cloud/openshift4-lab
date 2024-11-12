@@ -28,7 +28,7 @@ Hopefully you have your running script simulating load from **Step 2.2 Simulate 
 
     ![deployments](../assets/ocp-deployments.png)
 
-2. Switch to the the YAML view, search the section **template > spec > containers** to add some resource limits. Replace the `resources {}` (line 161), and ensure the spacing is correct -- YAML uses strict indentation.
+2. Switch to the the YAML view, search the section **template > spec > containers** to add some resource limits. Replace the `resources {}` (line 150), and ensure the spacing is correct -- YAML uses strict indentation.
 
     ![limits](../assets/ocp-limits-yaml.png)
 

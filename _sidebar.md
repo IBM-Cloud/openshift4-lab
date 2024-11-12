@@ -13,14 +13,11 @@
   * [2.4 Scaling the App](part1-learn_openshift/ex-4-scale.md)
 
 * OpenShift 4 and IBM Cloud
-  * [3.1 Cloudant with OperatorHub](part2-openshift_ibmcloud/exercise-5.md)
-  * [3.2 Configure Sysdig Agent](part2-openshift_ibmcloud/exercise-6.md)
-  * [3.3 Configure LogDNA Agent](part2-openshift_ibmcloud/exercise-7.md)
-  * [3.4 Analyze Logs w/ LogDNA](part2-openshift_ibmcloud/exercise-8.md)
-  * [3.5 Monitor Cluster w/ SysDig](part2-openshift_ibmcloud/exercise-9.md)
+  * [3.1 Analyze Logs w/ LogDNA](part2-openshift_ibmcloud/ex-5-analyse-logs.md)
+  * [3.2 Monitor Cluster w/ SysDig](part2-openshift_ibmcloud/ex-6-monitor.md)
 
 * Resources
   * [Doc: OpenShift on IBM Cloud](https://cloud.ibm.com/docs/openshift)
-  * [Doc: OpenShift Container Platform 4.14](https://docs.openshift.com/container-platform/4.14)
+  * [Doc: OpenShift Container Platform 4.16](https://docs.openshift.com/container-platform/4.16)
   <!-- * [Command Lines](common/clis/clis.md) -->
   <!-- * [:book: Handbook](handbook.md) -->

@@ -4,7 +4,6 @@ IBM Cloud Monitoring with Sysdig is a co-branded cloud-native, and container- in
 
 In the next steps, you will learn how to use dashboards and metrics to monitor the health of your application.
 
-
 ## View SysDig pre-defined views and dashboards
 
 Use views and dashboards to monitor your infrastructure, applications, and services. You can use pre-defined dashboards. You can also create custom dashboards through the Web UI or programmatically. You can backup and restore dashboards by using Python scripts.
