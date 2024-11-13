@@ -31,14 +31,6 @@ This diagram gives you an overview of the services and main command lines you wi
 
 ![cli](./assets/command-lines.png)
 
-## Credits
-
-Many folks have contributed to help shape, test, and contribute the workshop.
-
-* [Sai Vennam](https://github.com/svennam92)
-* [Lionel Mace](https://github.com/lionelmace)
-* [Marisa Lopez de Silanes Ruiz](https://github.com/lopezdsr)
-
 ## Access the tutorial
 
 The lab is accessible at this URL [https://ibm-cloud.github.io/openshift4-lab/](https://ibm-cloud.github.io/openshift4-lab/)
