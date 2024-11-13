@@ -61,6 +61,39 @@ The patient application that you previously deployed in the OpenShift cluster wi
 
    ![logs](../assets/icl-logging.png)
 
+## Create custom view
+
+You can use a view to see logs that match a specific filtering criteria. Views can be grouped into folders. View names must be unique within a folder.
+
+In the left-hand navigation, click **Explore logs > Logs**. By default, the last view you had opened will be displayed. If no view was previously open, all views will be displayed.
+
+1. Select the fields to be included in the view. By default, you can select Applications, Subsystems, and log Severities.
+
+2. Select the application that matches the namespace allocated to you.
+
+3. Select the subsystem **patient-ui**.
+
+4. Select if you want your view to only include **Priority Logs** (those in the Priority Insights data pipeline or All Logs, that is, logs that are stored in your data bucket. Logs in the data bucket include logs collected through all the three data pipelines.
+
+5. Add a Lucene query " in-memory data" to further filter your data.
+
+6. Specify the time interval for the view, for example Last 5 minutes.
+
+7. Save your view by clicking the three dots ...
+
+8. Set the view name to <your-username>-first-view.
+
+9. Check Save query and filters to save the query and filter values you configured.
+
+10. Set the privacy of your view to Private.
+
+      > Private views can only be seen by you. You can set a view as Private or Shared.
+
+11. Click Create.
+
+   ![logs](../assets/icl-view.png)
+
 ## Resources
 
-Find more about IBM Log Analysis with LogDNA in the [IBM Cloud documentation](https://cloud.ibm.com/docs/services/Log-Analysis-with-LogDNA/index.html#getting-started).
+* Find more about IBM Cloud Logs in the [IBM Cloud documentation](https://cloud.ibm.com/docs/cloud-logs)
+* [Managing the Logging agent for IBM Cloud Kubernetes Service clusters](https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-agent-std-cluster)
