@@ -2,7 +2,7 @@
 
 In this hands-on lab you will learn how to use the OpenShift Container Platform on IBM Cloud. The goal of OpenShift is to provide a great experience for both Developers and System Administrators to develop, deploy, and run containerized applications.
 
-You will familiarize yourself with OpenShift, deploy a micro-service Node.js application to OpenShift, scale the application, connect to a Cloudant DBaaS, check logs with LogDNA and monitor with Sysdig.
+You will familiarize yourself with OpenShift, deploy a micro-service Node.js application to OpenShift, scale the application, connect to a Cloudant DBaaS, check logs and monitor with Sysdig.
 
 ## Architecture
 
@@ -14,16 +14,15 @@ You will familiarize yourself with OpenShift, deploy a micro-service Node.js app
 1. The application is deployed to a OpenShift cluster.
 1. Users access the application.
 1. A developer connects the application to a Cloudant database with IBM Cloud Operator.
-1. An Ops monitors the app with LogDNA and Sysdig.
+1. An Ops monitors the app with Cloud Logs and Cloud Monitoring.
 
 ## Cloud Services used
 
 This tutorial uses the following IBM Cloud Services:
 
 * [Red Hat OpenShift on IBM Cloud](https://cloud.ibm.com/kubernetes/catalog/create?platformType=openshift)
-* [Cloudant](https://cloud.ibm.com/catalog/services/cloudant)
-* [IBM Log Analysis with LogDNA](https://cloud.ibm.com/observe/logging/create)
-* [IBM Cloud Monitoring with Sysdig](https://cloud.ibm.com/observe/monitoring/create)
+* [IBM Cloud Logs](https://cloud.ibm.com/observe/logging)
+* [IBM Cloud Monitoring](https://cloud.ibm.com/observe/monitoring)
 
 ## Command Lines
 
