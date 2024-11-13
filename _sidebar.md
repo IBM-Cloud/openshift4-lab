@@ -13,8 +13,8 @@
   * [2.4 Scaling the App](part1-learn_openshift/ex-4-scale.md)
 
 * OpenShift 4 and IBM Cloud
-  * [3.1 Analyze Logs w/ LogDNA](part2-openshift_ibmcloud/ex-5-analyse-logs.md)
-  * [3.2 Monitor Cluster w/ SysDig](part2-openshift_ibmcloud/ex-6-monitor.md)
+  * [3.1 Analyze Logs](part2-openshift_ibmcloud/ex-5-analyse-logs.md)
+  * [3.2 Monitor Cluster](part2-openshift_ibmcloud/ex-6-monitor.md)
 
 * Resources
   * [Doc: OpenShift on IBM Cloud](https://cloud.ibm.com/docs/openshift)
