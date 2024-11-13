@@ -93,6 +93,8 @@ In the left-hand navigation, click **Explore logs > Logs**. By default, the last
 
    ![logs](../assets/icl-view.png)
 
+Good job! You have completed the lab. Note that you can do much more in Cloud Logs such as setting Alerts.
+
 ## Resources
 
 * Find more about IBM Cloud Logs in the [IBM Cloud documentation](https://cloud.ibm.com/docs/cloud-logs)
