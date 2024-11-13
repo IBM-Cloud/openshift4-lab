@@ -16,13 +16,32 @@ In this hands-on lab, you will learn about IBM Cloud Logs features.
 
    > Alternatively, use the Navigation menu ☰ > Observability > Logging > Instances.
 
-2. Launch the Logging Dashboard.
+1. Launch the Logging Dashboard.
 
    ![overview](../assets/icl-overview.png)
 
-The UI opens in a new browser tab.
+1. The UI opens in the Home dashboard is a predefined dashboard that includes the following information for the time frame selected for the dashboard:
 
-## Send logs
+   * The trend of high severity logs and their percentage of total logs.
+   * The trend of metric ingestion.
+   * A list of triggered alerts grouped by severity.
+   * A list of anomalies grouped by type.
+   * The applications and subsystems that generated the highest volume of errors and their template distributions.
+   * The logs volumes grouped by severity.
+   * The top 3 errors that occurred above their usual occurrence rates or occurred for the first time within the last 7 days.
+   * Information on the application and subsystem combinations with the highest error rates.
+
+   > By default the displayed timeframe is set to 24 hours, and the information included covers both logs and metrics.
+
+   ![home](../assets/icl-home.png)
+
+   At a glance, you can see the type of logs that you are ingesting, their priority, the volumes per priority, the top errors, and the recent alerts that have been triggered.
+
+1. Cloud Logs includes many different features grouped in the following sections.
+
+   ![home](../assets/icl-section.png)
+
+## Explore logs
 
 The patient application that you previously deployed in the OpenShift cluster within a namespace named after your username generates logs.
 
@@ -40,7 +59,7 @@ The patient application that you previously deployed in the OpenShift cluster wi
 
 1. Change the **Severity** to **Debug**.
 
-   ![](../assets/icl-logging.png ':size=600')
+   ![logs](../assets/icl-logging.png)
 
 ## Resources
 
