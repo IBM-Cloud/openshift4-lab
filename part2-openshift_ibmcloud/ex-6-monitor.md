@@ -12,7 +12,6 @@ The following table lists the different types of pre-defined dashboards:
 | Host and containers | Dashboards that you can use to monitor resource utilization and system activity on your hosts and in your containers. |
 | Network | Dashboards that you can use to monitor your network connections and activity. |
 | Service | Dashboards that you can use to monitor the performance of your services, even if those services are deployed in orchestrated containers. |
-| Topology | Dashboards that you can use to monitor the logical dependencies of your application tiers and overlay metrics. |
 
 In the next steps, you will learn how to use dashboards and metrics to monitor the health of your application.
 
